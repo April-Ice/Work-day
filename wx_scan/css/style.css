@@ -140,6 +140,8 @@ table.cart tbody .price-total:before {
     padding-right: 1rem !important;
     padding-left: 1rem !important;
     padding-top: 1.4rem !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid #eee;
 }
 
 .cart-wrap .goods {
@@ -240,4 +242,12 @@ table.cart tbody .price-total:before {
     padding: 0.4rem 0.6rem;
     background: #ffc43a;
     color: #fff;
+}
+.order-discount th{
+    border-bottom: 0;
+    font-weight: normal;
+}
+.discount-tag{
+    padding:  0.4rem 0.6rem;
+    border: 1px solid #ffc43a;
 }
