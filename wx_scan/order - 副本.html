@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>美思策划-订单结算</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/order.js"></script>
+
+</head>
+
+<body>
+    <!--导航示例图可删除start-->
+    <div class="row" text-center>
+        <img style="width:100%" src="img/banner.jpg">
+    </div>
+    <!--导航示例图可删除end-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 order-title">
+                <span class="order-orange">全部商品</span>
+                All goods
+            </div>
+        </div>
+
+        <table class="table table-hover order-info" id="cartTable">
+            <thead>
+                <tr>
+                    <th>
+                        <label>
+                            <input class="check-all check" type="checkbox" />&nbsp;&nbsp;全选</label>
+                    </th>
+                    <th>商品</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>提示</td></tr>
+                <tr>
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="check-one check">
+                            </label>
+                        </div>
+                    </td>
+                    <td class="goods"><img src="img/goods.jpg" />
+                        <span>舞台背景3D效果图1</span>
+                    </td>
+                    <td class="price">59.00</td>
+                    <td class="">
+                        <span class="reduce"></span>
+                        <input class="count-input" type="text" value="1" />
+                        <span class="add">+</span>
+                    </td>
+                    <td class="subtotal">59.00</td>
+                    <td class="operation">
+                        <span class="delete">删除</span>
+                        <span>移到我的关注</span>
+                        <span>加到我的关注</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="check-one check">
+                            </label>
+                        </div>
+                        <!--<input class="check-one check" type="checkbox" />-->
+                    </td>
+                    <td class="goods"><img src="img/goods.jpg" />
+                        <span>舞台背景3D效果图2</span>
+                    </td>
+                    <td class="price">59.00</td>
+                    <td class="count">
+                        <span class="reduce"></span>
+                        <input class="count-input" type="text" value="1" />
+                        <span class="add">+</span>
+                    </td>
+                    <td class="subtotal">59.00</td>
+                    <td class="operation">
+                        <span class="delete">删除</span>
+                        <span>移到我的关注</span>
+                        <span>加到我的关注</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="check-one check">
+                            </label>
+                        </div>
+                    </td>
+                    <td class="goods"><img src="img/goods.jpg" />
+                        <span>舞台背景3D效果图3</span>
+                    </td>
+                    <td class="price">59.00</td>
+                    <td class="count">
+                        <span class="reduce"></span>
+                        <input class="count-input" type="text" value="1" />
+                        <span class="add">+</span>
+                    </td>
+                    <td class="subtotal">59.00</td>
+                    <td class="operation">
+                        <span class="delete">删除</span>
+                        <span>移到我的关注</span>
+                        <span>加到我的关注</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="row order-foot" id="foot">
+            <div class="col-md-6  text-center">
+                <label class="fl select-all">
+                    <input type="checkbox" class="check-all check" />全选 </label>
+                <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+            </div>
+            <div class="col-md-6  text-center">
+                <input type="hidden" id="cartTotalPrice" />
+                <span class="">合计：
+                    <span id="priceTotal">0.00</span>
+                </span>
+                <button class="fr closing" onclick="getTotal();">结 算</button>
+            </div>
+            <div class="fr selected" id="selected">
+                <span id="selectedTotal">0</span>件
+                <!--<span class="arrow up">︽</span>
+                <span class="arrow down">︾</span>-->
+            </div>
+            <!--<div class="selected-view">
+                <div id="selectedViewList" class="clearfix">
+                    <div><img src="images/1.jpg">
+                        <span>取消选择</span>
+                    </div>
+                </div>
+                <span class="arrow">◆
+                    <span>◆</span>
+                </span>
+            </div>-->
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+body {
+    background: #f0f0f0;
+    min-height: 100vh;
+}
+
+
+/*----------支付页面--------------*/
+
+.pay-red {
+    color: #ff4d00;
+}
+
+.pay-grey {
+    color: #999999;
+}
+
+.pay-user {
+    margin: 1rem auto;
+    padding: 0.2rem 1rem;
+    background: #fcf9f2;
+    line-height: 3;
+}
+
+.pay-title {
+    line-height: 3;
+    font-size: 1.6rem;
+}
+
+.pay-info {
+    border: 1px solid #eee;
+    line-height: 3;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.pay-info th {
+    color: #a49999;
+    border-top: 0 !important;
+    text-align: center;
+}
+
+.pay-info td {
+    border-top: 0 !important;
+    line-height: 6 !important;
+}
+
+.pay-total span {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 3;
+}
+
+.pay-qrcode .img-thumbnail {
+    border-radius: 0;
+}
+
+.pay-qrcode p {
+    line-height: 3;
+    padding-right: 0.4rem;
+    color: #b6b6b6;
+}
+
+.pay-qrcode p img {
+    width: 1.8rem;
+}
+
+.pay-qrcode .code {
+    display: inline-block;
+    padding: 0.68rem;
+    background: url(../img/qr-top.png) top left no-repeat, url(../img/qr-top2.png) top right no-repeat, url(../img/qr-bottom.png) bottom left no-repeat, url(../img/qr-bottom2.png) bottom right no-repeat;
+}
+
+.pay-guide img {
+    padding-top: 2rem;
+}
+
+
+/*----------订单页面--------------*/
+
+.order-main {
+    background: #fff;
+    min-height: 100vh;
+}
+
+.order-orange {
+    color: #ffc43a;
+}
+
+.order-gray {
+    color: #b2b2b2;
+}
+
+.order-title {
+    font-size: 1.6rem;
+    padding-top: 2rem;
+    line-height: 3;
+}
+
+.order-title span {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.order-title span:after {
+    border-right: 2px solid #b2b2b2;
+}
+
+.order-head {
+    background: #f3f3f3;
+    color: #919191;
+    font-weight: normal;
+}
+
+.order-head .table {
+    margin-bottom: 0;
+}
+
+.order-head .table th {
+    border: 0;
+}
+
+th,
+td {
+    width: 10%;
+    /*padding: 0 1rem;*/
+}
+
+table.cart tbody .selling-price:before,
+table.cart tbody .subtotal:before,
+table.cart tbody .price-total:before {
+    content: "￥"
+}
+
+.cart-wrap tr {
+    padding: 0 2rem !important;
+}
+
+.cart-wrap th,
+.cart-wrap td {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    padding-top: 1.4rem !important;
+}
+
+.cart-wrap .goods {
+    width: 55%;
+    overflow: hidden;
+}
+
+.cart-wrap .selling-price,
+.cart-wrap .goods-sum,
+.cart-wrap .subtotal {
+    width: 10%;
+    line-height: 2;
+}
+
+.cart-wrap .action {
+    width: 15%;
+    line-height: 2;
+}
+
+.cart-wrap .goods-num {
+    width: 10%;
+    line-height: 2;
+}
+
+.input-group {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.order-foot {
+    z-index: 100;
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    /*padding: 1rem 0;*/
+    -moz-box-shadow: 2px -1px 1px #eee;
+    -o-box-shadow: 2px -1px 1px #eee;
+    -webkit-box-shadow: 2px -1px 1px #eee;
+    box-shadow: 2px -1px 1px #eee;
+}
+
+.pay-btn {
+    display: inline-block;
+    background: #ffc43a;
+    color: #fff;
+    width: 6rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.input-group-addon:last-child,
+.input-group-addon:first-child {
+    background: #fff;
+}
+
+.check {
+    display: none;
+}
+
+.checkbox span {
+    display: inline-block;
+    line-height: 2rem;
+}
+
+.checkbox .check-icon {
+    margin-right: 1rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.8rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    border: 1px solid #ffc43a;
+}
+
+.check:checked+.check-icon {
+    background: #ffc43a;
+}
+
+.checkbox .check-icon:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0.4rem;
+    ;
+    color: #fff;
+}
+
+.goods-type {
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+    background: #ffc43a;
+    color: #fff;
+}
