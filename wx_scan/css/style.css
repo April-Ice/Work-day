@@ -144,48 +144,59 @@ table.cart tbody .price-total:before {
     border-bottom: 0 !important;
     border-top: 1px solid #f0f0f0 !important;
 }
-.cart-wrap th{
+
+.cart-wrap th {
     border-top: 1.5px solid #ddd !important;
 }
 
-.cart-wrap tr:first-child th{
-    border-top:0 !important;
+.cart-wrap tr:first-child th {
+    border-top: 0 !important;
 }
-.cart-wrap .order-add{
+
+.cart-wrap .order-add {
     /*border-bottom: 0px;*/
 }
-.cart-wrap .order-add{
+
+.cart-wrap .order-add {
     width: 3%;
     border: 0 !important;
 }
-.cart-wrap .order-add-th{
+
+.cart-wrap .order-add-th {
     width: 15%;
     padding-left: 15px !important;
 }
-.cart-wrap .goods-th{
+
+.cart-wrap .goods-th {
     width: 40%;
 }
-.table>tbody>tr>th{
+
+.table>tbody>tr>th {
     vertical-align: middle;
 }
+
 .cart-wrap .goods-img {
     width: 14%;
     overflow: hidden;
 }
+
 .cart-wrap .goods-info {
     width: 38%;
     vertical-align: middle;
 }
-.goods-info h5{
+
+.goods-info h5 {
     font-size: 1.6rem;
 }
+
 .cart-wrap .selling-price,
 .cart-wrap .goods-sum,
 .cart-wrap .subtotal {
     width: 10%;
     line-height: 2;
 }
-.cart-wrap .subtotal{
+
+.cart-wrap .subtotal {
     /*text-align: center;*/
 }
 
@@ -199,12 +210,14 @@ table.cart tbody .price-total:before {
     line-height: 2;
 }
 
-.cart{
+.cart {
     border-bottom: 1px solid #eee;
 }
-.cart-wrap:last-child{
-    border-bottom:0 !important;
+
+.cart-wrap:last-child {
+    border-bottom: 0 !important;
 }
+
 .input-group {
     margin: 0 auto;
     width: 100%;
@@ -243,13 +256,17 @@ table.cart tbody .price-total:before {
 .check {
     display: none;
 }
-.checkbox{
+
+.checkbox {
     margin: 0;
     position: relative;
 }
-.checkbox label, .radio label{
+
+.checkbox label,
+.radio label {
     padding-left: 0;
 }
+
 .checkbox span {
     display: inline-block;
     /*line-height: 2rem;*/
@@ -268,11 +285,11 @@ table.cart tbody .price-total:before {
     border: 1px solid #ffc43a;
 }
 
-.checkbox .text-tag{
+.checkbox .text-tag {
     display: block;
     position: absolute;
     left: 2.6rem;
-    top:0;
+    top: 0;
 }
 
 .check:checked+.check-icon {
@@ -298,55 +315,121 @@ table.cart tbody .price-total:before {
     background: #ffc43a;
     color: #fff;
 }
-.order-discount{
+
+.order-discount {
     padding: 1rem;
 }
-.order-discount th{
-     padding:  1rem 1rem !important;
+
+.order-discount th {
+    padding: 1rem 1rem !important;
     /*border-bottom: 0;*/
     font-weight: normal;
 }
-.order-discount a{
+
+.order-discount a {
     color: #444;
 }
 
-.discount-tag{
+.discount-tag {
     display: inline-block;
-    padding:  0.1rem 0.4rem;
+    padding: 0.1rem 0.4rem;
     border: 2px solid #ffc43a;
-    color:#ffc43a;
+    color: #ffc43a;
     margin-bottom: 0.2rem;
     margin-right: 1rem;
     position: relative;
 }
-.discount-tag:after{
+
+.discount-tag:after {
     content: '';
     position: absolute;
     left: -1px;
     bottom: -2.6rem;
     /*background: #000;*/
     height: 2.2rem;
-    border: 1px dotted #eee; 
+    border: 1px dotted #eee;
 }
- 
-.order-foot .checkbox{
+
+.order-foot .checkbox {
     padding-left: 8rem;
     line-height: 4rem;
     position: relative;
 }
-.order-foot .check-icon{
+
+.order-foot .check-icon {
     position: absolute;
     top: 1rem;
     left: 3rem;
 }
-.bottom-check .text-tag{
+
+.bottom-check .text-tag {
     left: 5.2rem;
 }
-.order-foot .delete-all{
+
+.order-foot .delete-all {
     margin-left: 1.4rem;
 }
 
-.price-total{
+.price-total {
     display: inline-block;
     font-size: 2rem;
+}
+
+
+/*------我的订单-------*/
+
+.deal-main {
+    background: #fff;
+    min-height: 100vh;
+}
+
+.deal-main .deal-active{
+    color: #ffc43a;
+}
+
+.deal-one {
+    margin: 1rem 0.4rem;
+    border: 1px solid #eee;
+    border-radius: 0.3rem;
+}
+
+.deal-one table {
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.deal-head {
+    background: #f1f1f1;
+    padding: 1rem;
+}
+
+.deal-one td {
+    padding: 1rem 0;
+}
+
+.deal-one td.border-left {
+    border-left: 1px solid #f1f1f1;
+    text-align: center;
+}
+
+.deal-info .title {
+    padding: 0 2rem 0 1rem;
+    width: 24%;
+}
+
+.deal-info .origin-price {
+    text-decoration: line-through;
+}
+
+.deal-main .types{
+    padding: 1rem 0;
+    /*line-height: 3;*/
+}
+.deal-main .types span{
+    display: inline-block;
+    padding: 0 1rem;
+    margin: 0 0.4rem 0 0;
+}
+.deal-main .types span:first-child{
+    border-right: 2px solid #eee;
 }
