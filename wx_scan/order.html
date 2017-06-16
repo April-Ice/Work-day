@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/order.js"></script>
 
 </head>
@@ -19,63 +20,39 @@
             <img style="width:100%" src="img/banner.jpg">
         </div>
         <!--导航示例图可删除end-->
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-            Launch demo modal
-        </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row order-title">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <span class="order-orange">全部商品</span>
-                All goods
+                <span class="order-orange">全部商品</span> <em class="order-gray"> All goods</em>
             </div>
         </div>
 
         <div class="cart-wrap">
             <div class="row order-head">
-                <table class="table text-center">
+                <table class="table">
                     <tr>
-                        <th colspan="2" class="goods">
+                        <th class="order-add-th">
                             <div class="checkbox">
                                 <label>
                                     <input class="check-cart check" type="checkbox" />
                                     <span class="check-icon"></span>
-                                    <span>全选</span>
+                                    <span class="text-tag">全选</span>
                                 </label>
-                                <span>商品</span>
                             </div>
                         </th>
-                        <th class="selling-price text-right">单价</th>
+                        <th class="goods-th">商品</th>
+                        <th class="selling-price text-center">单价</th>
                         <th class="goods-num text-center">数量</th>
                         <th class="subtotal text-right">小计</th>
-                        <th class="action">操作</th>
+                        <th class="action text-center">操作</th>
                     </tr>
                 </table>
             </div>
-            <table id="cartTable" class="cart table table-condensed">
+
+            <table id="cartTable" class="cart table table-condensed text-center">
                 <thead>
                     <tr>
-                        <th colspan="5" class="t-checkbox">
+                        <th colspan="7" class="t-checkbox">
                             <div class="checkbox">
                                 <label>
                                     <input class="check-all check" type="checkbox" />
@@ -88,23 +65,28 @@
                 </thead>
                 <tbody>
                     <tr class="order-discount">
-                        <th colspan="5" class="order-gray">
+                        <th colspan="7" class="order-gray">
                             <span class="discount-tag">满减</span> 活动商品购满￥300，即可享受满减 > <a href="#">去凑单</a> >
                         </th>
                     </tr>
                     <tr>
-                        <td colspan="2" class="goods">
+                        <td class="order-add">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" class="check-one check" />
                                     <span class="check-icon"></span>
-                                    <img src="img/goods.jpg" />
-                                    <span>舞台背景aaaa</span>
-                                    <span>设计者：Anny</span>
+                                    
                                 </label>
                             </div>
                         </td>
-                        <td class="selling-price number text-right" data-bind="76.55">76.55</td>
+                        <td class="goods-img">
+                            <img src="img/goods.jpg" />
+                        </td>
+                        <td class="goods-info text-left">
+                            <h5>主舞台背景 3D效果图</h5>
+                            <p class="order-gray">设计者：金大力</p>
+                        </td>
+                        <td class="selling-price number" data-bind="76.55">59.90</td>
                         <td class="goods-num">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon minus">-</span>
@@ -112,8 +94,8 @@
                                 <span class="input-group-addon plus">+</span>
                             </div>
                         </td>
-                        <td class="subtotal number text-right"></td>
-                        <td class="action">
+                        <td class="subtotal number"></td>
+                        <td class="action text-left">
                             <div class="delete">删除</div>
                             <div class="delete">移到我的关注</div>
                             <div class="delete">加到我的关注</div>
@@ -121,23 +103,28 @@
                     </tr>
 
                     <tr class="order-discount">
-                        <th colspan="5" class="order-gray">
-                            <span class="discount-tag">满减</span> 活动商品购满￥300，即可享受满减 > <a href="#">去凑单</a> >
+                        <th colspan="7" class="order-gray">
+                            <span class="discount-tag">换购</span> 活动商品购满￥9.00，即可加价换购商品1件 > <a href="#">去换购</a> >
                         </th>
                     </tr>
                     <tr>
-                        <td colspan="2" class="goods">
+                        <td class="order-add">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" class="check-one check" />
                                     <span class="check-icon"></span>
-                                    <img src="img/goods.jpg" />
-                                    <span>舞台背景aaaa</span>
-                                    <span>设计者：Anny</span>
+                                    
                                 </label>
                             </div>
                         </td>
-                        <td class="selling-price number text-right" data-bind="76.55">76.55</td>
+                        <td class="goods-img">
+                            <img src="img/goods.jpg" />
+                        </td>
+                        <td class="goods-info text-left">
+                            <h5>主舞台背景 3D效果图</h5>
+                            <p class="order-gray">设计者：金大力</p>
+                        </td>
+                        <td class="selling-price number" data-bind="76.55">59.90</td>
                         <td class="goods-num">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon minus">-</span>
@@ -145,8 +132,8 @@
                                 <span class="input-group-addon plus">+</span>
                             </div>
                         </td>
-                        <td class="subtotal number text-right"></td>
-                        <td class="action">
+                        <td class="subtotal number"></td>
+                        <td class="action text-left">
                             <div class="delete">删除</div>
                             <div class="delete">移到我的关注</div>
                             <div class="delete">加到我的关注</div>
@@ -155,10 +142,10 @@
                 </tbody>
             </table>
 
-            <table id="cartTable" class="cart table table-condensed">
+            <table id="cartTable" class="cart table table-condensed text-center">
                 <thead>
                     <tr>
-                        <th colspan="5" class="t-checkbox">
+                        <th colspan="7" class="t-checkbox">
                             <div class="checkbox">
                                 <label>
                                     <input class="check-all check" type="checkbox" />
@@ -168,49 +155,31 @@
                             </div>
                         </th>
                     </tr>
-                    </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="2" class="goods">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" class="check-one check" />
-                                    <span class="check-icon"></span>
-                                    <img src="img/goods.jpg" />
-                                    <span>舞台背景aaaa</span>
-                                    <span>设计者：Anny</span>
-                                </label>
-                            </div>
-                        </td>
-                        <td class="selling-price number text-right" data-bind="76.55">76.55</td>
-                        <td class="goods-num">
-                            <div class="input-group input-group-sm">
-                                <span class="input-group-addon minus">-</span>
-                                <input type="text" class="number form-control input-sm" value="2" />
-                                <span class="input-group-addon plus">+</span>
-                            </div>
-                        </td>
-                        <td class="subtotal number text-right"></td>
-                        <td class="action">
-                            <div class="delete">删除</div>
-                            <div class="delete">移到我的关注</div>
-                            <div class="delete">加到我的关注</div>
-                        </td>
+                    <tr class="order-discount">
+                        <th colspan="7" class="order-gray">
+                            <span class="discount-tag">满减</span> 活动商品购满￥300，即可享受满减 > <a href="#">去凑单</a> >
+                        </th>
                     </tr>
                     <tr>
-                        <td colspan="2" class="goods">
+                        <td class="order-add">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" class="check-one check" />
                                     <span class="check-icon"></span>
-                                    <img src="img/goods.jpg" />
-                                    <span>舞台背景aaaa</span>
-                                    <span>设计者：Anny</span>
+                                    
                                 </label>
                             </div>
                         </td>
-                        <td class="selling-price number text-right" data-bind="76.55">76.55</td>
+                        <td class="goods-img">
+                            <img src="img/goods.jpg" />
+                        </td>
+                        <td class="goods-info text-left">
+                            <h5>主舞台背景 3D效果图1</h5>
+                            <p class="order-gray">设计者：金大力</p>
+                        </td>
+                        <td class="selling-price number" data-bind="76.55">59.90</td>
                         <td class="goods-num">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon minus">-</span>
@@ -218,8 +187,46 @@
                                 <span class="input-group-addon plus">+</span>
                             </div>
                         </td>
-                        <td class="subtotal number text-right"></td>
-                        <td class="action">
+                        <td class="subtotal number"></td>
+                        <td class="action text-left">
+                            <div class="delete" data-toggle="modal">删除</div>
+                            <div class="delete" data-toggle="modal">移到我的关注</div>
+                            <div class="delete" data-toggle="modal">加到我的关注</div>
+                        </td>
+                    </tr>
+
+                    <tr class="order-discount">
+                        <th colspan="7" class="order-gray">
+                            <span class="discount-tag">满减</span> 活动商品购满￥300，即可享受满减 > <a href="#">去凑单</a> >
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="order-add">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="check-one check" />
+                                    <span class="check-icon"></span>
+                                    
+                                </label>
+                            </div>
+                        </td>
+                        <td class="goods-img">
+                            <img src="img/goods.jpg" />
+                        </td>
+                        <td class="goods-info text-left">
+                            <h5>主舞台背景 3D效果图</h5>
+                            <p class="order-gray">设计者：金大力</p>
+                        </td>
+                        <td class="selling-price number" data-bind="76.55">59.90</td>
+                        <td class="goods-num">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon minus">-</span>
+                                <input type="text" class="number form-control input-sm" value="2" />
+                                <span class="input-group-addon plus">+</span>
+                            </div>
+                        </td>
+                        <td class="subtotal number"></td>
+                        <td class="action text-left">
                             <div class="delete">删除</div>
                             <div class="delete">移到我的关注</div>
                             <div class="delete">加到我的关注</div>
@@ -231,38 +238,30 @@
     </div>
 
 
-    <div class="order-foot">
+    <div class="order-foot cart-wrap">
         <div class="container">
             <div class="row order-gray">
-                <div class="col-md-6 col-lg-6 col-sm-6 text-center cart-wrap">
-                    <div class="checkbox bottom-check">
-                        <label>
+                <div class="col-md-7 col-lg-7 col-sm-7 text-left cart-wrap">
+                    <div class="checkbox">
+                        <label class="bottom-check">
                             <input class="check-cart bottom-check check" type="checkbox" />
                             <span class="check-icon"></span>
-                            <span>全选</span>
+                            <span class="text-tag">全选</span>
                         </label>
-                        <span class="delete">删除选中的商品 </span>
-                        <span class="delete">移到我的关注 </span>
+                        <span type="button" class="delete-all"> 删除选中的商品 </span>
+                        <span type="button" class="delete-all"> 移到我的关注 </span>
                     </div>
                 </div>
                 <div class="col-md-3 col-lg-3 col-sm-3 text-right">
-                    <span class="cart-summary text-center">
-                        <span class="total">
-                            <label>
-                                <span>金额合计:
-                                    <em id="priceTotal" class="price-total order-orange">0.00</em>
-                                </span>
-                                <span>已经节省 -￥0.00</span>
-                            </label>
-                        </span>
-                        <!--<div class="pull-right">
-                        <label>
-                            您选择了<span id="itemCount"></span> 种产品型号， 共计 <span id="qtyCount"></span>件
-                        </label>
-                    </div>-->
-                    </span>
+                    <div class="cart-summary">
+                        <div class="total">
+                            总价:
+                            <span id="priceTotal" class="price-total order-orange">0.00</span>
+                            <p>已节省 -￥0.00</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-lg-3 col-sm-3">
+                <div class="col-md-2 col-lg-2 col-sm-2">
                     <div id="btn_settlement" class="pay-btn">
                         结算
                     </div>
@@ -270,13 +269,6 @@
             </div>
         </div>
     </div>
-
-
-    <script>
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').focus()
-        })
-    </script>
 </body>
 
 </html>

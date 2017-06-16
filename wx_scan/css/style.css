@@ -97,12 +97,14 @@ body {
 }
 
 .order-title span {
-    display: inline-block;
     padding-right: 1rem;
+    border-right: 2px solid #b2b2b2;
 }
 
-.order-title span:after {
-    border-right: 2px solid #b2b2b2;
+.order-title em {
+    padding-left: 1rem;
+    font-style: normal;
+    font-size: 1.4rem;
 }
 
 .order-head {
@@ -137,23 +139,54 @@ table.cart tbody .price-total:before {
 
 .cart-wrap th,
 .cart-wrap td {
-    padding-right: 1rem !important;
-    padding-left: 1rem !important;
-    padding-top: 1.4rem !important;
-    border-top: 0 !important;
-    border-bottom: 1px solid #eee;
+    font-weight: normal;
+    padding: 1.2rem 1rem 1.2rem 0 !important;
+    border-bottom: 0 !important;
+    border-top: 1px solid #f0f0f0 !important;
+}
+.cart-wrap th{
+    border-top: 1.5px solid #ddd !important;
 }
 
-.cart-wrap .goods {
-    width: 55%;
+.cart-wrap tr:first-child th{
+    border-top:0 !important;
+}
+.cart-wrap .order-add{
+    /*border-bottom: 0px;*/
+}
+.cart-wrap .order-add{
+    width: 3%;
+    border: 0 !important;
+}
+.cart-wrap .order-add-th{
+    width: 15%;
+    padding-left: 15px !important;
+}
+.cart-wrap .goods-th{
+    width: 40%;
+}
+.table>tbody>tr>th{
+    vertical-align: middle;
+}
+.cart-wrap .goods-img {
+    width: 14%;
     overflow: hidden;
 }
-
+.cart-wrap .goods-info {
+    width: 38%;
+    vertical-align: middle;
+}
+.goods-info h5{
+    font-size: 1.6rem;
+}
 .cart-wrap .selling-price,
 .cart-wrap .goods-sum,
 .cart-wrap .subtotal {
     width: 10%;
     line-height: 2;
+}
+.cart-wrap .subtotal{
+    /*text-align: center;*/
 }
 
 .cart-wrap .action {
@@ -166,6 +199,12 @@ table.cart tbody .price-total:before {
     line-height: 2;
 }
 
+.cart{
+    border-bottom: 1px solid #eee;
+}
+.cart-wrap:last-child{
+    border-bottom:0 !important;
+}
 .input-group {
     margin: 0 auto;
     width: 100%;
@@ -204,10 +243,16 @@ table.cart tbody .price-total:before {
 .check {
     display: none;
 }
-
+.checkbox{
+    margin: 0;
+    position: relative;
+}
+.checkbox label, .radio label{
+    padding-left: 0;
+}
 .checkbox span {
     display: inline-block;
-    line-height: 2rem;
+    /*line-height: 2rem;*/
 }
 
 .checkbox .check-icon {
@@ -221,6 +266,13 @@ table.cart tbody .price-total:before {
     background: #fff;
     position: relative;
     border: 1px solid #ffc43a;
+}
+
+.checkbox .text-tag{
+    display: block;
+    position: absolute;
+    left: 2.6rem;
+    top:0;
 }
 
 .check:checked+.check-icon {
@@ -238,16 +290,63 @@ table.cart tbody .price-total:before {
 }
 
 .goods-type {
+    position: absolute;
+    top: 0;
+    left: 2.4rem;
     display: inline-block;
-    padding: 0.4rem 0.6rem;
+    padding: 0.26rem 0.8rem;
     background: #ffc43a;
     color: #fff;
 }
+.order-discount{
+    padding: 1rem;
+}
 .order-discount th{
-    border-bottom: 0;
+     padding:  1rem 1rem !important;
+    /*border-bottom: 0;*/
     font-weight: normal;
 }
+.order-discount a{
+    color: #444;
+}
+
 .discount-tag{
-    padding:  0.4rem 0.6rem;
-    border: 1px solid #ffc43a;
+    display: inline-block;
+    padding:  0.1rem 0.4rem;
+    border: 2px solid #ffc43a;
+    color:#ffc43a;
+    margin-bottom: 0.2rem;
+    margin-right: 1rem;
+    position: relative;
+}
+.discount-tag:after{
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: -2.6rem;
+    /*background: #000;*/
+    height: 2.2rem;
+    border: 1px dotted #eee; 
+}
+ 
+.order-foot .checkbox{
+    padding-left: 8rem;
+    line-height: 4rem;
+    position: relative;
+}
+.order-foot .check-icon{
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+}
+.bottom-check .text-tag{
+    left: 5.2rem;
+}
+.order-foot .delete-all{
+    margin-left: 1.4rem;
+}
+
+.price-total{
+    display: inline-block;
+    font-size: 2rem;
 }
