@@ -436,7 +436,7 @@ table.cart tbody .price-total:before {
 }
 
 .deal-head .date {
-    width: 28%;
+    width: 42%;
 }
 
 .deal-head .date em {
@@ -445,12 +445,12 @@ table.cart tbody .price-total:before {
 }
 
 .deal-head .server {
-    width: 30%;
+    width: 10%;
     text-align: center;
 }
 
 .deal-head .contact {
-    width: 40%;
+    width: 44%;
     text-align: right;
 }
 
