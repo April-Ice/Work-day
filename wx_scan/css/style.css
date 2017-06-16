@@ -98,7 +98,7 @@ body {
 
 .order-title span {
     padding-right: 1rem;
-    border-right: 2px solid #b2b2b2;
+    border-right: 2px solid #a49999;
 }
 
 .order-title em {
@@ -377,18 +377,38 @@ table.cart tbody .price-total:before {
 
 
 /*------我的订单-------*/
-
+.deal-gray{
+    color: #b2b2b2;
+}
 .deal-main {
     background: #fff;
     min-height: 100vh;
 }
 
-.deal-main .deal-active{
+.deal-main  a{
+    color: inherit;
+}
+
+.deal-main .types {
+    padding: 1rem 0;
+}
+
+.deal-main .types span {
+    display: inline-block;
+    padding: 0 1rem;
+    margin: 0 0.4rem 0 0;
+}
+
+.deal-main .types span:first-child {
+    border-right: 2px solid #eee;
+}
+
+.deal-main .deal-active {
     color: #ffc43a;
 }
 
 .deal-one {
-    margin: 1rem 0.4rem;
+    margin: 2rem 0.5rem;
     border: 1px solid #eee;
     border-radius: 0.3rem;
 }
@@ -401,10 +421,40 @@ table.cart tbody .price-total:before {
 .deal-head {
     background: #f1f1f1;
     padding: 1rem;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.deal-head span {
+    display: inline-block;
+}
+
+.deal-head .date {
+    width: 28%;
+}
+
+.deal-head .date em {
+    font-style: normal;
+    margin-left: 3rem;
+}
+
+.deal-head .server {
+    width: 30%;
+    text-align: center;
+}
+
+.deal-head .contact {
+    width: 40%;
+    text-align: right;
 }
 
 .deal-one td {
-    padding: 1rem 0;
+    padding: 1.2rem 0;
+    vertical-align: top;
+}
+
+.deal-one td h5, .deal-one td p{
+    margin-top: 1rem;
 }
 
 .deal-one td.border-left {
@@ -413,23 +463,10 @@ table.cart tbody .price-total:before {
 }
 
 .deal-info .title {
-    padding: 0 2rem 0 1rem;
+    padding: 1.2rem 2rem 0 1rem;
     width: 24%;
 }
 
 .deal-info .origin-price {
     text-decoration: line-through;
-}
-
-.deal-main .types{
-    padding: 1rem 0;
-    /*line-height: 3;*/
-}
-.deal-main .types span{
-    display: inline-block;
-    padding: 0 1rem;
-    margin: 0 0.4rem 0 0;
-}
-.deal-main .types span:first-child{
-    border-right: 2px solid #eee;
 }
