@@ -377,15 +377,17 @@ table.cart tbody .price-total:before {
 
 
 /*------我的订单-------*/
-.deal-gray{
-    color: #b2b2b2;
+
+.deal-gray {
+    color: #7a7a7a;
 }
+
 .deal-main {
     background: #fff;
     min-height: 100vh;
 }
 
-.deal-main  a{
+.deal-main a {
     color: inherit;
 }
 
@@ -420,7 +422,8 @@ table.cart tbody .price-total:before {
     margin: 0 1rem;
     text-align: center;
 }
-.deal-info:hover{
+
+.deal-info:hover {
     background: #f8f7f7;
 }
 
@@ -459,7 +462,8 @@ table.cart tbody .price-total:before {
     vertical-align: top;
 }
 
-.deal-one td h5, .deal-one td p{
+.deal-one td h5,
+.deal-one td p {
     margin-top: 1rem;
 }
 
@@ -477,7 +481,7 @@ table.cart tbody .price-total:before {
     text-decoration: line-through;
 }
 
-.protect-icon{
+.protect-icon {
     background: url(../img/protect.png) no-repeat center;
     background-size: auto 1.4rem;
     display: inline-block;
