@@ -391,6 +391,7 @@ table.cart tbody .price-total:before {
 
 .deal-main .types {
     padding: 1rem 0;
+    font-size: 1.6rem;
 }
 
 .deal-main .types span {
@@ -401,15 +402,16 @@ table.cart tbody .price-total:before {
 }
 
 .deal-main .types span:first-child {
-    border-right: 2px solid #eee;
+    border-right: 1.6px solid #b6b6b6;
 }
 
 .deal-main .deal-active {
     color: #ffc43a;
+    font-size: 1.8rem;
 }
 
 .deal-one {
-    margin: 2rem 0.5rem;
+    margin: 1.4rem 0.5rem;
     border: 1px solid #eee;
     border-radius: 0.3rem;
 }
@@ -417,6 +419,9 @@ table.cart tbody .price-total:before {
 .deal-one table {
     margin: 0 1rem;
     text-align: center;
+}
+.deal-info:hover{
+    background: #f8f7f7;
 }
 
 .deal-head {
