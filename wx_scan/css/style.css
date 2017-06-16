@@ -394,6 +394,7 @@ table.cart tbody .price-total:before {
 }
 
 .deal-main .types span {
+    cursor: pointer;
     display: inline-block;
     padding: 0 1rem;
     margin: 0 0.4rem 0 0;
@@ -469,4 +470,12 @@ table.cart tbody .price-total:before {
 
 .deal-info .origin-price {
     text-decoration: line-through;
+}
+
+.protect-icon{
+    background: url(../img/protect.png) no-repeat center;
+    background-size: auto 1.4rem;
+    display: inline-block;
+    width: 5rem;
+    height: 2rem;
 }
