@@ -488,3 +488,275 @@ table.cart tbody .price-total:before {
     width: 5rem;
     height: 2rem;
 }
+
+
+/*------配送页面 adress-------*/
+
+.adress-main{
+    background: #fff;
+    min-height: 100vh;
+}
+
+.adress-title{
+    margin: 2rem auto;
+    line-height: 2;
+    border-bottom: 1px solid #eee;
+    font-weight:  bold;
+}
+.no-border{
+    border:  0 !important;
+}
+
+.pay-type .radio-inline{
+    padding: 0.6rem 3rem 0.6rem 0.6rem;
+    border: 1px solid #f1f1f1;
+    margin-right: 2rem;
+}
+.pay-type .pay-active{
+    border: 2px solid #b99877;
+}
+
+.pay-type input{
+    display: none;
+}
+.pay-type img{
+    width: 6rem;
+ }
+
+.deal-detail .good-img{
+    width: 8%;
+}
+.deal-detail .good-img img{
+    width: 6rem;
+}
+.deal-detail  .good-title{
+    width: 25%;
+}
+.deal-detail  .good-attr{
+    width: 20%;
+}
+.deal-detail  .good-attr p{
+    margin: 0 0 2px;
+}
+.deal-detail th{
+    border-top: 0 !important;
+    border-bottom: 2px solid #c3d0f0;
+}
+.address-check td{
+    border-top: 0 !important;
+    padding:  0 8px !important;
+}
+
+.deal-detail .shop-info{
+    height: 4.6rem;
+    vertical-align: bottom;
+}
+.deal-detail .shop-logo img{
+    width:1.8rem;
+}
+.shop-contact{
+    font-weight: bold;
+    margin-left: 3rem;
+}
+
+.other-adress{
+    line-height: 3;
+    color: #ff4d00;
+}
+
+.deal-price{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e64b2d;
+}
+
+.deal-total{
+    display: inline-block;
+    padding: 0.8rem 0.8rem 0.8rem 8rem;
+    border: 1.4px solid #cd9284;
+    margin: 0;
+    background: none;
+    border-radius: 0;
+}
+
+.address-check .radio-icon {
+    vertical-align: middle;
+    margin-right: 1rem;
+    display: inline-block;
+    padding-top: 2px;
+    position: relative;
+    
+}
+.address-check .radio-icon em{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    border: 2px solid #eee;
+}
+
+.text-tag{
+    vertical-align: middle;
+}
+
+.check-one:checked + .radio-icon em {
+    border: 6px solid #2e95e4;
+}
+
+.ad-content{
+    width: 80%;
+}
+
+.address-check .radio-active{
+    border: 1px solid #c09781;
+    background: #feefe8;
+}
+
+.ad-head{
+    width: 15%;
+    visibility: hidden;
+    color: #cd350e;
+}
+
+.radio-active .ad-head{
+    visibility: visible;
+}
+
+.ad-head span{height:30px; width:30px; display:inline-block; position:relative;} 
+
+.send-icon{
+    width:22px;
+}
+
+.send-icon:before{
+    content:'';
+    height:18px; 
+    width:18px;
+    border:4px solid #cd350e; 
+    display:block; 
+    position:absolute; top:9px; left:0px; 
+    z-index:1; background:#fff; 
+    border-radius:50%;
+    color:#fff; 
+    text-align:center;
+}
+
+.send-icon:after{
+    content:''; 
+    height:0px; 
+    width:0px; 
+    display:block;
+    position:absolute; 
+    bottom:-8px; 
+    left:1px; 
+    border:10px transparent solid; 
+    border-top-color:#cd350e;
+    border-width:16px 8px 0px 8px; 
+}
+
+.address-check .remove{
+    visibility: hidden;
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-top: 1rem;
+    cursor: pointer;
+}
+.radio-active .remove{
+    visibility: visible;
+}
+
+.address-check input{
+    display: none;
+}
+
+.other-adress .btn{
+    background: none;
+    color: #2f94fc;
+}
+
+.address-check{
+    margin-bottom: 0 !important;
+}
+.other-adress .btn:focus{
+    outline: none;
+    background: #eee;
+}
+
+.address-sub{
+    background: #ff4701;
+    border-radius: 0;
+    color: #fff;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    margin-bottom: 3rem;
+}
+
+.address-sub:focus{
+    outline: none;
+    color: #fff;
+}
+
+.ad-goods{
+    background: #fbfcff;
+}
+
+.deal-detail{
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #eee;
+}
+
+.deal-detail td{
+    border-top:1px dotted #ebebeb !important;
+}
+
+.ad-modal .modal-header{
+    background: #eee;
+}
+
+.ad-modal .required{
+    color: #c40a0a;
+    font-size: 1.8rem;
+}
+
+.ad-modal .control-label{
+    color: #878686;
+}
+
+.admodal-sub{
+    padding-left: 16.68%;
+}
+
+.admodal-sub .btn{
+    margin-top: 2rem;
+    display: inline-block;
+    padding-left: 3rem !important;
+    padding-right: 3rem;
+}
+
+.admodal-sub .submit{
+    margin-right: 1rem;
+    background: #eb9e55;
+    color: #fff;
+}
+
+.ad-modal .modal-header{
+    padding: 8px 15px;
+}
+
+.ad-modal .modal-header h4{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.ad-modal .modal-body{
+    padding: 4rem 15px;
+}
+
+.ad-modal.in .modal-dialog{
+    margin-top: 20vh;
+}

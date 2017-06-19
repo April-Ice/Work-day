@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>All goods</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/adress.js"></script>
+</head>
+
+<body>
+    <!--导航示例图可删除start-->
+    <div class="row" text-center>
+        <img style="width:100%" src="img/banner.jpg">
+    </div>
+    <!--导航示例图可删除end-->
+
+    <div class="container adress-main">
+        <div class="row adress-title">
+            <span>确认收货地址</span>
+        </div>
+
+        <table class="table address-check">
+            <tr class="radio-active">
+                <td class="ad-head">
+                    <span class="send-icon"></span>寄送至
+                </td>
+                <td class="ad-content">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="adress" class="check-one" id="" value="" checked>
+                            <!--<input class="check-one check" type="checkbox" />-->
+                            <span class="radio-icon">
+                                <em></em> 北京 北京市 石景山区 鲁谷街道 远洋山水北区6号楼1单元（张敏 收）15101140405
+                            </span>
+                        </label>
+                    </div>
+                    <td class="text-right">
+                        <span class="remove">X</span>
+                    </td>
+            </tr>
+
+            <tr>
+                <td class="ad-head">
+                    <span class="send-icon"></span>寄送至
+                </td>
+                <td class="ad-content">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="adress" class="check-one" id="" value="">
+                            <span class="radio-icon">
+                                <em></em> 北京 北京市 石景山区 鲁谷街道 远洋山水北区6号楼2单元（张敏 收）15101140405
+                            </span>
+                        </label>
+                    </div>
+                    <td class="text-right">
+                        <span class="remove">X</span>
+                    </td>
+            </tr>
+
+            <tr>
+                <td class="ad-head">
+                    <span class="send-icon"></span>寄送至
+                </td>
+                <td class="ad-content">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="adress" class="check-one" id="" value="">
+                            <span class="radio-icon">
+                                <em></em> 北京 北京市 石景山区 鲁谷街道 远洋山水北区6号楼3单元（张敏 收）15101140405
+                            </span>
+                        </label>
+                    </div>
+                    <td class="text-right">
+                        <span class="remove">X</span>
+                    </td>
+            </tr>
+        </table>
+
+        <div class="row other-adress">
+            <div class="col-lg-offset-2 col-md-offset-2 col-xs-offset-2">
+                <button type="button" class="btn" data-toggle="modal" data-target=".bs-example-modal-lg">
+                    使用其他地址
+            </button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg ad-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">修改收货地址</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="addressForm">
+                            <div class="form-group  has-feedback">
+                                <label for="inputEmail3" class="col-sm-2 control-label"><span class="required">* </span>收货人：</label>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="请输入收货人" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label"><span class="required">* </span>地址：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="address" placeholder="请输入地址" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-sm-2 control-label"><span class="required">* </span>手机号码：</label>
+                                <div class="col-sm-5">
+                                    <input type="tel number" class="form-control" id="phone" placeholder="请输入手机号码" required>
+                                </div>
+                            </div>
+                            <div class="admodal-sub">
+                                <button type="submit" class="btn submit">保存</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row adress-title">
+            <span>选择支付方式</span>
+        </div>
+        <div class="row pay-type">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <label class="radio-inline pay-active">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 
+                    <img src="img/pay1.png">
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 
+                    <img src="img/pay2.jpg">
+                </label>
+            </div>
+        </div>
+
+        <div class="row adress-title no-border">
+            <span>确认订单信息</span>
+        </div>
+
+        <table class="table deal-detail">
+            <tr>
+                <th colspan="2" class="text-center">店铺宝贝</th>
+                <th class="good-attr">商品属性</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>优惠方式</th>
+                <th class="text-right">小计</th>
+            </tr>
+            <tr>
+                <td colspan="7" class="shop-info">
+                    <span class="shop-logo"> <img src="img/member.jpg" /> </span>
+                    <span class="shop-name">店铺：东方题材 </span>
+                    <span class="shop-contact">联系电话：13388000098 </span>
+                </td>
+            </tr>
+            <tr class="ad-goods">
+                <td class="good-img">
+                    <img src="img/goods.jpg" />
+                </td>
+                <td class="good-title">
+                    主舞台背景 3D效果图
+                </td>
+                <td class="good-attr">
+                    <p>颜色分类：大陆行货</p>
+                    <p>套餐：套餐一</p>
+                </td>
+                <td>
+                    50.00
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    无优惠
+                </td>
+                <td class="text-right">
+                    50.00
+                </td>
+            </tr>
+            <tr class="ad-goods">
+                <td class="good-img">
+                    <img src="img/goods.jpg" />
+                </td>
+                <td>
+                    主舞台背景 3D效果图
+                </td>
+                <td class="good-attr">
+                    <p>镜头卡口：尼康</p>
+                    <p>套餐类型：官方标配</p>
+                    <p>颜色分类：全新三码合一</p>
+                </td>
+                <td>
+                    7550.00
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    无优惠
+                </td>
+                <td class="text-right">
+                    7550.00
+                </td>
+            </tr>
+        </table>
+
+        <div class="row text-right">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button class="btn deal-total">实付款：<span class="deal-price">￥7525.00</span></button>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button class="btn address-sub">提交订单</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+        })
+    </script>
+</body>
+
+</html>
