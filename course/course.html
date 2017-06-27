@@ -38,837 +38,843 @@
         <!--{{$data}}-->
     </script>
 
-    <div class="course Top" style="z-index: 10;">
-        <div class="Page">
-            <div class="edu-ad" type="course" style="margin-bottom: 10px;">
-                <a href="javascript:;" target="_blank" title="linux">
-                    <img src="img/ad1.png" alt="linux" width="1200" height="100">
-                </a>
-            </div>
-            <div class="Info">
-                <p class="roadLink">
-                    <a href="javascript:;">视频课程</a>
-                    <span>&gt;</span>
-                    <a href="javascript:;">系统/运维</a>
-                    <span>&gt;</span>
-                    <a href="javascript:;">Linux</a>
-                    <span>&gt;</span> 课程详情
-                </p>
+    <div id="couse-top"></div>
+    <script id="top-t" type="text/html">
+        <div class="course Top" style="z-index: 10;">
+            <div class="Page">
+                <div class="edu-ad" type="course" style="margin-bottom: 10px;">
+                    <a href="javascript:;" target="_blank" title="linux">
+                        <img src="img/ad1.png" alt="linux" width="1200" height="100">
+                    </a>
+                </div>
+                <div class="Info">
+                    <p class="roadLink">
+                        <a href="javascript:;">视频课程</a>
+                        <span>&gt;</span>
+                        <a href="javascript:;">系统/运维</a>
+                        <span>&gt;</span>
+                        <a href="javascript:;">Linux</a>
+                        <span>&gt;</span> 课程详情
+                    </p>
 
-                <div class="fl">
-                    <div class="pic">
-                        <img width="500" height="300" src="./img/course.jpg">
-                        <!-- 小角标 -->
-                        <p class="act_tab">
-                            <span class="act_tab_l">7.1-7.7</span>
-                            <span class="act_tab_r">6折</span>
-                        </p>
-                    </div>
-                    <div class="acts">
-                        <div class="download fl">
-                            <p>下载课程</p>
-                            <div class="qrcode tc">
-                                <img class="mb10" src="./img/qrcode.png">
-                                <p>下载学院APP</p>
-                                <p>缓存视频离线看</p>
-                            </div>
+                    <div class="fl">
+                        <div class="pic">
+                            <img width="500" height="300" src="./img/course.jpg">
+                            <!-- 小角标 -->
+                            <p class="act_tab">
+                                <span class="act_tab_l">7.1-7.7</span>
+                                <span class="act_tab_r">6折</span>
+                            </p>
                         </div>
-                        <a href="javascript:;" target="_blank" class="fl"></a>
-                        <a href="javascript:void(0)" class="fav fr " id="fav">
+                        <div class="acts">
+                            <div class="download fl">
+                                <p>下载课程</p>
+                                <div class="qrcode tc">
+                                    <img class="mb10" src="./img/qrcode.png">
+                                    <p>下载学院APP</p>
+                                    <p>缓存视频离线看</p>
+                                </div>
+                            </div>
+                            <a href="javascript:;" target="_blank" class="fl"></a>
+                            <a href="javascript:void(0)" class="fav fr " id="fav">
                             <i class="icon"></i><span id="favFont">收藏</span>
                             (<span id="favNum">520</span>)
                         </a>
-                        <div class="bdsharebuttonbox fr bdshare-button-style0-16" data-bd-bind="1498466778624">
-                            <a class="bds_more share" data-cmd="more" name="" style="line-height: 20px;margin: 0;padding-left: 24px;background: none;display: block;height: 20px;position: relative;font-size: 14px;">
+                            <div class="bdsharebuttonbox fr bdshare-button-style0-16" data-bd-bind="1498466778624">
+                                <a class="bds_more share" data-cmd="more" name="" style="line-height: 20px;margin: 0;padding-left: 24px;background: none;display: block;height: 20px;position: relative;font-size: 14px;">
                                 <i class="icon"></i>分享
                             </a>
+                            </div>
+                            <div class="clear"></div>
                         </div>
-                        <div class="clear"></div>
                     </div>
-                </div>
-                <div class="main fr">
-                    <h2 id="CourseTitle">深度讲解Linux企业级集群实现方案【马哥linux视频课程】</h2>
-                    <p>适用人群： Linux初学者、Linux爱好者、系统管理员。</p>
-                    <div class="CourseTime">
-                        <span>共14课时</span>
-                        <span>共6小时8分钟</span>
-                        <span>更新时间：2014-07-29</span>
-                        <div class="clear"></div>
-                    </div>
-                    <!--<p class="red"></p>-->
-                    <div class="price">
-                        <dl>
-                            <dt>价　　格</dt>
-                            <dd>
-                                <p class="red fl f26">¥119</p>
-                                <div class="clear"></div>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="serve">
-                        <p>
-                            <span>24</span>24小时内答疑</p>
-                        <p class="hasIcon">
-                            <span><i class="icon"></i></span>课时永久观看
-                        </p>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="Btns" id="buyBtns">
-                        <button class="red" onclick="setGoCat()">立即购买</button>
-                        <button class="red2 addCart">加入购物车</button>
-                        <button id="qqwaps">学习咨询</button>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-
-    <!--相关专题-->
-    <div class="Page course" style="z-index: 9;">
-        <div class="topic" style="display: block;">
-            <dl>
-                <dt>
-                    <p class="cur spec" style="display: block;">相关专题</p>
-                    <p class="pxb">微职位学习</p>
-                    <div class="spec fr" id="specBtns">
-                        <i class="icon next"> > </i>
-                        <i class="icon prev"> < </i>
-                    </div>
-                </dt>
-                <dd>
-                    <div class="topicList spec" style="display: block;">
-                        <ul id="Spec" style="width: 2370px;">
-                            <li>
-                                <a href="javascript:;" class="pic fl">
-                                    <img src="./img/about1.jpg">
-                                    <p class="act_tab">
-                                        <span class="act_tab_l">7.1-7.7</span>
-                                        <span class="act_tab_r">折上8折</span>
-                                    </p>
-                                </a>
-                                <div class="fl main">
-                                    <a href="javascript:;" class="f16 title" title="">拯救未来：名师三人行联手打造最强系统/网络视频课程专题</a>
-                                    <div class="clear"></div>
-                                    <p class="fl">立省
-                                        <span class="red">￥5641</span>
-                                    </p>
-                                    <a href="javascript:;" class="btn fr">去购买</a>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="pic fl">
-                                    <img src="./img/about2.jpg">
-                                    <p class="act_tab">
-                                        <span class="act_tab_l">7.1-7.7</span>
-                                        <span class="act_tab_r">折上8折</span>
-                                    </p>
-                                </a>
-                                <div class="fl main">
-                                    <a href="javascript:;" class="f16 title" title="">
-                                        Linux运维初级到高级学习线路图课程专题
-                                    </a>
-                                    <div class="clear"></div>
-                                    <p class="fl">立省
-                                        <span class="red">￥2091</span>
-                                    </p>
-                                    <a href="javascript:;" class="btn fr">去购买</a>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="pic fl">
-                                    <img src="./img/about3.jpg">
-                                    <p class="act_tab">
-                                        <span class="act_tab_l">7.1-7.7</span>
-                                        <span class="act_tab_r">折上8折</span>
-                                    </p>
-                                </a>
-                                <div class="fl main">
-                                    <a href="javascript:;" class="f16 title" title="">
-                                        Linux运维工程师资深企业级培训课程套餐
-                                    </a>
-                                    <div class="clear"></div>
-                                    <p class="fl">立省
-                                        <span class="red">￥1912</span>
-                                    </p><a href="javascript:;" class="btn fr">去购买</a>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="pic fl">
-                                    <img src="./img/about4.jpg">
-                                    <p class="act_tab">
-                                        <span class="act_tab_l">7.1-7.7</span>
-                                        <span class="act_tab_r">折上8折</span>
-                                    </p>
-                                </a>
-                                <div class="fl main">
-                                    <a href="javascript:;" class="f16 title" title="">
-                                    51CTO学院Linux+Python运维高薪就业班 第一期【专题】【已结束】
-                                    </a>
-                                    <div class="clear"></div>
-                                    <p class="fl">立省
-                                        <span class="red">￥827</span>
-                                    </p><a href="javascript:;" class="btn fr">去购买</a>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="pic fl">
-                                    <img src="./img/about5.jpg">
-                                    <p class="act_tab">
-                                        <span class="act_tab_l">7.1-7.7</span>
-                                        <span class="act_tab_r">折上8折</span>
-                                    </p>
-                                </a>
-                                <div class="fl main">
-                                    <a href="javascript:;" class="f16 title" title="">
-                                        Linux运维工程师中级套餐-Linux常见网络服务及安全应用
-                                    </a>
-                                    <div class="clear"></div>
-                                    <p class="fl">立省
-                                        <span class="red">￥520</span>
-                                    </p>
-                                    <a href="javascript:;" class="btn fr">去购买</a>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="pic fl">
-                                    <img src="./img/about6.jpg">
-                                    <p class="act_tab">
-                                        <span class="act_tab_l">7.1-7.7</span>
-                                        <span class="act_tab_r">折上8折</span>
-                                    </p>
-                                </a>
-                                <div class="fl main">
-                                    <a href="javascript:;" class="f16 title" title="">
-                                        Linux运维工程师高级套餐-Linux运维数据库、集群、高可用全面提升
-                                    </a>
-                                    <div class="clear"></div>
-                                    <p class="fl">立省
-                                        <span class="red">￥480</span>
-                                    </p>
-                                    <a href="javascript:;" class="btn fr">去购买</a>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </dd>
-            </dl>
-        </div>
-
-
-        <div class="Course">
-            <div class="Left">
-                <dl class="tabs">
-                    <dt class="tabsTil" id="tabsTil">
-                        <p class="cur">课程介绍</p>
-                        <p>课程大纲</p>
-                        <p>学习资料</p>
-                        <p>学员评价</p>
-                    </dt>
-                    <dd class="tabsCon">
-                        <div class="tabsConItem intro">
+                    <div class="main fr">
+                        <h2 id="CourseTitle">深度讲解Linux企业级集群实现方案【马哥linux视频课程】</h2>
+                        <p>适用人群： Linux初学者、Linux爱好者、系统管理员。</p>
+                        <div class="CourseTime">
+                            <span>共14课时</span>
+                            <span>共6小时8分钟</span>
+                            <span>更新时间：2014-07-29</span>
+                            <div class="clear"></div>
+                        </div>
+                        <!--<p class="red"></p>-->
+                        <div class="price">
                             <dl>
-                                <dt>课程目标</dt>
-                                <dd>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡</dd>
-                                <dt>适用人群</dt>
-                                <dd>Linux初学者、Linux爱好者、系统管理员。</dd>
-                                <dt>课程简介</dt>
-                                <dd id="content_code">
-                                    <p>
-                                        本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                    <p style="white-space: normal;">
-                                        <span style="color: rgb(255, 0, 0);">
-                                            课程学习中有遇到疑问或者技术问题，可加内部交流群 181624275进行交流
-                                        </span>
-                                    </p>
+                                <dt>价　　格</dt>
+                                <dd>
+                                    <p class="red fl f26">¥119</p>
+                                    <div class="clear"></div>
                                 </dd>
                             </dl>
                         </div>
-                        <!--课程大纲-->
-                        <div class="tabsConItem syllabus">
-                            <ul id="syList" class="noChapter">
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>1</p>
-                                        <p title="企业级集群方案演变、从DNS负载均衡到专业负载均衡应用">企业级集群方案演变、从DNS负载均衡到专业负载均衡应</p>
-                                        <p class="look red">[免费观看]</p>
-                                        <span class="time">47:00</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
+                        <div class="serve">
+                            <p>
+                                <span>24</span>24小时内答疑</p>
+                            <p class="hasIcon">
+                                <span><i class="icon"></i></span>课时永久观看
+                            </p>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="Btns" id="buyBtns">
+                            <button class="red" onclick="setGoCat()">立即购买</button>
+                            <button class="red2 addCart">加入购物车</button>
+                            <button id="qqwaps">学习咨询</button>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!--相关专题-->
+    <div id="about-con"></div>
+    <script id="about-t" type="text/html">
+        <div class="Page course" style="z-index: 9;">
+            <div class="topic" style="display: block;">
+                <dl>
+                    <dt>
+                        <p class="cur spec" style="display: block;">相关专题</p>
+                        <p class="pxb">微职位学习</p>
+                        <div class="spec fr" id="specBtns">
+                            <i class="icon next"> > </i>
+                            <i class="icon prev"> < </i>
+                        </div>
+                    </dt>
+                    <dd>
+                        <div class="topicList spec" style="display: block;">
+                            <ul id="Spec" style="width: 2370px;">
+                                <li>
+                                    <a href="javascript:;" class="pic fl">
+                                        <img src="./img/about1.jpg">
+                                        <p class="act_tab">
+                                            <span class="act_tab_l">7.1-7.7</span>
+                                            <span class="act_tab_r">折上8折</span>
+                                        </p>
+                                    </a>
+                                    <div class="fl main">
+                                        <a href="javascript:;" class="f16 title" title="">拯救未来：名师三人行联手打造最强系统/网络视频课程专题</a>
+                                        <div class="clear"></div>
+                                        <p class="fl">立省
+                                            <span class="red">￥5641</span>
+                                        </p>
+                                        <a href="javascript:;" class="btn fr">去购买</a>
+                                        <div class="clear"></div>
                                     </div>
-                                    <p>介绍了早期DNS负载均衡方式随之慢慢演变成专业的负载均衡方案，深入讲解均衡原理和相关细节，如持久链接、Session同步、健康状态检测等相关机制。 如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
-                                    </p>
                                 </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>2</p>
-                                        <p title="企业级高可用集群和存储解决方案">企业级高可用集群和存储解决方案</p>
-                                        <p class="look red">[免费观看]</p>
-                                        <span class="time">43:24</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
+                                <li>
+                                    <a href="javascript:;" class="pic fl">
+                                        <img src="./img/about2.jpg">
+                                        <p class="act_tab">
+                                            <span class="act_tab_l">7.1-7.7</span>
+                                            <span class="act_tab_r">折上8折</span>
+                                        </p>
+                                    </a>
+                                    <div class="fl main">
+                                        <a href="javascript:;" class="f16 title" title="">
+                                        Linux运维初级到高级学习线路图课程专题
+                                    </a>
+                                        <div class="clear"></div>
+                                        <p class="fl">立省
+                                            <span class="red">￥2091</span>
+                                        </p>
+                                        <a href="javascript:;" class="btn fr">去购买</a>
+                                        <div class="clear"></div>
                                     </div>
-                                    <p>本章介绍了负载均衡的实现方式如硬件设备：F5 、A10、Netcaler，软负载均衡：LVS、Haproxy、Nginx、Varnish、Squid等相关产品的对比，深入了介绍高可用集群的实现方式和相关技术指标，最后着重介绍了企业级的存储解决方案。
-                                        如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
-                                    </p>
                                 </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>3</p>
-                                        <p title="企业级存储解决方案和实现方式DAS、NAS、SAN">企业级存储解决方案和实现方式DAS、NAS、SAN</p>
-                                        <p class="look red">[免费观看]</p>
-                                        <span class="time">32:22</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
+                                <li>
+                                    <a href="javascript:;" class="pic fl">
+                                        <img src="./img/about3.jpg">
+                                        <p class="act_tab">
+                                            <span class="act_tab_l">7.1-7.7</span>
+                                            <span class="act_tab_r">折上8折</span>
+                                        </p>
+                                    </a>
+                                    <div class="fl main">
+                                        <a href="javascript:;" class="f16 title" title="">
+                                        Linux运维工程师资深企业级培训课程套餐
+                                    </a>
+                                        <div class="clear"></div>
+                                        <p class="fl">立省
+                                            <span class="red">￥1912</span>
+                                        </p><a href="javascript:;" class="btn fr">去购买</a>
+                                        <div class="clear"></div>
                                     </div>
-                                    <p>本课程着重介绍了企业级存储方案和实现方式：DAS、NAS、SAN，其中深入讲解ISCSI的实现原理和对应的实现环境，以及RAID功能在企业的用途，并介绍了常见总线接口的参数对比指标，如USB、IDE、SATA、SCSI的区别。最后介绍了光存储SAN的相关原理和实现，以及高性价比的存储方案。
-                                        如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
-                                    </p>
                                 </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>4</p>
-                                        <p title="企业级负载均衡之LVS原理篇-Lvs起源和实现方式">企业级负载均衡之LVS原理篇-Lvs起源和实现方式</p>
-                                        <p class="look red">[免费观看]</p>
-                                        <span class="time">26:34</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
+                                <li>
+                                    <a href="javascript:;" class="pic fl">
+                                        <img src="./img/about4.jpg">
+                                        <p class="act_tab">
+                                            <span class="act_tab_l">7.1-7.7</span>
+                                            <span class="act_tab_r">折上8折</span>
+                                        </p>
+                                    </a>
+                                    <div class="fl main">
+                                        <a href="javascript:;" class="f16 title" title="">
+                                    51CTO学院Linux+Python运维高薪就业班 第一期【专题】【已结束】
+                                    </a>
+                                        <div class="clear"></div>
+                                        <p class="fl">立省
+                                            <span class="red">￥827</span>
+                                        </p><a href="javascript:;" class="btn fr">去购买</a>
+                                        <div class="clear"></div>
                                     </div>
-                                    <p>详细的介绍了LVS的诞生和发展，讲解了VIP、CIP、RIP的各自含义，以及LVS请求转发是如何实现的，从TCP/IP和内核层/用户层(ipvs/ipvsadm)阐述了LVS的实现方式。并详细的介绍企业级四层负载均衡使用场景和具体功能。
-                                        如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
-                                    </p>
                                 </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>5</p>
-                                        <p title="企业级负载均衡之LVS原理篇-LVS三种负载均衡模式">企业级负载均衡之LVS原理篇-LVS三种负载均衡模式</p>
-                                        <p class="look red">[免费观看]</p>
-                                        <span class="time">29:52</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
+                                <li>
+                                    <a href="javascript:;" class="pic fl">
+                                        <img src="./img/about5.jpg">
+                                        <p class="act_tab">
+                                            <span class="act_tab_l">7.1-7.7</span>
+                                            <span class="act_tab_r">折上8折</span>
+                                        </p>
+                                    </a>
+                                    <div class="fl main">
+                                        <a href="javascript:;" class="f16 title" title="">
+                                        Linux运维工程师中级套餐-Linux常见网络服务及安全应用
+                                    </a>
+                                        <div class="clear"></div>
+                                        <p class="fl">立省
+                                            <span class="red">￥520</span>
+                                        </p>
+                                        <a href="javascript:;" class="btn fr">去购买</a>
+                                        <div class="clear"></div>
                                     </div>
-                                    <p>本章介绍了LVS三种负载均衡模式即NAT、DR、TUN。课程内容讲解了这三个种类的试用场景和各自特点，深入的介绍了DR模型，从TCP/IP协议栈深入讲解请求的走向、到后端的接收和响应的整个过程，涉及LVS技术的底层细节。
-                                        如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
-                                    </p>
                                 </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>6</p>
-                                        <p title="企业级负载均衡之LVS原理篇-LVS八种负载均衡算法结合实例讲解">企业级负载均衡之LVS原理篇-LVS八种负载均衡算法</p>
-                                        <p class="look red">[免费观看]</p>
-                                        <span class="time">22:07</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
+                                <li>
+                                    <a href="javascript:;" class="pic fl">
+                                        <img src="./img/about6.jpg">
+                                        <p class="act_tab">
+                                            <span class="act_tab_l">7.1-7.7</span>
+                                            <span class="act_tab_r">折上8折</span>
+                                        </p>
+                                    </a>
+                                    <div class="fl main">
+                                        <a href="javascript:;" class="f16 title" title="">
+                                        Linux运维工程师高级套餐-Linux运维数据库、集群、高可用全面提升
+                                    </a>
+                                        <div class="clear"></div>
+                                        <p class="fl">立省
+                                            <span class="red">￥480</span>
+                                        </p>
+                                        <a href="javascript:;" class="btn fr">去购买</a>
+                                        <div class="clear"></div>
                                     </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。</p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>7</p>
-                                        <p>【马哥Linux培训高级课程】-LVS源码级讲解动态负载均衡算法过程</p>
-                                        <span class="time">22:07</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>8</p>
-                                        <p>【马哥Linux培训高薪课程】-LVS动态负载均衡算法实例和进阶</p>
-                                        <span class="time">22:07</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>9</p>
-                                        <p>【马哥Linux高薪课程】-LVS配置和参数深入剖析【业内最精细】</p>
-                                        <span class="time">22:07</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>10</p>
-                                        <p>【高薪技能】-全程带领实现LVS负载均衡实战NAT模型【业内最细】</p>
-                                        <span class="time">22:06</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>11</p>
-                                        <p>【高薪技能】-Lvs的DR模型相关原理和技术背景【业内最精细】</p>
-                                        <span class="time">19:43</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>12</p>
-                                        <p>【高薪技能】-Lvs的DR模型实现原理和深入解析【业内最精细】</p>
-                                        <span class="time">19:43</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>13</p>
-                                        <p>【高薪技能】-脚本实现DR一键部署和动态切换【业内最精细】</p>
-                                        <span class="time">19:43</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
-                                    </p>
-                                </li>
-                                <li class="item lesson">
-                                    <div class="main"><i class="icon type1"></i>
-                                        <p>14</p>
-                                        <p>【高薪技能】-LVS的DR模型手动带领实战部署</p>
-                                        <span class="time">19:41</span>
-                                        <a href="javascript:;" target="_blank">
-                                            <span class="look">开始学习</span>
-                                        </a>
-                                    </div>
-                                    <p>本章课程免费视频已经上传完成，更多的内容可以关注我们更高质量的学习方式，多谢朋友们支持。
-                                    </p>
                                 </li>
                             </ul>
-                            <div id="syList_loading" class="loading" style="display: none;">正在加载</div>
-                            <div id="syList_Empty" class="Empty" style="display: none;">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>童鞋，没检测到相关信息，去看看其他内容吧</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
                         </div>
-                        <!--学习资料-->
-                        <div class="tabsConItem files">
-                            <dl class="information disp-n">
-                                <dt>相关资料推荐</dt>
-                                <dd id="information"></dd>
-                            </dl>
-                            <div id="fileEmpty" class="Empty disp-n" style="display: block;">
-                                <p>暂时还没有学习资料~</p>
-                            </div>
-                        </div>
-                        <!--学员评价-->
-                        <div class="tabsConItem comment">
-                            <div class="myAppraise">
-                                <div class="fl L1">
-                                    <p class="color42">综合评分</p>
-                                    <div id="hasNumbers" class="disp-n" style="display: block;">
-                                        <div class="stars Big" id="totalScore">
-                                            <i class="icon star full"></i>
-                                            <i class="icon star full"></i>
-                                            <i class="icon star full"></i>
-                                            <i class="icon star full"></i>
-                                            <i class="icon star full"></i>
-                                        </div>
-                                        <p>
-                                            <span id="numbers">4</span>人评价</p>
+                    </dd>
+                </dl>
+            </div>
 
-                                    </div>
-                                    <div id="noNumbers" class="disp-n" style="display: none;">
-                                        <p class="f22">暂无</p>
-                                    </div>
+
+            <div class="Course">
+                <div class="Left">
+                    <dl class="tabs">
+                        <dt class="tabsTil" id="tabsTil">
+                            <p class="cur">课程介绍</p>
+                            <p>课程大纲</p>
+                            <p>学习资料</p>
+                            <p>学员评价</p>
+                        </dt>
+                        <dd class="tabsCon">
+                            <div class="tabsConItem intro">
+                                <dl>
+                                    <dt>课程目标</dt>
+                                    <dd>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡</dd>
+                                    <dt>适用人群</dt>
+                                    <dd>Linux初学者、Linux爱好者、系统管理员。</dd>
+                                    <dt>课程简介</dt>
+                                    <dd id="content_code">
+                                        <p>
+                                            本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                        <p style="white-space: normal;">
+                                            <span style="color: rgb(255, 0, 0);">
+                                                课程学习中有遇到疑问或者技术问题，可加内部交流群 181624275进行交流
+                                            </span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <!--课程大纲-->
+                            <div class="tabsConItem syllabus">
+                                <ul id="syList" class="noChapter">
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>1</p>
+                                            <p title="企业级集群方案演变、从DNS负载均衡到专业负载均衡应用">企业级集群方案演变、从DNS负载均衡到专业负载均衡应</p>
+                                            <p class="look red">[免费观看]</p>
+                                            <span class="time">47:00</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>介绍了早期DNS负载均衡方式随之慢慢演变成专业的负载均衡方案，深入讲解均衡原理和相关细节，如持久链接、Session同步、健康状态检测等相关机制。 如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>2</p>
+                                            <p title="企业级高可用集群和存储解决方案">企业级高可用集群和存储解决方案</p>
+                                            <p class="look red">[免费观看]</p>
+                                            <span class="time">43:24</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本章介绍了负载均衡的实现方式如硬件设备：F5 、A10、Netcaler，软负载均衡：LVS、Haproxy、Nginx、Varnish、Squid等相关产品的对比，深入了介绍高可用集群的实现方式和相关技术指标，最后着重介绍了企业级的存储解决方案。
+                                            如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>3</p>
+                                            <p title="企业级存储解决方案和实现方式DAS、NAS、SAN">企业级存储解决方案和实现方式DAS、NAS、SAN</p>
+                                            <p class="look red">[免费观看]</p>
+                                            <span class="time">32:22</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程着重介绍了企业级存储方案和实现方式：DAS、NAS、SAN，其中深入讲解ISCSI的实现原理和对应的实现环境，以及RAID功能在企业的用途，并介绍了常见总线接口的参数对比指标，如USB、IDE、SATA、SCSI的区别。最后介绍了光存储SAN的相关原理和实现，以及高性价比的存储方案。
+                                            如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>4</p>
+                                            <p title="企业级负载均衡之LVS原理篇-Lvs起源和实现方式">企业级负载均衡之LVS原理篇-Lvs起源和实现方式</p>
+                                            <p class="look red">[免费观看]</p>
+                                            <span class="time">26:34</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>详细的介绍了LVS的诞生和发展，讲解了VIP、CIP、RIP的各自含义，以及LVS请求转发是如何实现的，从TCP/IP和内核层/用户层(ipvs/ipvsadm)阐述了LVS的实现方式。并详细的介绍企业级四层负载均衡使用场景和具体功能。
+                                            如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>5</p>
+                                            <p title="企业级负载均衡之LVS原理篇-LVS三种负载均衡模式">企业级负载均衡之LVS原理篇-LVS三种负载均衡模式</p>
+                                            <p class="look red">[免费观看]</p>
+                                            <span class="time">29:52</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本章介绍了LVS三种负载均衡模式即NAT、DR、TUN。课程内容讲解了这三个种类的试用场景和各自特点，深入的介绍了DR模型，从TCP/IP协议栈深入讲解请求的走向、到后端的接收和响应的整个过程，涉及LVS技术的底层细节。
+                                            如果课程内容对你有帮助，请进行评价来支持马哥教育，你的支持是我们前进的最大动力！
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>6</p>
+                                            <p title="企业级负载均衡之LVS原理篇-LVS八种负载均衡算法结合实例讲解">企业级负载均衡之LVS原理篇-LVS八种负载均衡算法</p>
+                                            <p class="look red">[免费观看]</p>
+                                            <span class="time">22:07</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。</p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>7</p>
+                                            <p>【马哥Linux培训高级课程】-LVS源码级讲解动态负载均衡算法过程</p>
+                                            <span class="time">22:07</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>8</p>
+                                            <p>【马哥Linux培训高薪课程】-LVS动态负载均衡算法实例和进阶</p>
+                                            <span class="time">22:07</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>9</p>
+                                            <p>【马哥Linux高薪课程】-LVS配置和参数深入剖析【业内最精细】</p>
+                                            <span class="time">22:07</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>10</p>
+                                            <p>【高薪技能】-全程带领实现LVS负载均衡实战NAT模型【业内最细】</p>
+                                            <span class="time">22:06</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>11</p>
+                                            <p>【高薪技能】-Lvs的DR模型相关原理和技术背景【业内最精细】</p>
+                                            <span class="time">19:43</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>12</p>
+                                            <p>【高薪技能】-Lvs的DR模型实现原理和深入解析【业内最精细】</p>
+                                            <span class="time">19:43</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>13</p>
+                                            <p>【高薪技能】-脚本实现DR一键部署和动态切换【业内最精细】</p>
+                                            <span class="time">19:43</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，实战带领进行LVS企业级配置和优化、自写健康状态监测脚本，高可用实现机制，生产环境多年经验，以及企业级存储方案的各自不同使用场景。
+                                        </p>
+                                    </li>
+                                    <li class="item lesson">
+                                        <div class="main"><i class="icon type1"></i>
+                                            <p>14</p>
+                                            <p>【高薪技能】-LVS的DR模型手动带领实战部署</p>
+                                            <span class="time">19:41</span>
+                                            <a href="javascript:;" target="_blank">
+                                                <span class="look">开始学习</span>
+                                            </a>
+                                        </div>
+                                        <p>本章课程免费视频已经上传完成，更多的内容可以关注我们更高质量的学习方式，多谢朋友们支持。
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div id="syList_loading" class="loading" style="display: none;">正在加载</div>
+                                <div id="syList_Empty" class="Empty" style="display: none;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>童鞋，没检测到相关信息，去看看其他内容吧</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="fl L2">
-                                    <p>课程与描述相符
-                                        <span class="red" id="lesson_consistent">5</span>
-                                        <span id="lesson_consistent_msg" style="display: inline;">非常满意</span>
+                            </div>
+                            <!--学习资料-->
+                            <div class="tabsConItem files">
+                                <dl class="information disp-n">
+                                    <dt>相关资料推荐</dt>
+                                    <dd id="information"></dd>
+                                </dl>
+                                <div id="fileEmpty" class="Empty disp-n" style="display: block;">
+                                    <p>暂时还没有学习资料~</p>
+                                </div>
+                            </div>
+                            <!--学员评价-->
+                            <div class="tabsConItem comment">
+                                <div class="myAppraise">
+                                    <div class="fl L1">
+                                        <p class="color42">综合评分</p>
+                                        <div id="hasNumbers" class="disp-n" style="display: block;">
+                                            <div class="stars Big" id="totalScore">
+                                                <i class="icon star full"></i>
+                                                <i class="icon star full"></i>
+                                                <i class="icon star full"></i>
+                                                <i class="icon star full"></i>
+                                                <i class="icon star full"></i>
+                                            </div>
+                                            <p>
+                                                <span id="numbers">4</span>人评价</p>
+
+                                        </div>
+                                        <div id="noNumbers" class="disp-n" style="display: none;">
+                                            <p class="f22">暂无</p>
+                                        </div>
+                                    </div>
+                                    <div class="fl L2">
+                                        <p>课程与描述相符
+                                            <span class="red" id="lesson_consistent">5</span>
+                                            <span id="lesson_consistent_msg" style="display: inline;">非常满意</span>
+                                        </p>
+                                        <p>老师的讲解表达
+                                            <span class="red" id="lecturer_Interpretation">5</span>
+                                            <span id="lecturer_Interpretation_msg" style="display: inline;">非常满意</span>
+                                        </p>
+                                        <p>老师的答疑服务
+                                            <span class="red" id="lecturer_answer">5</span>
+                                            <span id="lecturer_answer_msg" style="display: inline;">非常满意</span>
+                                        </p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="Ar_Tab">
+                                    <p class="cur">全部
+                                        <span id="all_number">4</span>
                                     </p>
-                                    <p>老师的讲解表达
-                                        <span class="red" id="lecturer_Interpretation">5</span>
-                                        <span id="lecturer_Interpretation_msg" style="display: inline;">非常满意</span>
+                                    <p>好评
+                                        <span id="good_number">4</span>
                                     </p>
-                                    <p>老师的答疑服务
-                                        <span class="red" id="lecturer_answer">5</span>
-                                        <span id="lecturer_answer_msg" style="display: inline;">非常满意</span>
+                                    <p>中评
+                                        <span id="center_number">0</span>.
+                                    </p>
+                                    <p>差评
+                                        <span id="poor_number">0</span>
+                                    </p>
+                                </div>
+                                <ul id="arList">
+                                    <li class="item">
+                                        <div class="pic fl">
+                                            <a href="javascript:;" target="_blank">
+                                                <img src="./img/student.jpg" class="avatar">
+                                            </a>
+                                            <p class="nickName">ljl603</p>
+                                        </div>
+                                        <div class="main color81">
+                                            <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
+                                                <i class="icon star full"></i><i class="icon star full"></i></div>
+                                            <div class="clear"></div>
+                                            <p class="fl mr20">课程内容(5)</p>
+                                            <p class="fl mr20">讲解表达(5)</p>
+                                            <p class="fl">答疑服务(5)</p>
+                                            <p class="fr">2017-06-16 21:00</p>
+                                            <div class="clear"></div>
+                                            <p class="color42 mt5">讲解思路清晰，购买得很有价值</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="pic fl">
+                                            <a href="javascript:;" target="_blank">
+                                                <img src="./img/student.jpg" class="avatar">
+                                            </a>
+                                            <p class="nickName">张_宝龙</p>
+                                        </div>
+                                        <div class="main color81">
+                                            <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
+                                                <i class="icon star full"></i><i class="icon star full"></i></div>
+                                            <div class="clear"></div>
+                                            <p class="fl mr20">课程内容(5)</p>
+                                            <p class="fl mr20">讲解表达(5)</p>
+                                            <p class="fl">答疑服务(5)</p>
+                                            <p class="fr">2016-11-25 13:39</p>
+                                            <div class="clear"></div>
+                                            <p class="color42 mt5">老师讲的特别好，非常实用</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="pic fl">
+                                            <a href="javascript:;" target="_blank">
+                                                <img src="./img/student.jpg" class="avatar">
+                                            </a>
+                                            <p class="nickName">tianchaoinn</p>
+                                        </div>
+                                        <div class="main color81">
+                                            <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
+                                                <i class="icon star full"></i><i class="icon star full"></i></div>
+                                            <div class="clear"></div>
+                                            <p class="fl mr20">课程内容(5)</p>
+                                            <p class="fl mr20">讲解表达(5)</p>
+                                            <p class="fl">答疑服务(5)</p>
+                                            <p class="fr">2015-01-26 14:32</p>
+                                            <div class="clear"></div>
+                                            <p class="color42 mt5">对集群的讲解非常详细，通俗易懂，是马哥课程的精髓之一。</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <div class="pic fl">
+                                            <a href="javascript:;" target="_blank">
+                                                <img src="./img/student.jpg" class="avatar">
+                                            </a>
+                                            <i class="vipBig"></i>
+                                            <p class="nickName">gzy3836</p>
+                                        </div>
+                                        <div class="main color81">
+                                            <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
+                                                <i class="icon star full"></i><i class="icon star full"></i></div>
+                                            <div class="clear"></div>
+                                            <p class="fl mr20">课程内容(5)</p>
+                                            <p class="fl mr20">讲解表达(5)</p>
+                                            <p class="fl">答疑服务(5)</p>
+                                            <p class="fr">2014-01-11 20:18</p>
+                                            <div class="clear"></div>
+                                            <p class="color42 mt5">之其然更只其所以然，顶马哥</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div id="arList_loading" class="loading" style="display: none;">正在加载</div>
+                                <div id="arList_Empty" class="Empty" style="display: none;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>童鞋，没检测到相关信息，去看看其他内容吧</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <!--你可能还感兴趣的课程-->
+                    <dl class="Interested" id="Interested" style="display: block;">
+                        <dt>你可能还感兴趣的课程</dt>
+                        <dd>
+                            <ul class="cList" id="InterestedList">
+                                <li class="cList_Item">
+                                    <div class="pic">
+                                        <a href="javascript:;" target="_blank">
+                                            <img src="./img/like1.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="main">
+                                        <h3>
+                                            <a href="javascript:;" title="" target="_blank">2-老男孩Linux高薪运维集群实战</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="cList_Item">
+                                    <div class="pic">
+                                        <a href="javascript:;" target="_blank">
+                                            <img src="./img/like2.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="main">
+                                        <h3><a href="javascript:;" title="" target="_blank">Linux基础入门和架构了解-[国内No1全新马哥Linux视频课程]</a></h3>
+                                    </div>
+                                </li>
+                                <li class="cList_Item">
+                                    <div class="pic">
+                                        <a href="javascript:;" target="_blank">
+                                            <img src="./img/like3.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="main">
+                                        <h3><a href="javascript:;" title="" target="_blank">Linux运维高薪入门及进阶全新经典视频课程-老男孩Linux第一部</a></h3>
+                                    </div>
+                                </li>
+                                <li class="cList_Item">
+                                    <div class="pic">
+                                        <a href="javascript:;" target="_blank">
+                                            <img src="./img/like4.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="main">
+                                        <h3><a href="javascript:;" title="" target="_blank">Oracle从入门到精通视频课程</a></h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+
+
+                <div class="Right">
+                    <div class="Pack">
+                        <div class="couponList" id="couponList"></div>
+                    </div>
+                    <div class="Pack">
+                        <p class="tit">讲师介绍</p>
+                        <div class="lecInfo">
+                            <a href="javascript:;" target="_blank">
+                                <img class="fl avatar" alt="" src="./img/teacher.jpg">
+                            </a>
+                            <div class="main fr">
+                                <h2><a href="javascript:;" target="_blank">马哥</a></h2>
+                                <p>好评率：
+                                    <span class="red">97%</span>
+                                </p>
+                                <p>所属机构：
+                                    <span>马哥教育泛Linux运维培训</span>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                            <p>马哥Linux运维学院院长，马哥教育创始人，计算机安全专业硕士，Linux核心专家、红帽中心特邀专家、51CTO专家博主</p>
+                        </div>
+                    </div>
+                    <div class="Pack">
+                        <p class="tit">官方交流群</p>
+                        <div>
+                            <p class="fl">51CTO学院480612985(Linux官方2群 )</p>
+                            <a href="javascript:;" target="_blank" class="fr blue">立即加入</a>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="Pack" id="students" style="display: block;">
+                        <p class="tit">30334人学习过</p>
+                        <div class="uList uList1" id="studentsList">
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="//-index/index?_id=8566436" target="_blank">onlyjyf</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a><i class="vipSmall"></i></div>
+                                <p class="name"><a href="javascript:;" target="_blank">2914712111</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">sickles</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a><i class="vipSmall"></i></div>
+                                <p class="name"><a href="javascript:;" target="_blank">qq404730028</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">xbw123</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a><i class="vipSmall"></i></div>
+                                <p class="name"><a href="javascript:;" target="_blank">jinchuan_127</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">bobo87</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">南非蚂蚁</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">wuhengaiyi</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">neijiade10000</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">裴子韬</a></p>
+                            </div>
+                            <div class="item">
+                                <div class="avatar">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/student.jpg">
+                                    </a>
+                                </div>
+                                <p class="name"><a href="javascript:;" target="_blank">company002</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="Pack" id="bookListPack" style="display: block;">
+                        <p class="tit">推荐图书</p>
+                        <div class="book" id="bookList">
+                            <div class="item">
+                                <div class="pic fl">
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="./img/book1.gif">
+                                    </a>
+                                </div>
+                                <div class="main fr">
+                                    <p class="name"><a href="javascript:;" target="_blank">跟老男孩学Linux运维：Web集群实战</a></p>
+                                    <p class="author">作者：老男孩</p>
+                                    <p class="author"></p>
+                                    <p class="price red">￥
+                                        <span>99</span>
                                     </p>
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                            <div class="Ar_Tab">
-                                <p class="cur">全部
-                                    <span id="all_number">4</span>
-                                </p>
-                                <p>好评
-                                    <span id="good_number">4</span>
-                                </p>
-                                <p>中评
-                                    <span id="center_number">0</span>.
-                                </p>
-                                <p>差评
-                                    <span id="poor_number">0</span>
-                                </p>
-                            </div>
-                            <ul id="arList">
-                                <li class="item">
-                                    <div class="pic fl">
-                                        <a href="javascript:;" target="_blank">
-                                            <img src="./img/student.jpg" class="avatar">
-                                        </a>
-                                        <p class="nickName">ljl603</p>
-                                    </div>
-                                    <div class="main color81">
-                                        <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
-                                            <i class="icon star full"></i><i class="icon star full"></i></div>
-                                        <div class="clear"></div>
-                                        <p class="fl mr20">课程内容(5)</p>
-                                        <p class="fl mr20">讲解表达(5)</p>
-                                        <p class="fl">答疑服务(5)</p>
-                                        <p class="fr">2017-06-16 21:00</p>
-                                        <div class="clear"></div>
-                                        <p class="color42 mt5">讲解思路清晰，购买得很有价值</p>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="pic fl">
-                                        <a href="javascript:;" target="_blank">
-                                            <img src="./img/student.jpg" class="avatar">
-                                        </a>
-                                        <p class="nickName">张_宝龙</p>
-                                    </div>
-                                    <div class="main color81">
-                                        <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
-                                            <i class="icon star full"></i><i class="icon star full"></i></div>
-                                        <div class="clear"></div>
-                                        <p class="fl mr20">课程内容(5)</p>
-                                        <p class="fl mr20">讲解表达(5)</p>
-                                        <p class="fl">答疑服务(5)</p>
-                                        <p class="fr">2016-11-25 13:39</p>
-                                        <div class="clear"></div>
-                                        <p class="color42 mt5">老师讲的特别好，非常实用</p>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="pic fl">
-                                        <a href="javascript:;" target="_blank">
-                                            <img src="./img/student.jpg" class="avatar">
-                                        </a>
-                                        <p class="nickName">tianchaoinn</p>
-                                    </div>
-                                    <div class="main color81">
-                                        <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
-                                            <i class="icon star full"></i><i class="icon star full"></i></div>
-                                        <div class="clear"></div>
-                                        <p class="fl mr20">课程内容(5)</p>
-                                        <p class="fl mr20">讲解表达(5)</p>
-                                        <p class="fl">答疑服务(5)</p>
-                                        <p class="fr">2015-01-26 14:32</p>
-                                        <div class="clear"></div>
-                                        <p class="color42 mt5">对集群的讲解非常详细，通俗易懂，是马哥课程的精髓之一。</p>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="pic fl">
-                                        <a href="javascript:;" target="_blank">
-                                            <img src="./img/student.jpg" class="avatar">
-                                        </a>
-                                        <i class="vipBig"></i>
-                                        <p class="nickName">gzy3836</p>
-                                    </div>
-                                    <div class="main color81">
-                                        <div class="stars fl"><i class="icon star full"></i><i class="icon star full"></i><i class="icon star full"></i>
-                                            <i class="icon star full"></i><i class="icon star full"></i></div>
-                                        <div class="clear"></div>
-                                        <p class="fl mr20">课程内容(5)</p>
-                                        <p class="fl mr20">讲解表达(5)</p>
-                                        <p class="fl">答疑服务(5)</p>
-                                        <p class="fr">2014-01-11 20:18</p>
-                                        <div class="clear"></div>
-                                        <p class="color42 mt5">之其然更只其所以然，顶马哥</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div id="arList_loading" class="loading" style="display: none;">正在加载</div>
-                            <div id="arList_Empty" class="Empty" style="display: none;">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>童鞋，没检测到相关信息，去看看其他内容吧</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </dd>
-                </dl>
-                <!--你可能还感兴趣的课程-->
-                <dl class="Interested" id="Interested" style="display: block;">
-                    <dt>你可能还感兴趣的课程</dt>
-                    <dd>
-                        <ul class="cList" id="InterestedList">
-                            <li class="cList_Item">
-                                <div class="pic">
+                            <div class="item">
+                                <div class="pic fl">
                                     <a href="javascript:;" target="_blank">
-                                        <img src="./img/like1.jpg">
+                                        <img src="./img/book2.gif">
                                     </a>
                                 </div>
-                                <div class="main">
-                                    <h3>
-                                        <a href="javascript:;" title="" target="_blank">2-老男孩Linux高薪运维集群实战</a>
-                                    </h3>
+                                <div class="main fr">
+                                    <p class="name"><a href="javascript:;" target="_blank">Windows内核设计思想</a></p>
+                                    <p class="author">作者：陈树宝</p>
+                                    <p class="author">博文视点出版社</p>
+                                    <p class="price red">￥
+                                        <span>108</span>
+                                    </p>
                                 </div>
-                            </li>
-                            <li class="cList_Item">
-                                <div class="pic">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/like2.jpg">
-                                    </a>
-                                </div>
-                                <div class="main">
-                                    <h3><a href="javascript:;" title="" target="_blank">Linux基础入门和架构了解-[国内No1全新马哥Linux视频课程]</a></h3>
-                                </div>
-                            </li>
-                            <li class="cList_Item">
-                                <div class="pic">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/like3.jpg">
-                                    </a>
-                                </div>
-                                <div class="main">
-                                    <h3><a href="javascript:;" title="" target="_blank">Linux运维高薪入门及进阶全新经典视频课程-老男孩Linux第一部</a></h3>
-                                </div>
-                            </li>
-                            <li class="cList_Item">
-                                <div class="pic">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/like4.jpg">
-                                    </a>
-                                </div>
-                                <div class="main">
-                                    <h3><a href="javascript:;" title="" target="_blank">Oracle从入门到精通视频课程</a></h3>
-                                </div>
-                            </li>
-                        </ul>
-                    </dd>
-                </dl>
-            </div>
-
-
-            <div class="Right">
-                <div class="Pack">
-                    <div class="couponList" id="couponList"></div>
-                </div>
-                <div class="Pack">
-                    <p class="tit">讲师介绍</p>
-                    <div class="lecInfo">
-                        <a href="javascript:;" target="_blank">
-                            <img class="fl avatar" alt="" src="./img/teacher.jpg">
-                        </a>
-                        <div class="main fr">
-                            <h2><a href="javascript:;" target="_blank">马哥</a></h2>
-                            <p>好评率：
-                                <span class="red">97%</span>
-                            </p>
-                            <p>所属机构：
-                                <span>马哥教育泛Linux运维培训</span>
-                            </p>
-                        </div>
-                        <div class="clear"></div>
-                        <p>马哥Linux运维学院院长，马哥教育创始人，计算机安全专业硕士，Linux核心专家、红帽中心特邀专家、51CTO专家博主</p>
-                    </div>
-                </div>
-                <div class="Pack">
-                    <p class="tit">官方交流群</p>
-                    <div>
-                        <p class="fl">51CTO学院480612985(Linux官方2群 )</p>
-                        <a href="javascript:;" target="_blank" class="fr blue">立即加入</a>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-
-                <div class="Pack" id="students" style="display: block;">
-                    <p class="tit">30334人学习过</p>
-                    <div class="uList uList1" id="studentsList">
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
+                                <div class="clear"></div>
                             </div>
-                            <p class="name"><a href="//-index/index?_id=8566436" target="_blank">onlyjyf</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a><i class="vipSmall"></i></div>
-                            <p class="name"><a href="javascript:;" target="_blank">2914712111</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">sickles</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a><i class="vipSmall"></i></div>
-                            <p class="name"><a href="javascript:;" target="_blank">qq404730028</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">xbw123</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a><i class="vipSmall"></i></div>
-                            <p class="name"><a href="javascript:;" target="_blank">jinchuan_127</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">bobo87</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">南非蚂蚁</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">wuhengaiyi</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">neijiade10000</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">裴子韬</a></p>
-                        </div>
-                        <div class="item">
-                            <div class="avatar">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/student.jpg">
-                                </a>
-                            </div>
-                            <p class="name"><a href="javascript:;" target="_blank">company002</a></p>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-
-                <div class="Pack" id="bookListPack" style="display: block;">
-                    <p class="tit">推荐图书</p>
-                    <div class="book" id="bookList">
-                        <div class="item">
-                            <div class="pic fl">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/book1.gif">
-                                </a>
-                            </div>
-                            <div class="main fr">
-                                <p class="name"><a href="javascript:;" target="_blank">跟老男孩学Linux运维：Web集群实战</a></p>
-                                <p class="author">作者：老男孩</p>
-                                <p class="author"></p>
-                                <p class="price red">￥
-                                    <span>99</span>
-                                </p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="item">
-                            <div class="pic fl">
-                                <a href="javascript:;" target="_blank">
-                                    <img src="./img/book2.gif">
-                                </a>
-                            </div>
-                            <div class="main fr">
-                                <p class="name"><a href="javascript:;" target="_blank">Windows内核设计思想</a></p>
-                                <p class="author">作者：陈树宝</p>
-                                <p class="author">博文视点出版社</p>
-                                <p class="price red">￥
-                                    <span>108</span>
-                                </p>
-                            </div>
-                            <div class="clear"></div>
                         </div>
                     </div>
-                </div>
 
-                <div class="Pack" id="studentsTop">
-                    <p class="tit">7日学霸榜
-                        <span>有30334人与你一起学习</span>
-                    </p>
-                    <div class="uList uList2" id="studentsTopList"></div>
+                    <div class="Pack" id="studentsTop">
+                        <p class="tit">7日学霸榜
+                            <span>有30334人与你一起学习</span>
+                        </p>
+                        <div class="uList uList2" id="studentsTopList"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </script>
 
     <div class="Fixed" style="display: none;">
         <div class="Page">
