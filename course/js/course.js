@@ -28,21 +28,28 @@ $(document).ready(function () {
 
     // --------模板数据---------
 
-    var data = {
-        title: '基本例子',
-        isAdmin: true,
-        list: ['文艺1', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
-    };
-    var blog = template('test', data);
-    document.getElementById('content').innerHTML = blog;
+    var ppt_html = template('tpl-ppt', {
+        "info": "order_info.order_data",
+        "show": "hello"
+    });
+    $("#ppt_preview").html(ppt_html);
 
-    var course = {
+
+
+    var course_html = template('tpl_course', {
         cover: 'assets/img/course.jpg',
         favnum: 520,
         title: '深度讲解Linux企业级集群实现方案【马哥linux视频课程】',
-    }
-    var courseTop = template('top-t', course);
-    document.getElementById('couse-top').innerHTML = courseTop;
+    });
+    $("#ppt_preview").html(course_html);
+
+    // var course = {
+    //     cover: 'assets/img/course.jpg',
+    //     favnum: 520,
+    //     title: '深度讲解Linux企业级集群实现方案【马哥linux视频课程】',
+    // }
+    // var courseTop = template('top-t', course);
+    // document.getElementById('couse-top').innerHTML = courseTop;
 
 
     var abouts = [{

@@ -24,22 +24,15 @@
         memu
     </div>
 
-
-    <div id="content"></div>
-    <script id="test" type="text/html">
-        <!--{{if isAdmin}}-->
-        <h1>{{title}}</h1>
-        <ul>
-            {{each list value i}}
-            <li>索引 {{i + 1}} ：{{value}}</li>
-            {{/each}}
-        </ul>
-        <!--{{/if}} -->
-        <!--{{$data}}-->
+    <div id="ppt_preview"></div>
+    <script id="tpl-ppt" type="text/html">
+        {{info}}
+        <!--{{each show as value index}} {{index}} {{/each}}-->
     </script>
 
-    <div id="couse-top"></div>
-    <script id="top-t" type="text/html">
+
+    <div id="couse_review"></div>
+    <script id="tpl_course" type="text/html">
         <div class="course Top" style="z-index: 10;">
             <div class="Page">
                 <div class="edu-ad" type="course" style="margin-bottom: 10px;">
@@ -59,7 +52,7 @@
 
                     <div class="fl">
                         <div class="pic">
-                            <img width="500" height="300" src="./img/course.jpg">
+                            <img width="500" height="300" src="{{cover}}">
                             <!-- 小角标 -->
                             <p class="act_tab">
                                 <span class="act_tab_l">7.1-7.7</span>
@@ -89,7 +82,7 @@
                         </div>
                     </div>
                     <div class="main fr">
-                        <h2 id="CourseTitle">深度讲解Linux企业级集群实现方案【马哥linux视频课程】</h2>
+                        <h2 id="CourseTitle">{{title}}</h2>
                         <p>适用人群： Linux初学者、Linux爱好者、系统管理员。</p>
                         <div class="CourseTime">
                             <span>共14课时</span>
@@ -266,7 +259,6 @@
                     </dd>
                 </dl>
             </div>
-
 
             <div class="Course">
                 <div class="Left">
