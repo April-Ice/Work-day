@@ -358,13 +358,13 @@
             </div>
             <!--讲师介绍-->
             <div class="Right">
+                <div id="teacher1_review"></div>
+                <script id="tpl_teacher1" type="text/html">
+                    <div class="Pack">
+                        <div class="lecInfo">
 
-                <div class="Pack">
-                    <div class="lecInfo">
+                            <p class="tit">讲师介绍</p>
 
-                        <p class="tit">讲师介绍</p>
-                        <div id="teacher1_review"></div>
-                        <script id="tpl_teacher1" type="text/html">
                             <a href="javascript:;" target="_blank">
                                 <img class="fl avatar" alt="" src="{{teacher.avatar}}">
                             </a>
@@ -379,170 +379,73 @@
                             </div>
                             <div class="clear"></div>
                             <p>{{teacher.tags}}</p>
-                        </script>
 
-                    </div>
-                </div>
-
-                <div class="Pack">
-                    <p class="tit">官方交流群</p>
-                    <div>
-                        <p id="teacher2_review"></p>
-                        <script id="tpl_teacher2" type="text/html">
-                            {{name}}
-                        </script>
-                        <a href="javascript:;" target="_blank" class="fr blue">立即加入</a>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-
-                <div class="Pack" id="students" style="display: block;">
-                    <p class="tit">{{students.number}}人学习过</p>
-                    <div class="uList uList1" id="studentsList">
-                        {{each studentlist as value index}}
-                        <div class="item">
-                            <a href="javascript:;" target="_blank">
-                                <div class="avatar">
-                                    <img src="{{value.avatar}}"> {{if vip}}
-                                    <i class="vipSmall"></i> {{/if}}
-                                </div>
-                                <p class="name">onlyjyf</p>
-                            </a>
                         </div>
-                        {{/each}}
-                        <!--<div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a><i class="vipSmall"></i></div>
-                                <p class="name"><a href="javascript:;" target="_blank">2914712111</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">sickles</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a><i class="vipSmall"></i></div>
-                                <p class="name"><a href="javascript:;" target="_blank">qq404730028</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">xbw123</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a><i class="vipSmall"></i></div>
-                                <p class="name"><a href="javascript:;" target="_blank">jinchuan_127</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">bobo87</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">南非蚂蚁</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">wuhengaiyi</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">neijiade10000</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">裴子韬</a></p>
-                            </div>
-                            <div class="item">
-                                <div class="avatar">
-                                    <a href="javascript:;" target="_blank">
-                                        <img src="./img/student.jpg">
-                                    </a>
-                                </div>
-                                <p class="name"><a href="javascript:;" target="_blank">company002</a></p>
-                            </div>-->
-                        <div class="clear"></div>
                     </div>
-                </div>
 
-                <div class="Pack" id="bookListPack" style="display: block;">
-                    <p class="tit">推荐图书</p>
-                    <div class="book" id="bookList">
-                        <div class="item">
-                            <div class="pic fl">
-                                <a href="javascript:;" target="_blank">
-                                        <img src="./img/book1.gif">
-                                    </a>
-                            </div>
-                            <div class="main fr">
-                                <p class="name"><a href="javascript:;" target="_blank">跟老男孩学Linux运维：Web集群实战</a></p>
-                                <p class="author">作者：老男孩</p>
-                                <p class="author"></p>
-                                <p class="price red">￥
-                                    <span>99</span>
-                                </p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="item">
-                            <div class="pic fl">
-                                <a href="javascript:;" target="_blank">
-                                        <img src="./img/book2.gif">
-                                    </a>
-                            </div>
-                            <div class="main fr">
-                                <p class="name"><a href="javascript:;" target="_blank">Windows内核设计思想</a></p>
-                                <p class="author">作者：陈树宝</p>
-                                <p class="author">博文视点出版社</p>
-                                <p class="price red">￥
-                                    <span>108</span>
-                                </p>
-                            </div>
+                    <div class="Pack">
+                        <p class="tit">官方交流群</p>
+                        <div>
+                            <p class="fl">
+                                {{group.name}}
+                            </p>
+                            <a href="javascript:;" target="_blank" class="fr blue">立即加入</a>
                             <div class="clear"></div>
                         </div>
                     </div>
-                </div>
 
-                <div class="Pack" id="studentsTop">
-                    <p class="tit">7日学霸榜
-                        <span>有30334人与你一起学习</span>
-                    </p>
-                    <div class="uList uList2" id="studentsTopList"></div>
-                </div>
+                    <div class="Pack" id="students" style="display: block;">
+                        <p class="tit">{{students.number}}人学习过</p>
+                        <div class="uList uList1" id="studentsList">
+                            {{each studentlist as value index}}
+                            <div class="item">
+                                <a href="javascript:;" target="_blank">
+                                    <div class="avatar">
+                                        <img src="{{value.avatar}}"> {{if value.vip}}
+                                        <i class="vipSmall"></i> {{/if}}
+                                    </div>
+                                    <p class="name">{{value.name}}</p>
+                                </a>
+                            </div>
+                            {{/each}}
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="Pack" id="bookListPack" style="display: block;">
+                        <p class="tit">推荐图书</p>
+                        <div class="book" id="bookList">
+                            {{each books as value index}}
+                            <div class="item">
+                                <a href="javascript:;" target="_blank">
+                                    <div class="pic fl">
+                                        <img src="{{value.cover}}">
+                                    </div>
+                                    <div class="main fr">
+                                        <p class="name">{{value.title}}</p>
+                                        <p class="author">作者：{{value.author}}</p>
+                                        <p class="author">{{value.public}}</p>
+                                        <p class="price red">￥
+                                            <span>{{value.price}}</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <div class="clear"></div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+
+                    <div class="Pack" id="studentsTop">
+                        <p class="tit">7日学霸榜
+                            <span>有30334人与你一起学习</span>
+                        </p>
+                        <div class="uList uList2" id="studentsTopList"></div>
+                    </div>
+
+                </script>
+
+
             </div>
         </div>
     </div>
@@ -680,9 +583,9 @@
         </div>
         <div class="footer_company">
             <a href="javascript:;" target="_blank" title="">
-                <img src="./img/logo_f2.png" alt="51CTO学院_中国最大的IT技能学习平台">
+                <!--<img src="./img/logo_f2.png" alt="">-->
             </a>
-            <div>Copyright © 2005-2017 <a href="javascript:;" target="_blank">51CTO.com</a></div>
+            <!--<div>Copyright © 2005-2017 </div>-->
         </div>
     </div>
 

@@ -271,12 +271,32 @@ $(document).ready(function () {
             },
             {
                 avatar: './img/student.jpg',
+                name: 'bobo87',
+                vip: 1
+            },
+            {
+                avatar: './img/student.jpg',
+                name: 'qq404730028',
+                vip: ''
+            },
+            {
+                avatar: './img/student.jpg',
+                name: 'onlyjyf',
+                vip: ''
+            },
+            {
+                avatar: './img/student.jpg',
                 name: 'onlyjyf',
                 vip: 1
             },
             {
                 avatar: './img/student.jpg',
-                name: 'onlyjyf',
+                name: 'qq404730028',
+                vip: ''
+            },
+            {
+                avatar: './img/student.jpg',
+                name: 'sickles',
                 vip: ''
             },
             {
@@ -286,52 +306,43 @@ $(document).ready(function () {
             },
             {
                 avatar: './img/student.jpg',
-                name: 'onlyjyf',
+                name: '2914712111',
                 vip: 1
             },
             {
                 avatar: './img/student.jpg',
-                name: 'onlyjyf',
+                name: 'xbw123',
                 vip: ''
             },
             {
                 avatar: './img/student.jpg',
-                name: 'onlyjyf',
+                name: 'jinchuan_127',
                 vip: ''
             },
             {
                 avatar: './img/student.jpg',
-                name: 'onlyjyf',
-                vip: ''
-            },
-            {
-                avatar: './img/student.jpg',
-                name: 'onlyjyf',
-                vip: ''
-            },
-            {
-                avatar: './img/student.jpg',
-                name: 'onlyjyf',
-                vip: ''
-            },
-            {
-                avatar: './img/student.jpg',
-                name: 'onlyjyf',
-                vip: ''
-            },
-            {
-                avatar: './img/student.jpg',
-                name: 'onlyjyf',
+                name: 'bobo87',
                 vip: ''
             },
         ],
-        x
+        "books": [
+            {
+                cover: './img/book1.gif',
+                title: '跟老男孩学Linux运维：Web集群实战',
+                author: '老男孩',
+                public: '',
+                price: 99
+            },
+            {
+                cover: './img/book2.gif',
+                title: 'Windows内核设计思想',
+                author: '陈树宝',
+                public: '博文视点出版社',
+                price: 108
+            },
+
+        ]
     });
     $("#teacher1_review").html(teacher1_html);
-
-    var teacher2_html = template('tpl_teacher2', {
-        name: '51CTO学院480612985(Linux官方2群)',
-    });
-    $("#teacher2_review").html(teacher2_html);
 
 });
