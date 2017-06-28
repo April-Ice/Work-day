@@ -27,6 +27,36 @@ $(document).ready(function () {
 
 
     // --------模板数据---------
+    var detail = {};
+    test();
+    // this.detail = test();
+    console.log(detail);
+    // console.log(test());
+    function test() {
+        console.log("请求准备发送");
+        var a = {a};
+        $.ajax({
+            type : 'GET',
+            url: 'http://crm.cike360.com/portal/index.php?r=background/School_course_detail',
+            data: {
+                course_id:1,
+                token:102
+            },
+            async : false,
+            success: function (data) {
+                var mya = jQuery.parseJSON(data);
+                // console.log("mya");
+                // console.log(mya);
+                this.a = mya;
+                detail = mya;
+                // console.log("a inner");
+                // console.log(this.a);
+            },
+        });
+        // console.log('a');
+        // console.log(a);
+        return a;
+    }
 
     var ppt_html = template('tpl-ppt', {
         "info": "order_info.order_data",
@@ -346,3 +376,4 @@ $(document).ready(function () {
     $("#teacher1_review").html(teacher1_html);
 
 });
+
