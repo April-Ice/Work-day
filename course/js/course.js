@@ -48,7 +48,7 @@ $(document).ready(function () {
                 // console.log("mya");
                 // console.log(mya);
                 this.a = mya;
-                detail = mya;
+                 detail = mya;
                 // console.log("a inner");
                 // console.log(this.a);
             },
