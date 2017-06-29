@@ -32,13 +32,15 @@ input.iw80 {width: 80px;}
   min-width: 1230px;
 }
 
-.course-body .red{color: #ff4a56;}
-.course-body .redb {background: #ff4a56;color: #FFF;}
-.course-body .disabled {background: #999;}
-.course-body .del{text-decoration: line-through;}
-.course-body .clear  {clear: both;width: 0px;height: 0px;overflow: hidden;}
-.course-body .fl,.course-body .Left{float: left;}
-.course-body.fr,.course-body .Right{float: right;}.tl{text-align: left;}.tc{text-align: center;}.tr{text-align: right;}
+
+.disabled {background: #999;}
+.del{text-decoration: line-through;}
+.clear  {clear: both;width: 0px;height: 0px;overflow: hidden;}
+.fl, .Left{float: left;}
+.fr,.Right{float: right;}
+.tl{text-align: left;}
+.tc{text-align: center;}
+.tr{text-align: right;}
 
 .disp-n {display: none;}
 .color42,.color42 a  {color:#424242;}
@@ -101,6 +103,9 @@ input.iw80 {width: 80px;}
 
 .con {padding-left: 20px;}
 .border-bom1 {border-bottom: 1px solid #ddd;}
+
+.course-body .red{color: #ff4a56;}
+.course-body .redb {background: #ff4a56;color: #FFF;}
 
 /* text pos */
 .tl {text-align: left;}
