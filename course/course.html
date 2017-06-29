@@ -132,10 +132,10 @@
                     <dt>
                         <p class="cur spec" style="display: block;">相关专题</p>
                         <!--<p class="pxb">微职位学习</p>-->
-                        <div class="spec fr" id="specBtns">
+                        <!--<div class="spec fr" id="specBtns">
                             <i class="icon next"> > </i>
                             <i class="icon prev"> < </i>
-                        </div>
+                        </div>-->
                     </dt>
                     <dd>
                         <div class="topicList spec" style="display: block;">
@@ -143,10 +143,10 @@
                                 {{each abouts as value index}}
                                 <li>
                                     <a href="javascript:;" class="pic fl">
-                                        <img src="{{value.img}}">
+                                        <img src="{{value.poster}}">
                                         <p class="act_tab">
-                                            <span class="act_tab_l">{{value.time}}</span>
-                                            <span class="act_tab_r">{{value.activity}}</span>
+                                            <!--<span class="act_tab_l">{{value.time}}</span>-->
+                                            <!--<span class="act_tab_r">{{value.activity}}</span>-->
                                         </p>
                                     </a>
                                     <div class="fl main">
@@ -154,8 +154,9 @@
                                             {{value.title}}
                                         </a>
                                         <div class="clear"></div>
-                                        <p class="fl">立省
-                                            <span class="red">￥{{value.count}}</span>
+                                        <p class="fl">
+                                            立省
+                                            <!--<span class="red">￥{{value.count}}</span>-->
                                         </p>
                                         <a href="javascript:;" class="btn fr">去购买</a>
                                         <div class="clear"></div>
@@ -205,9 +206,9 @@
                                     <li class="item lesson">
                                         <div class="main"><i class="icon type1"></i>
                                             <p>{{index}}</p>
-                                            <p>{{value.title}}</p>
+                                            <p>{{value.name}}</p>
                                             <p class="look red">{{value.free}}</p>
-                                            <span class="time">{{value.time}}</span>
+                                            <span class="time">{{value.update_time}}</span>
                                             <a href="javascript:;" target="_blank">
                                                 <span class="look">开始学习</span>
                                             </a>
@@ -306,14 +307,15 @@
                                                 <i class="icon star full"></i>
                                                 <i class="icon star full"></i>
                                                 <i class="icon star full"></i>
-                                                <i class="icon star full"></i></div>
+                                                <i class="icon star full"></i> {{value.star_amount}}
+                                            </div>
                                             <div class="clear"></div>
-                                            <p class="fl mr20">课程内容({{value.consistent_score}})</p>
-                                            <p class="fl mr20">讲解表达({{value.easy_score}})</p>
-                                            <p class="fl">答疑服务({{value.answer_score}})</p>
-                                            <p class="fr">{{value.time}}</p>
+                                            <!--<p class="fl mr20">课程内容({{value.consistent_score}})</p>-->
+                                            <!--<p class="fl mr20">讲解表达({{value.easy_score}})</p>-->
+                                            <!--<p class="fl">答疑服务({{value.answer_score}})</p>-->
+                                            <p class="fr">{{value.update_time}}</p>
                                             <div class="clear"></div>
-                                            <p class="color42 mt5">{{value.review}}</p>
+                                            <p class="color42 mt5">{{value.comment}}</p>
                                         </div>
                                     </li>
                                     {{/each}}
@@ -333,7 +335,7 @@
                     </dd>
                 </dl>
                 <!--你可能还感兴趣的课程-->
-                <dl class="Interested" id="Interested" style="display: block;">
+                <!--<dl class="Interested" id="Interested" style="display: block;">
                     <dt>你可能还感兴趣的课程</dt>
                     <dd>
                         <div id="interest_review"></div>
@@ -354,17 +356,16 @@
                             </ul>
                         </script>
                     </dd>
-                </dl>
+                </dl>-->
             </div>
             <!--讲师介绍-->
             <div class="Right">
                 <div id="teacher1_review"></div>
                 <script id="tpl_teacher1" type="text/html">
-                    <div class="Pack">
+                    <!--讲师介绍-->
+                    <!--<div class="Pack">
                         <div class="lecInfo">
-
                             <p class="tit">讲师介绍</p>
-
                             <a href="javascript:;" target="_blank">
                                 <img class="fl avatar" alt="" src="{{teacher.avatar}}">
                             </a>
@@ -381,9 +382,9 @@
                             <p>{{teacher.tags}}</p>
 
                         </div>
-                    </div>
-
-                    <div class="Pack">
+                    </div>-->
+                    <!--官方交流群-->
+                    <!--<div class="Pack">
                         <p class="tit">官方交流群</p>
                         <div>
                             <p class="fl">
@@ -392,7 +393,7 @@
                             <a href="javascript:;" target="_blank" class="fr blue">立即加入</a>
                             <div class="clear"></div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="Pack" id="students" style="display: block;">
                         <p class="tit">{{students.number}}人学习过</p>
@@ -411,8 +412,8 @@
                             <div class="clear"></div>
                         </div>
                     </div>
-
-                    <div class="Pack" id="bookListPack" style="display: block;">
+                    <!--推荐图书-->
+                    <!--<div class="Pack" id="bookListPack" style="display: block;">
                         <p class="tit">推荐图书</p>
                         <div class="book" id="bookList">
                             {{each books as value index}}
@@ -434,14 +435,14 @@
                             </div>
                             {{/each}}
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="Pack" id="studentsTop">
+                    <!--<div class="Pack" id="studentsTop">
                         <p class="tit">7日学霸榜
                             <span>有{{students.number}}人与你一起学习</span>
                         </p>
                         <div class="uList uList2" id="studentsTopList"></div>
-                    </div>
+                    </div>-->
 
                 </script>
             </div>
