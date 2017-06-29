@@ -131,17 +131,12 @@
                 <dl>
                     <dt>
                         <p class="cur spec" style="display: block;">相关专题</p>
-                        <!--<p class="pxb">微职位学习</p>-->
-                        <!--<div class="spec fr" id="specBtns">
-                            <i class="icon next"> > </i>
-                            <i class="icon prev"> < </i>
-                        </div>-->
                     </dt>
                     <dd>
                         <div class="topicList spec" style="display: block;">
                             <ul id="Spec" style="width: 2370px;">
                                 {{each abouts as value index}}
-                                <li>
+                                <li onclick="gotoCourse({{value.id}})">
                                     <a href="javascript:;" class="pic fl">
                                         <img src="{{value.poster}}">
                                         <p class="act_tab">

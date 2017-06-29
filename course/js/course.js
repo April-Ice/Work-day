@@ -180,7 +180,11 @@ function test() {
 }
 
 function gotoVideo(id) {
-    window.location.href = "./lesson.html?id=" + id + "&course_id=" + this.course_id + "&token" + token;
+    window.location.href = "./lesson.html?id=" + id + "&course_id=" + this.course_id + "&token=" + token;
+}
+
+function gotoCourse(cid) {
+    window.location.href = "./course.html?course_id=" + cid + "&token" + token;
 }
 
 
