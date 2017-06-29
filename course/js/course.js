@@ -52,8 +52,8 @@ $(document).ready(function () {
     }
 
     function test() {
-        console.log("course_id"+ course_id);
-        console.log("token"+ token);
+        console.log("course_id" + course_id);
+        console.log("token" + token);
         $.ajax({
             type: 'GET',
             url: 'http://crm.cike360.com/portal/index.php?r=background/School_course_detail',
@@ -69,6 +69,9 @@ $(document).ready(function () {
             },
         });
     }
+
+
+
 
     var course_html = template('tpl_course', {
         "cover": course[0].poster,
@@ -175,3 +178,8 @@ $(document).ready(function () {
     $("#teacher1_review").html(teacher1_html);
 
 });
+
+
+function gotoVideo(id) {
+    window.location.href = "./lesson.html?id=" + id;
+}

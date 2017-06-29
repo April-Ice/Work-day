@@ -203,7 +203,7 @@
                                 <div id="introtab2_review"></div>
                                 <script id="tpl_introtab2" type="text/html">
                                     {{each catalog as value index}}
-                                    <li class="item lesson">
+                                    <li class="item lesson" onclick="gotoVideo({{value.id}})">
                                         <div class="main"><i class="icon type1"></i>
                                             <p>{{index}}</p>
                                             <p>{{value.name}}</p>
@@ -443,7 +443,6 @@
                         </p>
                         <div class="uList uList2" id="studentsTopList"></div>
                     </div>-->
-
                 </script>
             </div>
         </div>
