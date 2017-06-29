@@ -27,8 +27,12 @@ $(document).ready(function () {
 
 
     // --------模板数据---------
+    var course_id = getUrlParam('course_id') || 1;
+    var token = getUrlParam('token') || 102;
+
     var detail = {};
     test();
+
     var course = detail.course;
     var course_video = detail.course_video;
     var same_course = detail.same_course;
@@ -36,16 +40,26 @@ $(document).ready(function () {
     var recommend = detail.recommend;
     var buyer = detail.buyer;
 
-    // console.log(course[0].title);
     console.log(detail);
 
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        console.log(name);
+        console.log(r);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
     function test() {
+        console.log("course_id"+ course_id);
+        console.log("token"+ token);
         $.ajax({
             type: 'GET',
             url: 'http://crm.cike360.com/portal/index.php?r=background/School_course_detail',
             data: {
-                course_id: 1,
-                token: 102
+                course_id: course_id,
+                token: token
             },
             async: false,
             success: function (data) {
