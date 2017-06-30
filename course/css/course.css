@@ -119,7 +119,7 @@ input.iw80 {width: 80px;}
 .pl30 {padding-left:30px;}.pr30 {padding-right:30px;}
 .pl10 {padding-left:10px;}.pr10 {padding-right:10px;}
 .pl20 {padding-left:20px;}.pr20 {padding-right:20px;}
-.clearfix:after { content: ".";display: block;height: 0;clear: both;visibility: hidden; } 
+.clearfix:after { content: ".";display: block;height: 0;clear: both;visibility: hidden; }
 .clearfix {display: block;height: 1%;zoom: 1;}* html
 .Clearfix {display: block;} /* for IE/Mac */
 
@@ -174,14 +174,14 @@ top:0px;left:0px;z-index:9999;display: none;
 .Advice .Main #bizQQ_WPA  {
   position: absolute;right: 20px;
   bottom: 8px;width: 100px;height: 40px;
-  background: #c01a20; 
+  background: #c01a20;
   padding:0;border-radius: 0;
 }
 
 /*vip标识-红色*/
 .vipSmall {
   display: inline-block !important;
-  border-radius: 50%;    
+  border-radius: 50%;
   width: 20px;height: 20px;
   background: #efe301 url(../img/vip.png) no-repeat left bottom;
   background-size: 100%;
@@ -513,3 +513,46 @@ i.type3.icon {
 .qqbm_bs_box .to-top img{
   position: absolute;left: 0;top: 0;
 }
+
+.quiz{
+    /*border:solid 1px #ccc;*/
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    transition: height 1s;
+}
+.title-btn{
+    width: 100px;
+    height: 40px;
+}
+.quiz.active{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #eee;
+    background: #eee;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.quiz.active .title-btn{
+    display: none;
+}
+
+.goods-comm{
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+/*.gradecon{border:1px solid #E0DCDC;background:#fefdea;padding:10px;width:320px;margin:40px auto 0 auto;}*/
+/*.rev_pro li{line-height:20px;height:20px;}*/
+/*.rev_pro li .revtit{text-align:right;display:block;float:left;margin-right:10px;width:70px;}*/
+/*.revinp{float:left;display:inline;}*/
+/*.level .level_solid,.level .level_hollow{float:left;background-image:url("img/icon2.png");background-repeat:no-repeat;display:inline-block;width:15px;height:15px;}*/
+/*.level .level_solid{background-position:0px 0px;}*/
+/*.level .level_hollow{background-position:-21px 0px;}*/
+/*.revgrade{margin-left:20px;}*/

@@ -109,7 +109,7 @@
                             <div class="clear"></div>
                         </div>
                         <div class="Btns" id="buyBtns">
-                            <button class="red" onclick="setGoCat()">立即购买</button>
+                            <button class="red">立即购买</button>
                             <button class="red2 addCart">加入购物车</button>
                             <button id="qqwaps">学习咨询</button>
                             <div class="clear"></div>
@@ -181,13 +181,9 @@
                             <div id="introtab1_review"></div>
                             <script id="tpl_introtab1" type="text/html">
                                 <dl>
-                                    <dt>课程目标</dt>
-                                    <dd>{{target}}</dd>
-                                    <dt>适用人群</dt>
-                                    <dd>{{audience}}</dd>
                                     <dt>课程简介</dt>
-                                    <dd id="content_code" html="{{}}">
-                                        {{introduction}}
+                                    <dd id="content_code" html="{{introduction}}">
+                                        <!--{{introduction}}-->
                                     </dd>
                                 </dl>
                             </script>
@@ -238,7 +234,57 @@
                         <div class="tabsConItem comment">
                             <div id="introtab4_review"></div>
                             <script id="tpl_introtab4" type="text/html">
-                                <div class="myAppraise">
+
+                                <div class="quiz" onclick="review()">
+                                    <button class="title-btn">我要评价</button>
+                                    <div class="quiz_content">
+                                        <form action="" id="" method="post">
+                                            <div class="goods-comm">
+                                                <div class="goods-comm-stars">
+                                                    <p class="star_l">满意度：</p>
+                                                </div>
+
+
+                                                <ul class="rev_pro clearfix">
+                                                    <li>
+                                                        <!--在每一个评价条目的前面都放一个隐藏域，用来保存评分的分值，默认的分值为0 -->
+                                                        <input class="fl" type="hidden" style="margin-top:2px;" name="InterviewCommentInfoSub[expAuth]" value="0" />
+                                                        <span class="revtit">总体评价</span>
+                                                        <div class="revinp stars">
+                                                            <span class="level">
+                                                                <i class="level_hollow icon star" cjmark=""></i>
+                                                                <i class="level_hollow icon star" cjmark=""></i>
+                                                                <i class="level_hollow icon star" cjmark=""></i>
+                                                                <i class="level_hollow icon star" cjmark=""></i>
+                                                                <i class="level_hollow icon star" cjmark=""></i>
+                                                            </span>
+                                                            <span class="revgrade">未评分</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+
+
+                                                <!--<div id="restars" class="stars">
+                                                    <i class="icon star" onclick="reviewStars(1)"></i>
+                                                    <i class="icon star" onclick="reviewStars(2)"></i>
+                                                    <i class="icon star" onclick="reviewStars(3)"></i>
+                                                    <i class="icon star" onclick="reviewStars(4)"></i>
+                                                    <i class="icon star" onclick="reviewStars(5)"></i>
+                                                </div>-->
+                                            </div>
+
+                                            <div class="l_text">
+                                                <label class="m_flo">内 容：</label>
+                                                <textarea name="" id="" placeholder="请输入评价..." class="text"></textarea>
+                                                <span class="tr">字数限制为5-200个</span>
+                                            </div>
+                                            <button class="btm" type="submit"></button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <!--<div class="myAppraise">
                                     <div class="fl L1">
                                         <p class="color42">综合评分</p>
                                         <div id="hasNumbers" class="disp-n" style="display: block;">
@@ -257,36 +303,9 @@
                                             <p class="f22">暂无</p>
                                         </div>
                                     </div>
-                                    <div class="fl L2">
-                                        <p>课程与描述相符
-                                            <span class="red" id="lesson_consistent">{{consistent_score}}</span>
-                                            <span id="lesson_consistent_msg">非常满意</span>
-                                        </p>
-                                        <p>老师的讲解表达
-                                            <span class="red" id="lecturer_Interpretation">{{easy_score}}</span>
-                                            <span id="lecturer_Interpretation_msg">非常满意</span>
-                                        </p>
-                                        <p>老师的答疑服务
-                                            <span class="red" id="lecturer_answer">{{answer_score}}</span>
-                                            <span id="lecturer_answer_msg">非常满意</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <div class="Ar_Tab">
-                                    <p class="cur">全部
-                                        <span id="all_number">{{all_number}}</span>
-                                    </p>
-                                    <p>好评
-                                        <span id="good_number">{{good_number}}</span>
-                                    </p>
-                                    <p>中评
-                                        <span id="center_number">{{center_number}}</span>.
-                                    </p>
-                                    <p>差评
-                                        <span id="poor_number">{{poor_number}}</span>
-                                    </p>
-                                </div>
+                                </div>-->
+
+                                {{if arlist != '' }}
                                 <ul id="arList">
                                     {{each arlist as value index}}
                                     <li class="item">
@@ -294,17 +313,17 @@
                                             <a href="javascript:;" target="_blank">
                                                 <img src="{{value.avatar}}" class="avatar">
                                             </a>
-                                            <p class="nickName">{{value.nick_name}}</p>
+                                            <!--<p class="nickName">{{value.nick_name}}</p>-->
                                         </div>
                                         <div class="main color81">
                                             <div class="stars fl">
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i> {{value.star_amount}}
+                                                {{each stars as value1 index1}} {{if index1
+                                                < value.star_amount }} <i class="icon star full">
+                                                    </i>
+                                                    {{else}}
+                                                    <i class="icon star"></i> {{/if}}{{/each}}
                                             </div>
-                                            <div class="clear"></div>
+                                            <!--<div class="clear"></div>-->
                                             <!--<p class="fl mr20">课程内容({{value.consistent_score}})</p>-->
                                             <!--<p class="fl mr20">讲解表达({{value.easy_score}})</p>-->
                                             <!--<p class="fl">答疑服务({{value.answer_score}})</p>-->
@@ -315,8 +334,8 @@
                                     </li>
                                     {{/each}}
                                 </ul>
-                                <div id="arList_loading" class="loading" style="display: none;">正在加载</div>
-                                <div id="arList_Empty" class="Empty" style="display: none;">
+                                {{else}}
+                                <div id="arList_Empty" class="Empty">
                                     <table>
                                         <tbody>
                                             <tr>
@@ -325,12 +344,13 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                {{/if}}
                             </script>
                         </div>
                     </dd>
                 </dl>
                 <!--你可能还感兴趣的课程-->
-                <!--<dl class="Interested" id="Interested" style="display: block;">
+                <dl class="Interested" id="Interested" style="display: block;">
                     <dt>你可能还感兴趣的课程</dt>
                     <dd>
                         <div id="interest_review"></div>
@@ -340,10 +360,10 @@
                                 <li class="cList_Item">
                                     <a href="javascript:;" target="_blank">
                                         <div class="pic">
-                                            <img src="{{value.cover}}">
+                                            <img src="{{value.poster}}">
                                         </div>
                                         <div class="main">
-                                            <h3>{{value.title}}</h3>
+                                            <h3>{{value.name}}</h3>
                                         </div>
                                     </a>
                                 </li>
@@ -351,7 +371,7 @@
                             </ul>
                         </script>
                     </dd>
-                </dl>-->
+                </dl>
             </div>
             <!--讲师介绍-->
             <div class="Right">
@@ -452,7 +472,7 @@
                 <p>学习资料</p>
                 <p>学员评价</p>
             </dt>
-            <button class="red fr" onclick="setGoCat()">立即购买</button>
+            <button class="red fr">立即购买</button>
             <p class="red fr f26">
                 <span id="couse2_review"></span>
                 <script id="tpl_course2" type="text/html">

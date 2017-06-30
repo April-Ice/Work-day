@@ -76,11 +76,10 @@ $(document).ready(function () {
     $("#about_review").html(about_html);
 
     var introtab1_html = template('tpl_introtab1', {
-        "target": '本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡',
-        "audience": 'Linux初学者、Linux爱好者、系统管理员。',
-        "introduction": '<p>本课程深入介绍了企业级集群种类，负载均衡、高可用集群常见解决方案，其中负载均衡集群从DNS负载均衡到后端web负载均衡，讲解过程中介绍了常见的负载均衡模型以及负载均衡调度算法，涉及到LVS、F5、Haproxy、Nginx、Varnish等对比，以及企业级存储方案的各自不同使用场景。</p>'
+        "introduction": course[0].summary,
     });
     $("#introtab1_review").html(introtab1_html);
+    $("#content_code").html(course[0].summary);
 
     var introtab2_html = template('tpl_introtab2', {
         "catalog": course_video,
@@ -88,7 +87,7 @@ $(document).ready(function () {
     $("#introtab2_review").html(introtab2_html);
 
     var introtab4_html = template('tpl_introtab4', {
-        "all_number": 4,
+        "all_number": comment.length,
         "good_number": 0,
         "center_number": 0,
         "poor_number": 0,
@@ -96,27 +95,12 @@ $(document).ready(function () {
         "easy_score": 5,
         "answer_score": 5,
         "arlist": comment,
+        stars: [0, 0, 0, 0, 0]
     });
     $("#introtab4_review").html(introtab4_html);
 
     var interest_html = template('tpl_interest', {
-        "interest_list": [{
-            cover: './img/like1.jpg',
-            title: '2-老男孩Linux高薪运维集群实战',
-        },
-        {
-            cover: './img/like2.jpg',
-            title: '2-老男孩Linux高薪运维集群实战',
-        },
-        {
-            cover: './img/like3.jpg',
-            title: '2-老男孩Linux高薪运维集群实战',
-        },
-        {
-            cover: './img/like4.jpg',
-            title: '2-老男孩Linux高薪运维集群实战',
-        },
-        ]
+        "interest_list": recommend
     });
     $("#interest_review").html(interest_html);
 
@@ -132,27 +116,70 @@ $(document).ready(function () {
             name: '51CTO学院480612985(Linux官方2群)',
         },
         "students": {
-            number: buyer,
+            number: buyer.number || 0,
         },
         "studentlist": buyer,
-        // "books": [{
-        //         cover: './img/book1.gif',
-        //         title: '跟老男孩学Linux运维：Web集群实战',
-        //         author: '老男孩',
-        //         public: '',
-        //         price: 99
-        //     },
-        //     {
-        //         cover: './img/book2.gif',
-        //         title: 'Windows内核设计思想',
-        //         author: '陈树宝',
-        //         public: '博文视点出版社',
-        //         price: 108
-        //     },
-
-        // ]
     });
     $("#teacher1_review").html(teacher1_html);
+
+
+var degree = ['','很差','差','中','良','优','未评分'];
+
+        $(function(){
+            //点星星
+            $(document).on('mouseover','i[cjmark]',function(){
+                var num = $(this).index();
+                var pmark = $(this).parents('.revinp');
+                var mark = pmark.prevAll('input');
+                //var val = mark.val();
+                //if(mark.prop('checked')) return false;
+
+                var list = $(this).parent().find('i');
+                for(var i=0;i<=num;i++){
+                    list.eq(i).attr('class','level_solid');
+                }
+                for(var i=num+1,len=list.length-1;i<=len;i++){
+                    list.eq(i).attr('class','level_hollow');
+                }
+                $(this).parent().next().html(degree[num+1]);
+
+            });
+
+            $(document).on('mouseout','i[cjmark]',function(){
+                var num = $(this).index();
+                var pmark = $(this).parents('.revinp');
+                var mark = pmark.prevAll('input');
+                var val = parseInt(mark.val());
+                //if(mark.prop('checked')) return false;
+
+                var list = $(this).parent().find('i');
+                //alert(list.length);
+                if(val != 0){
+                    for(var i=0;i<=val;i++){
+                        list.eq(i).attr('class','level_solid');
+                    }
+                    //alert(val);
+                    for(var i=val,len=list.length-1;i<=len;i++){
+                        list.eq(i).attr('class','level_hollow');
+                    }
+                    $(this).parent().next().html(degree[val]);
+                }else{
+                    for(var i=0;i<=list.length-1;i++){
+                        list.eq(i).attr('class','level_hollow');
+                    }
+                    $(this).parent().next().html("未评分");
+                }
+            })
+
+            //点击星星
+            $(document).on('click','i[cjmark]',function(){
+                var num = $(this).index();
+                var pmark = $(this).parents('.revinp');
+                var mark = pmark.prevAll('input');
+                mark.val(num+1);
+            })
+        });
+
 
 });
 
@@ -187,4 +214,14 @@ function gotoCourse(cid) {
     window.location.href = "./course.html?course_id=" + cid + "&token" + token;
 }
 
+function review() {
+    $(".quiz").addClass("active")
+}
 
+// function reviewStars(num) {
+//     console.log("stars");
+//     console.log($(this));
+//     for (var i = 1; i < num; i++) {
+//         $("#restars").find(".star").nthchild(i).addClass("full");
+//     }
+// }
