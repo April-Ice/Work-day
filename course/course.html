@@ -21,13 +21,12 @@
 
 <body class="course-body">
     <div class="Header3 white ">
-        memu
+        <!--memu-->
     </div>
 
     <div id="ppt_preview"></div>
     <script id="tpl-ppt" type="text/html">
         {{info}}
-        <!--{{each show as value index}} {{index}} {{/each}}-->
     </script>
 
 
@@ -35,9 +34,9 @@
     <script id="tpl_course" type="text/html">
         <div class="course Top" style="z-index: 10;">
             <div class="Page">
-                <div class="edu-ad" type="course" style="margin-bottom: 10px;">
+                <div class="edu-ad" type="course">
                     <a href="javascript:;" target="_blank" title="linux">
-                        <img src="img/ad1.png" alt="linux" width="1200" height="100">
+                        <img src="img/ad1.png">
                     </a>
                 </div>
                 <div class="Info">
@@ -55,8 +54,8 @@
                             <img width="500" height="300" src="{{cover}}">
                             <!-- 小角标 -->
                             <p class="act_tab">
-                                <span class="act_tab_l">{{acdate}}</span>
-                                <span class="act_tab_r">{{discount}}</span>
+                                <!--<span class="act_tab_l">{{acdate}}</span>-->
+                                <!--<span class="act_tab_r">{{discount}}</span>-->
                             </p>
                         </div>
                         <div class="acts">
@@ -71,7 +70,7 @@
                             <a href="javascript:;" target="_blank" class="fl"></a>
                             <a href="javascript:void(0)" class="fav fr " id="fav">
                             <i class="icon"></i><span id="favFont">收藏</span>
-                            (<span id="favNum">{{favnum}}</span>)
+                            <!--(<span id="favNum">{{favnum}}</span>)-->
                         </a>
                             <div class="bdsharebuttonbox fr bdshare-button-style0-16" data-bd-bind="1498466778624">
                                 <a class="bds_more share" data-cmd="more" name="" style="line-height: 20px;margin: 0;padding-left: 24px;background: none;display: block;height: 20px;position: relative;font-size: 14px;">
@@ -86,11 +85,10 @@
                         <p>{{brief}}</p>
                         <div class="CourseTime">
                             <span>共{{lectures}}课时</span>
-                            <span>共{{hour}}</span>
+                            <!--<span>共{{hour}}</span>-->
                             <span>更新时间：{{time}}</span>
                             <div class="clear"></div>
                         </div>
-                        <!--<p class="red"></p>-->
                         <div class="price">
                             <dl>
                                 <dt>价　　格</dt>
@@ -122,7 +120,7 @@
     </script>
 
 
-    <div class="Page course" style="z-index: 9;">
+    <div class="Page course">
 
         <!--相关专题-->
         <div id="about_review"></div>
@@ -150,7 +148,7 @@
                                         </a>
                                         <div class="clear"></div>
                                         <p class="fl">
-                                            立省
+                                            <!--立省-->
                                             <!--<span class="red">￥{{value.count}}</span>-->
                                         </p>
                                         <a href="javascript:;" class="btn fr">去购买</a>
@@ -167,7 +165,6 @@
 
         <div class="Course">
             <!--课程介绍-->
-
             <div class="Left">
                 <dl class="tabs">
                     <dt class="tabsTil" id="tabsTil">
@@ -183,7 +180,6 @@
                                 <dl>
                                     <dt>课程简介</dt>
                                     <dd id="content_code" html="{{introduction}}">
-                                        <!--{{introduction}}-->
                                     </dd>
                                 </dl>
                             </script>
@@ -196,7 +192,7 @@
                                     {{each catalog as value index}}
                                     <li class="item lesson" onclick="gotoVideo({{value.id}})">
                                         <div class="main"><i class="icon type1"></i>
-                                            <p>{{index}}</p>
+                                            <p>{{index+1}}</p>
                                             <p>{{value.name}}</p>
                                             <p class="look red">{{value.free}}</p>
                                             <span class="time">{{value.update_time}}</span>
@@ -235,75 +231,41 @@
                             <div id="introtab4_review"></div>
                             <script id="tpl_introtab4" type="text/html">
 
-                                <div class="quiz" onclick="review()">
-                                    <button class="title-btn">我要评价</button>
+                                <div class="quiz">
+                                    <button class="title-btn" onclick="review()">我要评价</button>
                                     <div class="quiz_content">
-                                        <form action="" id="" method="post">
+                                        <form action="" id="postsform" method="post">
                                             <div class="goods-comm">
                                                 <div class="goods-comm-stars">
-                                                    <p class="star_l">满意度：</p>
                                                 </div>
-
-
                                                 <ul class="rev_pro clearfix">
                                                     <li>
-                                                        <!--在每一个评价条目的前面都放一个隐藏域，用来保存评分的分值，默认的分值为0 -->
-                                                        <input class="fl" type="hidden" style="margin-top:2px;" name="InterviewCommentInfoSub[expAuth]" value="0" />
-                                                        <span class="revtit">总体评价</span>
+                                                        <input id="star_num" type="hidden" name="star_amount" value="5" />
+                                                        <span class="revtit">评分：</span>
                                                         <div class="revinp stars">
-                                                            <span class="level">
-                                                                <i class="level_hollow icon star" cjmark=""></i>
-                                                                <i class="level_hollow icon star" cjmark=""></i>
-                                                                <i class="level_hollow icon star" cjmark=""></i>
-                                                                <i class="level_hollow icon star" cjmark=""></i>
-                                                                <i class="level_hollow icon star" cjmark=""></i>
+                                                            <span class="level" id="setstar">
+                                                                <i id="star1" class="level_hollow icon star" onclick="setstars(1)"></i>
+                                                                <i id="star2" class="level_hollow icon star" onclick="setstars(2)"></i>
+                                                                <i id="star3" class="level_hollow icon star" onclick="setstars(3)"></i>
+                                                                <i id="star4" class="level_hollow icon star" onclick="setstars(4)"></i>
+                                                                <i id="star5" class="level_hollow icon star" onclick="setstars(5)"></i>
                                                             </span>
-                                                            <span class="revgrade">未评分</span>
                                                         </div>
                                                     </li>
                                                 </ul>
-
-
-
-                                                <!--<div id="restars" class="stars">
-                                                    <i class="icon star" onclick="reviewStars(1)"></i>
-                                                    <i class="icon star" onclick="reviewStars(2)"></i>
-                                                    <i class="icon star" onclick="reviewStars(3)"></i>
-                                                    <i class="icon star" onclick="reviewStars(4)"></i>
-                                                    <i class="icon star" onclick="reviewStars(5)"></i>
-                                                </div>-->
                                             </div>
 
                                             <div class="l_text">
-                                                <label class="m_flo">内 容：</label>
-                                                <textarea name="" id="" placeholder="请输入评价..." class="text"></textarea>
-                                                <span class="tr">字数限制为5-200个</span>
+                                                <span class="revtit">内容：</span>
+                                                <textarea name="comment" id="comment" required="required" placeholder="请输入评价..." class="text"></textarea>
                                             </div>
-                                            <button class="btm" type="submit"></button>
+                                            <input class="fl" type="hidden" name="course_id" value="{{course_id}}" />
+                                            <input class="fl" type="hidden" name="token" value="{{token}}" />
+
+                                            <input  class="btn starbtn"  type="submit" value="提交">
                                         </form>
                                     </div>
                                 </div>
-
-                                <!--<div class="myAppraise">
-                                    <div class="fl L1">
-                                        <p class="color42">综合评分</p>
-                                        <div id="hasNumbers" class="disp-n" style="display: block;">
-                                            <div class="stars Big" id="totalScore">
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i>
-                                                <i class="icon star full"></i>
-                                            </div>
-                                            <p>
-                                                <span id="numbers">{{all_number}}</span>人评价</p>
-
-                                        </div>
-                                        <div id="noNumbers" class="disp-n" style="display: none;">
-                                            <p class="f22">暂无</p>
-                                        </div>
-                                    </div>
-                                </div>-->
 
                                 {{if arlist != '' }}
                                 <ul id="arList">
@@ -311,9 +273,9 @@
                                     <li class="item">
                                         <div class="pic fl">
                                             <a href="javascript:;" target="_blank">
-                                                <img src="{{value.avatar}}" class="avatar">
+                                                <img src="{{value.avatar}}" onerror="this.src='./img/post.png'" class="avatar">
                                             </a>
-                                            <!--<p class="nickName">{{value.nick_name}}</p>-->
+                                            <!--<p class="nickName">{{value.name}}</p>-->
                                         </div>
                                         <div class="main color81">
                                             <div class="stars fl">
@@ -321,12 +283,8 @@
                                                 < value.star_amount }} <i class="icon star full">
                                                     </i>
                                                     {{else}}
-                                                    <i class="icon star"></i> {{/if}}{{/each}}
+                                                    <i class="icon star"></i> {{/if}} {{/each}}
                                             </div>
-                                            <!--<div class="clear"></div>-->
-                                            <!--<p class="fl mr20">课程内容({{value.consistent_score}})</p>-->
-                                            <!--<p class="fl mr20">讲解表达({{value.easy_score}})</p>-->
-                                            <!--<p class="fl">答疑服务({{value.answer_score}})</p>-->
                                             <p class="fr">{{value.update_time}}</p>
                                             <div class="clear"></div>
                                             <p class="color42 mt5">{{value.comment}}</p>
@@ -346,6 +304,8 @@
                                 </div>
                                 {{/if}}
                             </script>
+
+
                         </div>
                     </dd>
                 </dl>
@@ -357,7 +317,7 @@
                         <script id="tpl_interest" type="text/html">
                             <ul class="cList" id="InterestedList">
                                 {{each interest_list as value index}}
-                                <li class="cList_Item">
+                                <li class="cList_Item" onclick="gotoCourse({{value.id}})">
                                     <a href="javascript:;" target="_blank">
                                         <div class="pic">
                                             <img src="{{value.poster}}">
@@ -409,7 +369,6 @@
                             <div class="clear"></div>
                         </div>
                     </div>-->
-
                     <div class="Pack" id="students" style="display: block;">
                         <p class="tit">{{students.number}}人学习过</p>
                         <div class="uList uList1" id="studentsList">
@@ -480,57 +439,6 @@
                 </script>
             </p>
 
-        </div>
-    </div>
-
-    <div class="mask" id="EvaluateMask"></div>
-    <div class="evaluate" id="Evaluate">
-        <div class="title">
-            <h2>课程评价</h2>
-            <p>综合评价在4颗星及以上最高可获得35分奖励</p>
-            <div class="clear"></div>
-        </div>
-        <div class="main">
-            <div class="classInfo">
-                <!--<img src="./img/wKioL1NUhTDjQi6lAAH-Z2UcXoI689.jpg" class="fl">-->
-                <h3>深度讲解Linux企业级集群实现方案【马哥linux视频课程】</h3>
-                <p class="color81">该课程已有
-                    <span id="totalNum">4</span> 人评价</p>
-            </div>
-            <div class="setStars">
-                <p class="fl">课程与描述相符</p>
-                <div class="stars small set fl" id="stars1">
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                </div>
-                <p class="fl ml30">老师的讲解表达</p>
-                <div class="stars small set fl" id="stars2">
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                </div>
-                <p class="fl ml30">老师的答疑服务</p>
-                <div class="stars small set fl" id="stars3">
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                    <i class="icon star full"></i>
-                </div>
-            </div>
-            <textarea id="appContent" placeholder="赠人玫瑰，手有余香，分享，帮助更多学员，200字以内" maxlength="200"></textarea>
-            <i class="icon check fl mr5"></i>
-            <p class="fl check">匿名</p>
-            <div class="clear"></div>
-            <div class="tc btns">
-                <button class="white" id="closeEvaluate">关闭</button>
-                <button id="saveEvaluate">提交</button>
-            </div>
         </div>
     </div>
 
@@ -643,7 +551,6 @@
             <button id="bizQQ_WPA">点我咨询</button>
         </div>
     </div>
-
 
 </body>
 

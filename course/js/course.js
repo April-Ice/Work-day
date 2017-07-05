@@ -10,6 +10,7 @@ var same_course;
 var comment;
 var recommend;
 var buyer;
+var amount = 0;
 
 
 ///tabs
@@ -46,20 +47,17 @@ $(document).ready(function () {
     same_course = detail.same_course;
     comment = detail.comment;
     recommend = detail.recommend;
-    console.log(detail);
     buyer = detail.buyer;
 
 
     var course_html = template('tpl_course', {
         "cover": course[0].poster,
-        "favnum": 520,
-        // "title": '深度讲解Linux企业级集群实现方案【马哥linux视频课程】',
+        // "favnum": 520,
         "title": course[0].title,
         "brief": course[0].short_summary,
         "discount": '',
         "acdate": '',
-        "lectures": 14,
-        "hour": '6小时8分钟',
+        "lectures": course_video.length,
         "time": course[0].update_time,
         "countprice": course[0].price,
     });
@@ -88,13 +86,10 @@ $(document).ready(function () {
 
     var introtab4_html = template('tpl_introtab4', {
         "all_number": comment.length,
-        "good_number": 0,
-        "center_number": 0,
-        "poor_number": 0,
-        "consistent_score": 5,
-        "easy_score": 5,
-        "answer_score": 5,
         "arlist": comment,
+        "course_id": course_id,
+        "token": token,
+        "amount": amount,
         stars: [0, 0, 0, 0, 0]
     });
     $("#introtab4_review").html(introtab4_html);
@@ -116,71 +111,15 @@ $(document).ready(function () {
             name: '51CTO学院480612985(Linux官方2群)',
         },
         "students": {
-            number: buyer.number || 0,
+            number: buyer.length || 0,
         },
         "studentlist": buyer,
     });
     $("#teacher1_review").html(teacher1_html);
 
-
-var degree = ['','很差','差','中','良','优','未评分'];
-
-        $(function(){
-            //点星星
-            $(document).on('mouseover','i[cjmark]',function(){
-                var num = $(this).index();
-                var pmark = $(this).parents('.revinp');
-                var mark = pmark.prevAll('input');
-                //var val = mark.val();
-                //if(mark.prop('checked')) return false;
-
-                var list = $(this).parent().find('i');
-                for(var i=0;i<=num;i++){
-                    list.eq(i).attr('class','level_solid');
-                }
-                for(var i=num+1,len=list.length-1;i<=len;i++){
-                    list.eq(i).attr('class','level_hollow');
-                }
-                $(this).parent().next().html(degree[num+1]);
-
-            });
-
-            $(document).on('mouseout','i[cjmark]',function(){
-                var num = $(this).index();
-                var pmark = $(this).parents('.revinp');
-                var mark = pmark.prevAll('input');
-                var val = parseInt(mark.val());
-                //if(mark.prop('checked')) return false;
-
-                var list = $(this).parent().find('i');
-                //alert(list.length);
-                if(val != 0){
-                    for(var i=0;i<=val;i++){
-                        list.eq(i).attr('class','level_solid');
-                    }
-                    //alert(val);
-                    for(var i=val,len=list.length-1;i<=len;i++){
-                        list.eq(i).attr('class','level_hollow');
-                    }
-                    $(this).parent().next().html(degree[val]);
-                }else{
-                    for(var i=0;i<=list.length-1;i++){
-                        list.eq(i).attr('class','level_hollow');
-                    }
-                    $(this).parent().next().html("未评分");
-                }
-            })
-
-            //点击星星
-            $(document).on('click','i[cjmark]',function(){
-                var num = $(this).index();
-                var pmark = $(this).parents('.revinp');
-                var mark = pmark.prevAll('input');
-                mark.val(num+1);
-            })
-        });
-
-
+    $("form").submit(function (e) {
+        subpost();
+    });
 });
 
 function getUrlParam(name) {
@@ -218,10 +157,43 @@ function review() {
     $(".quiz").addClass("active")
 }
 
-// function reviewStars(num) {
-//     console.log("stars");
-//     console.log($(this));
-//     for (var i = 1; i < num; i++) {
-//         $("#restars").find(".star").nthchild(i).addClass("full");
-//     }
-// }
+$.fn.serializeObject = function () {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function () {
+        if (o[this.name]) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+function subpost() {
+    var data = $('#postsform').serializeObject();;
+    var AjaxURL = "http://crm.cike360.com/portal/index.php?r=background/Insert_course_comment";
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: AjaxURL,
+        data: JSON.stringify(data),
+        success: function (result) {
+        },
+        error: function (data) {
+        }
+    });
+}
+
+function setstars(num) {
+    amount = num;
+    $("#star_num").attr("value", num);
+    $("#setstar").find(".star").removeClass("full");
+    for (var j = 0; j < num; j++) {
+        console.log(j);
+        $("#setstar").find(".star").eq(j).addClass("full");
+    }
+}
