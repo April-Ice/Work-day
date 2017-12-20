@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IWMS月台看板</title>
+		<html lang="http://zhi.hu/XyIa"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+		<meta charset='utf-8' />
+		<!--<meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+		<meta name="author" content="maguilei59@camelotchina.com" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />   
+		<link rel="stylesheet" type="text/css" href="css/entrucking.css"/>
+	</head>
+	<body>
+		<div class="WMSTitle">
+			IWMS装货大屏
+		</div>
+		<div class="ocontent">
+			<div class="nowTimeDiv"></div>
+			<div class="ocontentBorder">
+			<div class="topMid comBox">
+				<div class="comBoxPadding">
+                <div class="setting">
+                    <a href="javascript: void(0);" class="search-con" id="searchConBtn"></a>
+                    <a href="javascript: void(0);" class="full-screen" id="fullScreen"></a>
+                </div>
+                <div class="refresh">
+                    <span class="wordColor3">每</span>
+                    <select id="re-second">
+                        <option value="60" selected="selected">60</option>
+                        <option value="50">50</option>
+                        <option value="40">40</option>
+                        <option value="30">30</option>
+                        <option value="20">20</option>
+                        <option value="10">10</option>
+                    </select>
+                    <span class="wordColor3">秒刷新,倒计时：<span class="number" id="number"></span></span>
+                </div>
+				<div class="comBoxCon">
+                    <div class="total-desc">
+                        <ul>
+                            <li>
+                                <span class="wordColor4">正在作业：</span>
+                                <span class="wordColor4">10俩</span>
+                            </li>
+                            <li>
+                                <span class="wordColor1">累计到达：</span>
+                                <span class="wordColor1">36俩</span>
+                            </li>
+                            <li>
+                                <span class="wordColor2">已完成：</span>
+                                <span class="wordColor2">20俩</span>
+                            </li>
+                            <li>
+                                <span class="wordColor3">正在排队：</span>
+                                <span class="wordColor3">6俩</span>
+                            </li>
+                        </ul>
+                    </div>
+					<table>
+						<thead>
+							<tr>
+								<th width="10%">线路</th>
+								<th width="10%">车牌号</th>
+								<th width="10%">司机</th>
+								<th width="8%">应装数量</th>
+								<th width="8%">已装数量</th>
+								<th width="8%">未装数量</th>
+								<th width="13%">登记日期</th>
+								<th width="13%">开始日期</th>
+								<th width="10%">总耗时</th>
+								<th width="10%">备注</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+                                <td>北京</td>
+								<td>鲁B 88888</td>
+								<td>史珍香</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td class="bgRed">加急</td>
+							</tr>
+							<tr>
+                                <td>天津</td>
+								<td>鲁B 88888</td>
+								<td>杜子腾</td>
+								<td>30</td>
+								<td>12</td>
+                                <td>18</td>
+								<td>2017-8-18 17:00</td>
+								<td>2017-8-18 17:30</td>
+								<td>10分钟</td>
+                                <td></td>
+							</tr>
+                            <tr>
+                                <td>北京</td>
+                                <td>鲁B 888888</td>
+                                <td>史珍香</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td class="bgRed">加急</td>
+                            </tr>
+                            <tr>
+                                <td>天津</td>
+                                <td>鲁B 888888</td>
+                                <td>杜子腾</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>北京</td>
+                                <td>鲁B 888888</td>
+                                <td>史珍香</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td class="bgRed">加急</td>
+                            </tr>
+                            <tr>
+                                <td>天津</td>
+                                <td>鲁B 888888</td>
+                                <td>杜子腾</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>北京</td>
+                                <td>鲁B 888888</td>
+                                <td>史珍香</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td class="bgRed">加急</td>
+                            </tr>
+                            <tr>
+                                <td>天津</td>
+                                <td>鲁B 888888</td>
+                                <td>杜子腾</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>北京</td>
+                                <td>鲁B 888888</td>
+                                <td>史珍香</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td class="bgRed">加急</td>
+                            </tr>
+                            <tr>
+                                <td>天津</td>
+                                <td>鲁B 888888</td>
+                                <td>杜子腾</td>
+                                <td>30</td>
+                                <td>12</td>
+                                <td>18</td>
+                                <td>2017-8-18 17:00</td>
+                                <td>2017-8-18 17:30</td>
+                                <td>10分钟</td>
+                                <td></td>
+                            </tr>
+						</tbody>
+					</table>
+                    <div class="page">
+                        <input id="totalPage" type="hidden" value="10">
+                        <input id="current" type="hidden" value="1">
+                        <ul>
+                            <li>每页显示<span class="wordColor3">10</span>条，当前第<span class="wordColor1" id="currentNum">1</span>页，共<span class="wordColor3">68</span>条</li>
+                        </ul>
+                    </div>
+                    <div class="conMiddle" id="searchCon">
+                        <form id="myForm" action="#" method="post">
+                            <div class="con center-center">
+                                <div class="cch">日期：</div>
+                                <input class="zzdjInput" type="text">
+                            </div>
+							<div class="con center-center">
+								<div class="cch">车辆状态：</div>
+								<select class="conSelect">
+									<option class="op" value="">--请选择--</option>
+								</select>
+							</div>
+                            <div class="con center-center">
+                                <input class="con-btn-search" type="button" id="search" value="查询" />
+                                <input class="con-btn-clear" type="reset" value="清空">
+                            </div>
+                        </form>
+                    </div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+		<script src="js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/entrucking.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+</html>

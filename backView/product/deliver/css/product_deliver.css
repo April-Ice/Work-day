@@ -1,0 +1,372 @@
+@charset "UTF-8";
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.tingyong {
+    background-color: gray;
+}
+
+.bgRed {
+    background-color: #c11f1f !important;
+}
+
+.wordRed {
+    color: #e82626;
+}
+
+.bgGreen {
+    background-color: #17a044 !important;
+}
+
+.wordGreen {
+    color: #1ced61;
+}
+
+.bgYellow {
+    background-color: rgba(220, 200, 0, 0.8);
+}
+
+.wordYellow {
+    color: #ffbe0e;
+}
+
+.wordBlue {
+    color: #00a0e9;
+}
+
+.wordRed {
+    color: #e82626;
+}
+
+.wordColor1 {
+    color: #d82121;
+}
+
+.wordColor2 {
+    color: #e4d833;
+}
+
+.wordColor3 {
+    color: #38b5f3;
+}
+
+.wordColor4 {
+    color: #3ae85a;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url("../iconfont/iconfont.eot");
+    /* IE9*/
+    src: url("../iconfont/iconfont.eot#iefix") format("embedded-opentype"), url("../iconfont/iconfont.woff") format("woff"), url("../iconfont/iconfont.ttf") format("truetype"), url("../iconfont/iconfont.svg#iconfont") format("svg");
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #3f98DB;
+    margin-right: 0.05rem;
+}
+
+html,
+body,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 dl,
+dt,
+dd,
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    width: 100%;
+    /*height: 100%;*/
+    font-family: "Arial", "Microsoft YaHei", sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+.hor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hor-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.ver-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.center-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-center-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.space-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.txtRight {
+    text-align: right;
+}
+
+body.deliver {
+    min-width: 720px !important;
+    background: #0b122f url("../img/bg.png") no-repeat;
+    background-position: -100vh -50vh;
+    background-size: 200% 160%;
+    padding: 0.2rem;
+    padding-top: 0.4rem;
+    box-sizing: border-box;
+}
+
+
+/*----------------------content-------------------------------*/
+
+.WMSTitle {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 0.15rem;
+    transform: translate(-50%);
+    height: 0.52rem;
+    line-height: 0.52rem;
+    width: auto;
+    background-color: #14225a;
+    border: 1px solid #1f48a2;
+    color: #d4e1ff;
+    font-size: .28rem;
+    padding: 0 0.3rem;
+    z-index: 1;
+}
+
+.deliverContent {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #1f48a2;
+    padding: 0.1rem;
+    padding-top: 0.1rem;
+    position: relative;
+    font-size: .18rem;
+}
+
+.deliverContent .nowTimeDiv {
+    position: absolute;
+    left: 8.3rem;
+    top: 0.35rem;
+    font-size: .18rem;
+    color: #d4e1ff;
+}
+
+.ocontentBorder {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: calc(100vh - .8rem);
+    background: url("../img/bigborder.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.topMid {
+    width: 100%;
+    position: relative;
+    padding-top: 0.3rem;
+}
+
+.comBox {
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    padding: 0.15rem;
+    overflow: hidden;
+}
+
+.comBoxCon {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: .3rem;
+}
+
+.deliverContent .leftBox,
+.deliverContent .rightBox {
+    width: 45.8vw;
+    min-height: 87.96vh;
+}
+
+.deliverContent .leftBox {
+    background: url("../img/leftradioborder2.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.deliverContent .rightBox {
+    background: url("../img/rightradioborder2.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.deliverContent .title {
+    font-size: .23rem;
+    text-align: center;
+    line-height: 2;
+    margin-top: .5rem;
+    margin-bottom: .1rem;
+}
+
+.tableBox .scroll {
+    height: 34.2vh;
+    width: 94.6%;
+    margin: 0 auto;
+}
+
+.scroll::-webkit-scrollbar{
+    width: 2px;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.tableBox table {
+    width: 100%;
+    font-size: .18rem;
+}
+
+.tableBox table th,
+.tableBox table td {
+    line-height: 2;
+    border: 1px solid #15266d;
+    text-align: center;
+    font-weight: normal;
+    padding: .1rem .05rem;
+}
+
+.tableBox table th {
+    background: rgba(32, 81, 172, 0.8);
+}
+
+.tableBox table td {
+    background: rgba(27, 65, 135, 0.8);
+}
+
+.circleBox {
+    display: flex;
+    justify-content: space-between;
+    width: 94.6%;
+    margin: .4rem auto 0;
+}
+
+.circleBox .boxItem {
+    width: 31%;
+    background: rgba(255, 255, 255, .2);
+    border-radius: .2rem;
+    padding: .1rem 0;
+}
+
+.circleBox .boxItem p {
+    text-align: center;
+    font-size: .16rem;
+    line-height: 2;
+    margin-bottom: .1rem;
+}
+
+.circleBox .boxItem .circle {
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    margin: 0 auto;
+    padding: .1rem;
+    text-align: center;
+    font-size: .26rem;
+}
+
+.circleBox .boxItem .circle .inner {
+    border-radius: 50%;
+    /* height: .8rem;
+    width: .8rem; */
+    width: 100%;
+    height: 100%;
+    line-height: .8rem;
+}
+
+.circleBox .boxItem .circle.blue {
+    background: rgba(0, 160, 233, 0.6);
+}
+
+.circleBox .boxItem .circle.blue .inner {
+    background: #00a0e9;
+}
+
+.circleBox .boxItem .circle.yellow {
+    background: rgba(255, 180, 4, 0.6);
+}
+
+.circleBox .boxItem .circle.yellow .inner {
+    background: rgba(255, 180, 4, 1);
+}
+
+.circleBox .boxItem .circle.red {
+    background: rgba(255, 0, 0, 0.6);
+}
+
+.circleBox .boxItem .circle.red .inner {
+    background: rgba(255, 0, 0, 1);
+}
+
+.deliverContent .row.time {
+    font-size: .2rem;
+    text-align: center;
+    margin: .3rem 0;
+}
+
+.deliverContent .workTime {
+    font-size: .28rem;
+    text-align: center;
+    width: 100%;
+}

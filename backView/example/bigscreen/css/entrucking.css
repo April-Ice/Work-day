@@ -1,0 +1,345 @@
+@charset "UTF-8";
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.tingyong {
+  background-color: gray; }
+
+.bgRed {
+  background-color: #c11f1f !important; }
+
+.wordRed {
+  color: #e82626; }
+
+.bgGreen {
+  background-color: #17a044 !important; }
+
+.wordGreen {
+  color: #1ced61; }
+
+.bgYellow {
+  background-color: rgba(220, 200, 0, 0.8); }
+
+.wordYellow {
+  color: #ffbe0e; }
+
+.wordBlue {
+  color: #00a0e9; }
+
+.wordRed {
+  color: #e82626; }
+
+.wordColor1 {
+  color: #d82121; }
+
+.wordColor2 {
+  color: #e4d833; }
+
+.wordColor3 {
+  color: #38b5f3; }
+
+.wordColor4 {
+  color: #3ae85a; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../iconfont/iconfont.eot");
+  /* IE9*/
+  src: url("../iconfont/iconfont.eot#iefix") format("embedded-opentype"), url("../iconfont/iconfont.woff") format("woff"), url("../iconfont/iconfont.ttf") format("truetype"), url("../iconfont/iconfont.svg#iconfont") format("svg");
+  /* iOS 4.1- */ 
+}
+  
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: #3f98DB;
+  margin-right: 0.05rem; }
+
+html, body, span, h1, h2, h3, h4, h5, h6 dl, dt, dd, ol, ul, li {
+  margin: 0;
+  padding: 0;
+  color: #666;
+  width: 100%;
+  /*height: 100%;*/
+  font-family: "Arial","Microsoft YaHei",sans-serif; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+body {
+  min-width: 720px !important;
+  background: #0d163b url("../img/bg.png") no-repeat;
+  background-position: 0rem -1.5rem;
+  background-size: 100% 100%;
+  padding: 0.2rem;
+  padding-top: 0.4rem;
+  box-sizing: border-box;
+  position: relative; }
+
+ul, ol, li {
+  list-style: none; }
+
+.hor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.hor-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center; }
+
+.ver-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center; }
+
+.center-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; }
+
+.center-center-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center; }
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+
+/*----------------------content-------------------------------*/
+.WMSTitle {
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 0.15rem;
+  transform: translate(-50%);
+  height: 0.52rem;
+  line-height: 0.52rem;
+  width: auto;
+  background-color: #0d163b;
+  border: 1px solid #1f48a2;
+  color: #d4e1ff;
+  font-size: .3rem;
+  padding: 0 0.3rem;
+  z-index: 1; }
+
+.ocontent {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #1f48a2;
+  padding: 0.1rem;
+  padding-top: 0.1rem;
+  position: relative; }
+  .ocontent .nowTimeDiv {
+    position: absolute;
+    left: 8.3rem;
+    top: 0.35rem;
+    font-size: .2rem;
+    color: #d4e1ff; }
+
+.ocontentBorder {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: url("../img/bigborder.png") no-repeat;
+  background-size: 100% 100%; }
+
+.topMid {
+  width: 100%;
+  position: relative;
+  padding-top: 0.3rem; }
+
+.comBox {
+  box-sizing: border-box;
+  float: left;
+  height: 100%;
+  padding: 0.1rem;
+  overflow: hidden; }
+
+.comBoxPadding {
+  background: url("../img/o-bg.png") no-repeat center;
+  background-size: 100% 100%;
+  border: none;
+  padding-top: 0.9rem;
+  height: 89%; }
+  .comBoxPadding .setting {
+    position: absolute;
+    top: -0.2rem;
+    left: 0.5rem; }
+    .comBoxPadding .setting .search-con {
+      width: 40px;
+      height: 40px;
+      background: url("../img/seach.png") no-repeat;
+      display: inline-block; }
+    .comBoxPadding .setting .full-screen {
+      width: 40px;
+      height: 40px;
+      background: url("../img/full-screen.png") no-repeat;
+      display: inline-block; }
+  .comBoxPadding .refresh {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.4rem;
+    font-size: .24rem; }
+    .comBoxPadding .refresh select {
+      border: 1px solid #fff;
+      height: 0.24rem;
+      top: -3px;
+      position: relative;
+      border-radius: 3px;
+      color: #38b5f3;
+      border: 1px solid #38b5f3;
+      background-color: #0e173e; }
+    .comBoxPadding .refresh .number {
+      width: 0.2rem;
+      display: inline-block; }
+  .comBoxPadding .comBoxCon {
+    height: 100%; }
+    .comBoxPadding .comBoxCon .total-desc {
+      height: .4rem;
+      line-height: .4rem;
+      margin-left: 0.5rem;
+      font-size: .24rem;
+      width: 94.5%; }
+      .comBoxPadding .comBoxCon .total-desc li {
+        text-align: right;
+        float: right;
+        width: 12%;
+        padding-right: .4rem; }
+    .comBoxPadding .comBoxCon table {
+      width: 100%;
+      height: 90%;
+      padding: 0 0.5rem; }
+      .comBoxPadding .comBoxCon table tr {
+        background-color: #122963;
+        border: 2px solid #0c1333; }
+        .comBoxPadding .comBoxCon table tr th {
+          height: .8rem;
+          font-size: .24rem;
+          color: #1cf342;
+          background-color: #173e92;
+          /*width: 12.5%;*/ }
+        .comBoxPadding .comBoxCon table tr td {
+          text-align: center;
+          font-size: .24rem;
+          color: #d4e1ff; }
+          .comBoxPadding .comBoxCon table tr td i, .comBoxPadding .comBoxCon table tr td span {
+            color: #d4e1ff; }
+      .comBoxPadding .comBoxCon table tr:nth-child(even) {
+        background-color: #173e92; }
+    .comBoxPadding .comBoxCon .page {
+      height: .4rem;
+      line-height: .4rem;
+      margin-left: 0.5rem;
+      font-size: .24rem;
+      width: 94.5%; }
+      .comBoxPadding .comBoxCon .page li {
+        text-align: left;
+        float: left;
+        width: 50%;
+        padding-right: .4rem;
+        color: #1e61ef; }
+  .comBoxPadding .conMiddle {
+    position: absolute;
+    top: 50%;
+    margin-top: -15%;
+    left: 50%;
+    margin-left: -15%;
+    width: 35%;
+    padding: .5rem 0;
+    background: #2653b7;
+    border: 1px solid #1f48a2;
+    /*清除ie的默认选择框样式清除，隐藏下拉箭头*/ }
+    .comBoxPadding .conMiddle .con {
+      padding: 10px 0; }
+    .comBoxPadding .conMiddle .cch {
+      width: 20%;
+      float: left;
+      color: #d4e1ff;
+      font-size: .26rem; }
+    .comBoxPadding .conMiddle .zzdjInput {
+      color: #d4e1ff;
+      font-size: .26rem;
+      padding-left: .1rem;
+      box-sizing: border-box;
+      width: 60%;
+      float: left;
+      border: 1px solid #5884e6;
+      height: .7rem;
+      border-radius: .03rem;
+      background-color: transparent; }
+    .comBoxPadding .conMiddle .conSelect {
+      color: #d4e1ff;
+      font-size: .26rem;
+      padding-left: .1rem;
+      box-sizing: border-box;
+      width: 60%;
+      float: left;
+      border: 1px solid #5884e6;
+      height: .7rem;
+      border-radius: .03rem;
+      background-color: transparent; }
+    .comBoxPadding .conMiddle select {
+      /*很关键：将默认的select选择框样式清除*/
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      /*在选择框的最右侧中间显示小箭头图片*/
+      background: url(../img/arrow.png) no-repeat scroll 95% center transparent;
+      background-size: .2rem .1rem;
+      /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+      padding-right: 10%; }
+    .comBoxPadding .conMiddle select::-ms-expand {
+      display: none; }
+    .comBoxPadding .conMiddle .op {
+      color: #0c1333;
+      background: #fff; }
+    .comBoxPadding .conMiddle .op:hover {
+      color: #fff;
+      background: #1f48a2; }
+    .comBoxPadding .conMiddle .con-btn-search {
+      font-size: .26rem;
+      border: 1px solid #1ced61;
+      color: #fff;
+      background: #0bb543;
+      height: .5rem;
+      border-radius: .1rem;
+      width: 1.4rem;
+      margin-top: .2rem;
+      margin-right: .2rem; }
+    .comBoxPadding .conMiddle .con-btn-clear, .comBoxPadding .conMiddle .con-btn-clear:focus {
+      font-size: .26rem;
+      border: 1px solid #1ced61;
+      color: #1ced61;
+      background: #2653b7;
+      height: .5rem;
+      border-radius: .1rem;
+      width: 1.4rem;
+      margin-top: .2rem;
+      margin-right: .2rem; }
+    .comBoxPadding .conMiddle .con-btn-search:hover, .comBoxPadding .conMiddle .con-btn-clear:hover {
+      border: 1px solid #018a2e;
+      background: #018a2e;
+      color: #fff; }

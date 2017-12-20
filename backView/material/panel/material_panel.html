@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IWMS月台看板</title>
+    <html lang="http://zhi.hu/XyIa">
+    <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+    <meta charset='utf-8' />
+    <!--<meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/material_panel.css" />
+</head>
+
+<body>
+    <div class="WMSTitle">
+        COSMO-WMS 原材料预约看板
+    </div>
+    <div class="ocontent">
+        <div class="nowTimeDiv"></div>
+        <div class="ocontentBorder">
+            <div class="topMid comBox">
+                <div class="comBoxPadding">
+                    <div class="comBoxCon">
+                        <div class="leftAll">
+                            <div class="comLeft">
+                                <div class="carBox">
+                                    <h4 class="boardTitle">车辆情况</h4>
+                                    <div class="row top" data-toggle="modal" data-target="#carModal">
+                                        <div class="col-sm-6 label">
+                                            <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>车辆总数
+                                        </div>
+                                        <div class="col-sm-6 value">
+                                            <span class="carNum blue">94</span> 辆
+                                        </div>
+                                    </div>
+                                    <div class="row" data-toggle="modal" data-target="#carModal">
+                                        <div class="col-sm-6 label">
+                                            <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>按时到达</div>
+                                        <div class="col-sm-6 value">
+                                            <span class="carNum green">84</span> 辆
+                                        </div>
+                                    </div>
+                                    <div class="row" data-toggle="modal" data-target="#carModal">
+                                        <div class="col-sm-6 label">
+                                            <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>提前到达</div>
+                                        <div class="col-sm-6 value">
+                                            <span class="carNum red">1</span> 辆
+                                        </div>
+                                    </div>
+                                    <div class="row" data-toggle="modal" data-target="#carModal">
+                                        <div class="col-sm-6 label">
+                                            <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>延期到达</div>
+                                        <div class="col-sm-6 value">
+                                            <span class="carNum red">1</span> 辆
+                                        </div>
+                                    </div>
+                                    <div class="row bottom" data-toggle="modal" data-target="#carModal">
+                                        <div class="col-sm-6 label">
+                                            <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>应到未到</div>
+                                        <div class="col-sm-6 value">
+                                            <span class="carNum red">1</span> 辆
+                                        </div>
+                                    </div>
+                                    <div class="row" data-toggle="modal" data-target="#carModal">
+                                        <div class="col-sm-6 label">
+                                            <span class="glyphicon glyphicon-bed" aria-hidden="true"></span>免预约到达</div>
+                                        <div class="col-sm-6 value">
+                                            <span class="carNum yellow">4</span> 辆
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chartbox">
+                                    <div class="bottomBox" id="finish"  data-toggle="modal" data-target="#carModal">
+                                        <p>提前到达车辆数：
+                                            <span class="red">1</span> 辆</p>
+                                        <table class="table table-bordered bottomTable">
+                                            <tr>
+                                                <td>供应商</td>
+                                                <td>车辆</td>
+                                                <td>预约时间</td>
+                                                <td>提前时间</td>
+                                            </tr>
+                                            <tr>
+                                                <td>海达盛</td>
+                                                <td>鲁A-3490B3</td>
+                                                <td>13:00</td>
+                                                <td>5分钟</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="chartitle side">
+                                        <span>[</span>
+                                        <em>提前达到</em>
+                                        <span>]
+                                            <span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="centerAll">
+                            <div class="comCenter">
+                                <div class="centerBox">
+                                    <div class="row explain">
+                                        <div class="col-sm-6 leftCon">
+                                            <span class="square normalCell"></span> 正常工作
+                                        </div>
+                                        <div class="col-sm-6 rightCon txtRight">
+                                            <span class="square warnCell"></span> 工作超时
+                                        </div>
+                                    </div>
+
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th>月台1</th>
+                                            <th>月台2</th>
+                                            <th>月台3</th>
+                                            <th>月台4</th>
+                                            <th>月台5</th>
+                                            <th>月台6</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="warnCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="warnCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="warnCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                            <td class="normalCell" data-toggle="modal" data-target="#detailModal">
+                                                <p>鲁B-F93A6</p>
+                                                <p>10分钟</p>
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                            <td class="freeCell">
+                                                空闲
+                                            </td>
+                                            <td class="freeCell">
+                                                <p>鲁B-F空闲
+                                            </td>
+                                        </tr>
+                                        <tr class="total">
+                                            <td>
+                                                计划：15
+                                            </td>
+                                            <td>
+                                                计划：18
+                                            </td>
+                                            <td>
+                                                计划：19
+                                            </td>
+                                            <td>
+                                                计划：15
+                                            </td>
+                                            <td>
+                                                计划：3
+                                            </td>
+                                            <td>
+                                                计划：15
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="bottomCon">
+                                <div class="chartbox">
+                                    <div class="bottomBox" id="finish" data-toggle="modal" data-target="#carModal">
+                                        <p>延期到达车辆数：
+                                            <span class="red">1</span> 辆</p>
+                                        <table class="table table-bordered bottomTable">
+                                            <tr>
+                                                <td>供应商</td>
+                                                <td>车辆</td>
+                                                <td>预约时间</td>
+                                                <td>提前时间</td>
+                                            </tr>
+                                            <tr data-toggle="modal" data-target="#detailModal">
+                                                <td>海达盛</td>
+                                                <td>鲁A-3490B3</td>
+                                                <td>13:00</td>
+                                                <td>5分钟</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="chartitle chartitleC">
+                                        <span>[</span>
+                                        <em>延期到达</em>
+                                        <span>]
+                                            <span>
+                                    </div>
+                                </div>
+                                <div class="chartbox">
+                                    <div class="bottomBox" id="finish" data-toggle="modal" data-target="#carModal">
+                                        <p>应到未到车辆数：
+                                            <span class="red">1</span> 辆</p>
+                                        <table class="table table-bordered bottomTable">
+                                            <tr>
+                                                <td>供应商</td>
+                                                <td>车辆</td>
+                                                <td>预约时间</td>
+                                                <td>提前时间</td>
+                                            </tr>
+                                            <tr data-toggle="modal" data-target="#detailModal">
+                                                <td>海达盛</td>
+                                                <td>鲁A-3490B3</td>
+                                                <td>13:00</td>
+                                                <td>5分钟</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="chartitle chartitleC">
+                                        <span>[</span>
+                                        <em>应到未到</em>
+                                        <span>]
+                                            <span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightAll">
+                            <div class="comright">
+                                <div class="carBox orderBox">
+                                    <h4 class="boardTitle">看单情况</h4>
+                                    <h5 class="top">
+                                        <span class="glyphicon glyphicon-bed" aria-hidden="true"></span> 当日看单
+                                    </h5>
+                                    <div class="row ">
+                                        <div class="col-sm-4">
+                                            <p class="orderNum blue">386</p>
+                                            <p>看单总数</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="orderNum green">386</p>
+                                            <p>已收总数</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="orderNum yellow">386</p>
+                                            <p>未收总数</p>
+                                        </div>
+                                    </div>
+                                    <h5>
+                                        <span class="glyphicon glyphicon-bed" aria-hidden="true"></span> 预约看单
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <p class="orderNum blue">386</p>
+                                            <p>看单总数</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="orderNum green">386</p>
+                                            <p>已收总数</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="orderNum yellow">386</p>
+                                            <p>未收总数</p>
+                                        </div>
+                                    </div>
+                                    <h5>
+                                        <span class="glyphicon glyphicon-bed" aria-hidden="true"></span> 免预约看单
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <p class="orderNum blue">386</p>
+                                            <p>看单总数</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="orderNum green">386</p>
+                                            <p>已收总数</p>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p class="orderNum yellow">386</p>
+                                            <p>未收总数</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chartbox">
+                                <div class="bottomBox" id="finish" data-toggle="modal" data-target="#carModal">
+                                    <p>作业超时车辆数：
+                                        <span class="red">1</span> 辆</p>
+                                    <table class="table table-bordered bottomTable">
+                                        <tr>
+                                            <td>供应商</td>
+                                            <td>车辆</td>
+                                            <td>预约时间</td>
+                                            <td>提前时间</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#detailModal">
+                                            <td>海达盛</td>
+                                            <td>鲁A-3490B3</td>
+                                            <td>13:00</td>
+                                            <td>5分钟</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#detailModal">
+                                            <td>海达盛</td>
+                                            <td>鲁A-3490B3</td>
+                                            <td>13:00</td>
+                                            <td>5分钟</td>
+                                        </tr>
+                                        <tr data-toggle="modal" data-target="#detailModal">
+                                            <td>海达盛</td>
+                                            <td>鲁A-3490B3</td>
+                                            <td>13:00</td>
+                                            <td>5分钟</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="chartitle side">
+                                    <span>[</span>
+                                    <em>作业超时</em>
+                                    <span>]
+                                        <span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 车辆状况Modal -->
+                        <div class="modal fade" id="carModal" tabindex="-1" role="dialog" aria-labelledby="carModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="carModalLabel">车辆总数</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-bordered bottomTable">
+                                            <tr>
+                                                <td>供应商</td>
+                                                <td>车辆</td>
+                                                <td>预约时间</td>
+                                                <td>提前时间</td>
+                                            </tr>
+                                            <tr>
+                                                <td>海达盛</td>
+                                                <td>鲁A-3490B3</td>
+                                                <td>13:00</td>
+                                                <td>5分钟</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 车辆详细信息Modal -->
+                        <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h4 class="modal-title" id="detailModalLabel">车牌号 鲁B-F93A6</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-bordered bottomTable">
+                                            <tr>
+                                                <td>型号</td>
+                                                <td>已/应出数量</td>
+                                                <td>差异</td>
+                                                <td>作业人</td>
+                                            </tr>
+                                            <tr>
+                                                <td>BCD-244545</td>
+                                                <td>39/60</td>
+                                                <td>160</td>
+                                                <td>张明丽</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br style="clear:both;">
+        </div>
+    </div>
+    <script src="js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/material_panel.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

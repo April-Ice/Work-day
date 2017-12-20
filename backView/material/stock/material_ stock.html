@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IWMS月台看板</title>
+    <html lang="http://zhi.hu/XyIa">
+    <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+    <meta charset='utf-8' />
+    <!--<meta name ="viewport" content ="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/material_ stock.css" />
+</head>
+
+<body>
+    <div class="stockCon container-fluid">
+        <div class="row topTitle">
+            <div class="col-md-4 logo">
+                <!-- <span class="logo"></span>  -->
+                COSMOPlat
+            </div>
+            <div class="col-md-4 title">原材料库存可视</div>
+            <div class="col-md-4 user">责任人：张通江
+                <span class="time nowTimeDiv"></span>
+            </div>
+        </div>
+
+        <div class="cotentBox">
+            <div class="cotentTop">
+                <div class="topItem">
+                    <div class="totalBox container-fluid">
+                        <p class="title">库件合计</p>
+                        <div class="row">
+                            <div class="col-sm-6 label">
+                                可用库存
+                            </div>
+                            <div class="col-sm-6 value">
+                                <span class="carNum blue">5000</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 label">
+                                已交数量
+                            </div>
+                            <div class="col-sm-6 value">
+                                <span class="carNum yellow">12000</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 label">
+                                仍需数量
+                            </div>
+                            <div class="col-sm-6 value">
+                                <span class="carNum green">5000</span>
+                            </div>
+                        </div>
+                        <div class="row border">
+                            <div class="col-sm-6 label">
+                                总入库
+                            </div>
+                            <div class="col-sm-6 value">
+                                <span class="carNum red">300</span>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-sm-6 label">
+                                总出库
+                            </div>
+                            <div class="col-sm-6 value">
+                                <span class="carNum blue">400</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topItem">
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topItem">
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topItem">
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="topItem">
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rateBox">
+                        <p class="title">库区A</p>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- 百分比 data-percent -->
+                                <div id="outer" class="Kcircle greenC" data-percent="20">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">500</div>
+                                </div>
+                                <p>可用库存</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle yellowC" data-percent="50">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">300</div>
+                                </div>
+                                <p>已交数量</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <div id="outer" class="Kcircle redC" data-percent="80">
+                                    <div id="load_left">
+                                        <span></span>
+                                    </div>
+                                    <div id="load_right">
+                                        <span></span>
+                                    </div>
+                                    <div id="inner">100</div>
+                                </div>
+                                <p>仍需数量</p>
+                            </div>
+                        </div>
+                        <div class="row total">
+                            <div class="col-sm-6 border">
+                                总入库：
+                                <span class="green KNum">320</span>
+                            </div>
+                            <div class="col-sm-6">
+                                总出库：
+                                <span class="blue KNum">200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tableBox">
+                <div class="title"><span class="glyphicon glyphicon-align-justify tableIcon"></span> <span>库存详细</span> </div>
+                <table>
+                    <tr>
+                        <th>库区</th>
+                        <th>物料专用号</th>
+                        <th>描述</th>
+                        <th>可用库存</th>
+                        <th>已交数量</th>
+                        <th>仍需数量</th>
+                        <th>总入库</th>
+                        <th>总出库</th>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>库区名称1</td>
+                        <td>QWE-12890</td>
+                        <td>物料描述</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>100</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br style="clear:both;">
+    </div>
+    <script src="js/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/material_ stock.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

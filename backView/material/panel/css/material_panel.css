@@ -1,0 +1,629 @@
+@charset "UTF-8";
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.tingyong {
+    background-color: gray;
+}
+
+.bgRed {
+    background-color: #c11f1f !important;
+}
+
+.wordRed {
+    color: #e82626;
+}
+
+.bgGreen {
+    background-color: #17a044 !important;
+}
+
+.wordGreen {
+    color: #1ced61;
+}
+
+.bgYellow {
+    background-color: rgba(220, 200, 0, 0.8);
+}
+
+.wordYellow {
+    color: #ffbe0e;
+}
+
+.wordBlue {
+    color: #00a0e9;
+}
+
+.wordRed {
+    color: #e82626;
+}
+
+.wordColor1 {
+    color: #d82121;
+}
+
+.wordColor2 {
+    color: #e4d833;
+}
+
+.wordColor3 {
+    color: #38b5f3;
+}
+
+.wordColor4 {
+    color: #3ae85a;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url("../iconfont/iconfont.eot");
+    /* IE9*/
+    src: url("../iconfont/iconfont.eot#iefix") format("embedded-opentype"), url("../iconfont/iconfont.woff") format("woff"), url("../iconfont/iconfont.ttf") format("truetype"), url("../iconfont/iconfont.svg#iconfont") format("svg");
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: #3f98DB;
+    margin-right: 0.05rem;
+}
+
+html,
+body,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 dl,
+dt,
+dd,
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    width: 100%;
+    /*height: 100%;*/
+    font-family: "Arial", "Microsoft YaHei", sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 720px !important;
+    background: #0d163b url("../img/bg.png") no-repeat;
+    background-position: -20vh -50vh;
+    background-size: 120% 160%;
+    padding: 0.2rem;
+    padding-top: 0.4rem;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+.hor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hor-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.ver-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.center-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-center-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.space-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.txtRight {
+    text-align: right;
+}
+
+
+/*----------------------content-------------------------------*/
+
+.WMSTitle {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 0.15rem;
+    transform: translate(-50%);
+    height: 0.52rem;
+    line-height: 0.52rem;
+    width: auto;
+    background-color: #14225a;
+    border: 1px solid #1f48a2;
+    color: #d4e1ff;
+    font-size: .28rem;
+    padding: 0 0.3rem;
+    z-index: 1;
+}
+
+.ocontent {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #1f48a2;
+    padding: 0.1rem;
+    padding-top: 0.1rem;
+    position: relative;
+}
+
+.ocontent .nowTimeDiv {
+    position: absolute;
+    left: 8.3rem;
+    top: 0.35rem;
+    font-size: .2rem;
+    color: #d4e1ff;
+}
+
+.ocontentBorder {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: calc(100vh - .8rem);
+    background: url("../img/bigborder.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.topMid {
+    width: 100%;
+    position: relative;
+    padding-top: 0.3rem;
+}
+
+.comBox {
+    box-sizing: border-box;
+    float: left;
+    height: 100%;
+    padding: 0.15rem;
+    overflow: hidden;
+}
+
+.comBoxPadding {
+    background: url("../img/o-bg.png") no-repeat center;
+    background-size: 100% 100%;
+    border: none;
+    padding: 0.14rem 0.1rem;
+    min-height: calc(100vh - 100px);
+}
+
+.comBoxCon {
+    display: flex;
+    justify-content: space-between;
+    color: #efefef;
+    font-size: .3rem;
+}
+
+.leftAll {
+    width: 21.2vw;
+    color: #fff;
+    min-height: 70vh;
+}
+
+.centerAll {
+    width: 48vw;
+    color: #fff;
+    margin-top: .28rem;
+    min-height: 70vh;
+}
+
+.rightAll {
+    width: 21.2vw;
+    color: #fff;
+    min-height: 70vh;
+}
+
+.comLeft {
+    width: 100%;
+    /* width: 21.2vw; */
+    background: url("../img/leftradioborder.png") no-repeat center;
+    background-size: 100% 100%;
+    height: 63vh;
+    padding-top: .2rem;
+}
+
+.comCenter {
+    width: 100%;
+    /* width: 48vw; */
+    background: url("../img/middleradioborder.png") no-repeat center;
+    background-size: 100% 100%;
+    height: calc(63vh - .28rem);
+    /* margin-top: .19rem; */
+}
+
+.comright {
+    width: 100%;
+    /* width: 21.2vw; */
+    background: url("../img/rightradioborder.png") no-repeat center;
+    background-size: 100% 100%;
+    height: 63vh;
+    padding-top: .2rem;
+}
+
+
+/* //车辆情况 */
+
+.carBox .blue {
+    color: #00a0e9;
+}
+
+.carBox .green {
+    color: #1ced61;
+}
+
+.red {
+    color: #e82626;
+}
+
+.carBox .yellow {
+    color: #ffbe0e;
+}
+
+.yellow_bg {
+    background: #ffbe0e;
+}
+
+.carBox {
+    width: 100%;
+    height: 100%;
+    color: #eee;
+}
+
+.boardTitle {
+    text-align: center;
+    color: #eee;
+    font-size: .2rem;
+    /* margin-top: .2rem; */
+}
+
+.carBox .row {
+    height: 14%;
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.carBox .row.top {
+    margin-top: 12%;
+    height: 10%;
+    border-bottom: 1px dashed #31459b;
+    margin-bottom: .3rem;
+}
+
+.carBox .row.bottom {
+    margin-bottom: .3rem;
+    height: 10%;
+    border-bottom: 1px dashed #31459b;
+}
+
+.carBox .row .label,
+.carBox .row .value {
+    height: 100%;
+    line-height: 100%;
+    font-size: .16rem;
+    color: #eee;
+}
+
+.carBox .row .label {
+    text-align: left;
+    vertical-align: bottom;
+    font-weight: normal;
+}
+
+.carBox .row .label span {
+    display: inline;
+    margin-right: 4px;
+    color: #eee;
+}
+
+.carBox .row .value {
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.carNum {
+    font-size: .5rem;
+}
+
+
+/* 中央看板 */
+
+.centerBox {
+    color: #eee;
+    width: 100%;
+    height: 100%;
+}
+
+.square {
+    height: .16rem;
+    width: .16rem;
+    display: inline-block;
+}
+
+.square.waitCell,
+.square.freeCell {
+    margin-left: .3rem;
+}
+
+.centerBox .explain {
+    line-height: 2;
+    font-size: .16rem;
+}
+
+.centerBox .explain .leftCon {
+    padding: 1em 0 0 3em;
+}
+
+.centerBox .explain .rightCon {
+    padding: 1em 3em 0 0;
+}
+
+.centerBox table {
+    width: 96%;
+    height: 86%;
+    margin: .05rem auto 0;
+    cursor: pointer;
+}
+
+.centerBox table th {
+    font-weight: normal;
+    background: #1f48a2;
+}
+
+.centerBox table th,
+.centerBox table td {
+    text-align: center;
+    border: 1px solid rgba(24, 86, 140, 0.8) !important;
+    font-size: .16rem;
+    vertical-align: middle;
+}
+
+.centerBox .normalCell {
+    background: #17a044;
+}
+
+.centerBox .warnCell {
+    background: #c11f1f;
+}
+
+.centerBox .freeCell {
+    background: #334377;
+}
+
+.centerBox table .total td {
+    background: #1f48a2;
+}
+
+
+/* //车辆情况 */
+
+.orderBox {
+    width: 100%;
+    height: 62.96vh;
+    color: #eee;
+    text-align: center;
+}
+
+.orderBox .row {
+    height: 10%;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.orderBox .row p {
+    font-size: .14rem;
+}
+
+.orderBox .row .orderNum {
+    font-size: .3rem;
+}
+
+.orderBox h5 {
+    margin-top: 18%;
+    text-align: left;
+    padding-left: 3.2em;
+    color: #eee;
+    line-height: 2;
+    font-size: .18rem;
+    margin-bottom: 1%;
+}
+
+.orderBox h5.top {
+    margin-top: 8%;
+}
+
+.orderBox h5 span {
+    display: inline;
+    color: #eee;
+}
+
+.orderBox .row {
+    margin-bottom: .2rem;
+}
+
+.orderBox .row span {
+    font-size: .16rem;
+    color: #eee;
+}
+
+
+/* //底部镶边内容框 */
+
+.bottomBox {
+    color: #fff;
+    border: 1.6px solid #e1e4e7;
+    width: 100%;
+    min-height: 20vh;
+    position: relative;
+    margin-bottom: .1rem;
+    margin-top: .2rem;
+    padding-bottom: .1rem;
+}
+
+.bottomBox p {
+    text-align: center;
+    line-height: 2;
+    margin-top: .14rem;
+    font-size: .14rem;
+}
+
+.bottomBox p span {
+    font-size: .24rem;
+    margin-left: 1.8em;
+}
+
+.bottomBox:before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 2*16px);
+    height: calc(100% + 2*1.6px);
+    top: -1.6px;
+    left: 16px;
+    border-bottom: 1.6px solid #02386b;
+    border-top: 1.6px solid #02386b;
+}
+
+.bottomBox:after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 2*1.6px);
+    height: calc(100% - 2 *16px);
+    right: -1.6px;
+    top: 16px;
+    border-left: 1.6px solid #02386b;
+    border-right: 1.6px solid #02386b;
+}
+
+.chartbox {
+    position: relative;
+    min-height: 10vh;
+}
+
+.bottomCon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomCon .chartbox {
+    width: 48%;
+}
+
+.chartitle {
+    position: absolute;
+    /* border-left: 1.6px solid #142a6a; */
+    /* border-right: 1.6px solid #142a6a; */
+    background: #0e173e;
+    color: #fff;
+    top: .7em;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1.1em;
+    line-height: 1.1em;
+    font-size: .2rem;
+}
+
+.chartitleC {
+    background: #0f1b4c;
+}
+
+.chartitle.side {
+    top: -0.5em;
+}
+
+.chartitle span {
+    color: #163d9c;
+}
+
+.chartitle em {
+    margin: 0 1em;
+    font-style: normal;
+}
+
+.bottomTable {
+    line-height: 1.4;
+    font-size: .14rem;
+    margin: 1em;
+    width: 90%;
+    margin: .2em auto 0;
+}
+
+.bottomTable td {
+    background: rgba(18, 43, 99, 1) !important;
+    border: 1px solid #0f1b49 !important;
+    padding: 6px !important;
+    text-align: center;
+    height: .36rem;
+    line-height: 1.4em;
+    color: #fff;
+}
+
+/* 模态框 */
+.modal-content{
+    background: rgba(186, 214, 227, 0.8);
+}
+.modal-title{
+    color: #fff;
+}
+.modal-header .close span{
+    color: #fff;
+}
+
+.modal-content .bottomTable td{
+    height: .5rem;
+    line-height: 2;
+    /* background: rgb(17, 18, 19) !important; */
+    border: 1px solid #eef1f8 !important;
+}
+
+    
