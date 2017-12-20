@@ -8,7 +8,7 @@
         var clientWidth = docEl.clientWidth;
         if (!clientWidth) 
             return;
-        if (clientWidth >= 1920) {
+        if (clientWidth >= 1920) { 
             docEl.style.fontSize = '100px';
         } else {
             docEl.style.fontSize = 100 * (clientWidth / 1920) + 'px';
@@ -28,22 +28,10 @@ $(function () {
         $(".nowTimeDiv").html(getNowTime)
     }, 1000);
 
-    //库件百分比进度条  根据div属性data-percent控制百分比
-    $(".Kcircle").each(function () {
-        var percent = $(this).attr("data-percent");
-        var degrees = percent * 3.6;
-        console.log(percent)
-        var rightRot = $(this).find("#load_right span");
-        var leftRot = $(this).find("#load_left span");
-        if (degrees <= 180) {
-            console.log("val" + percent)
-            rightRot.css({'transform':'rotate(' + degrees + 'deg)'});
-            leftRot.css({'transform':'rotate(0deg)'});
-        }
-        if (degrees > 180) {
-            leftRot.css({'transform':'rotate(' + (degrees - 180) + 'deg)'});
-            rightRot.css({'transform':'rotate(180deg)'});
-        }
+    //百分比进度条  根据div属性aria-valuenow控制百分比
+    $(".progress-bar").each(function () {
+        var percent = $(this).attr("aria-valuenow");
+        $(this).css('width', percent);
     })
 
     function getNowTime() {

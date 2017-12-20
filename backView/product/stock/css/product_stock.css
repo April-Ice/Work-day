@@ -168,8 +168,6 @@ body.proStock {
     padding: 0.2rem;
     padding-top: 0.4rem;
     box-sizing: border-box;
-    height: 100vh;
-    overflow: hidden;
 }
 
 
@@ -265,6 +263,48 @@ body.proStock {
     border-radius: .2rem;
 }
 
+.boxItem .title {
+    line-height: 4;
+}
+
+.boxItem .row {
+    margin: .1rem 0;
+}
+
+.boxItem .row .col-sm-3 {
+    padding: 0;
+}
+.boxItem .row .col-sm-6{
+    padding-top: .08rem;
+}
+.boxItem .all {
+    text-align: center;
+}
+.boxItem .row .num{
+    margin-top: -4px;
+}
+.boxItem .all span, .boxItem .num {
+    font-size: .28rem;
+}
+
+.boxItem .green {
+    color: #2ec560;
+}
+
+.boxItem .red {
+    color: #cc132c;
+}
+
+.boxItem .progress{
+    height: 8px;
+    border-radius:8px;
+    background-color:transparent;
+}
+.boxItem .progress-bar{
+    background: #17a044;
+    border-radius: 10px;
+}
+
 
 /* //底部镶边内容框 */
 
@@ -328,7 +368,7 @@ body.proStock {
 }
 
 .PSContent .bottomBox .scroll {
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 32vh;
     position: relative;
     z-index: 99;

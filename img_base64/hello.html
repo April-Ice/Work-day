@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>getBase64</title>
+</head>
+
+<body>
+    <div class="item1">
+        <img class="resize-img" src="https://img.alicdn.com/bao/uploaded/TB1qimQIpXXXXXbXFXXSutbFXXX.jpg">
+    </div>
+    <div>
+        <img id="test" src="" alt="" />
+    </div>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./drag.js"></script>
+    <script>
+        new ZResize();
+        var imgSrc = "https://img.alicdn.com/bao/uploaded/TB1qimQIpXXXXXbXFXXSutbFXXX.jpg";
+
+        function getBase64(img) { //传入图片路径，返回base64
+            function getBase64Image(img, width, height) { //width、height调用时传入具体像素值，控制大小 ,不传则默认图像大小
+                var canvas = document.createElement("canvas");
+                canvas.width = width ? width : img.width;
+                canvas.height = height ? height : img.height;
+
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                var dataURL = canvas.toDataURL();
+                return dataURL;
+            }
+            var image = new Image();
+            image.crossOrigin = '';
+            image.src = img;
+            var deferred = $.Deferred();
+            if (img) {
+                image.onload = function () {
+                    deferred.resolve(getBase64Image(image)); //将base64传给done上传处理
+                }
+                return deferred.promise(); //问题要让onload完成后再return sessionStorage['imgTest']
+            }
+        }
+        getBase64(imgSrc)
+            .then(function (base64) {
+                console.log(base64);
+                var img = new Image(); //创建img容器
+                img.src = base64; //给img容器引入base64的图片
+                document.body.appendChild(img);
+            }, function (err) {
+                console.log(err);
+            });
+    
+    </script>
+</body>
+
+</html>
