@@ -46,6 +46,19 @@ $(function () {
         }
     })
 
+    //查询
+    $("#searchConBtn").click(function () {
+        $("#searchCon").show("slow");
+    });
+
+    //查询按钮点击
+    $("#search").click(function(){
+        //TODO 向后台发送ajax请求
+
+        //请求成功后执行
+        $("#searchCon").hide("slow");
+    });
+
     function getNowTime() {
         var date = new Date();
         var year = date.getFullYear();

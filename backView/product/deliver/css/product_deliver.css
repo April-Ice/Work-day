@@ -268,7 +268,7 @@ body.deliver {
     margin: 0 auto;
 }
 
-.scroll::-webkit-scrollbar{
+.scroll::-webkit-scrollbar {
     width: 2px;
     background-color: rgba(255, 255, 255, .2);
 }
@@ -369,4 +369,93 @@ body.deliver {
     font-size: .28rem;
     text-align: center;
     width: 100%;
+}
+
+
+/* //设置按钮 */
+
+.leftBox .setting {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+}
+
+.leftBox .setting .search-con {
+    width: .4rem;
+    height: .4rem;
+    background: url("../img/seach.png") no-repeat center;
+    background-size: .4rem;
+    display: inline-block;
+}
+
+
+/* 设置按钮弹窗样式 */
+
+.leftBox .conMiddle {
+    position: absolute;
+    top: 50%;
+    margin-top: -15%;
+    left: 50%;
+    margin-left: -15%;
+    width: 35%;
+    padding: .5rem 0;
+    background: #2653b7;
+    border: 1px solid #1f48a2;
+    /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+}
+
+.leftBox .conMiddle .con {
+    padding: 10px 0;
+}
+
+.leftBox .conMiddle .cch {
+    width: 20%;
+    float: left;
+    color: #d4e1ff;
+    font-size: .26rem;
+}
+
+.leftBox .conMiddle .zzdjInput {
+    color: #d4e1ff;
+    font-size: .26rem;
+    padding-left: .1rem;
+    box-sizing: border-box;
+    width: 60%;
+    float: left;
+    border: 1px solid #5884e6;
+    height: .7rem;
+    border-radius: .03rem;
+    background-color: transparent;
+}
+
+.leftBox .conMiddle .con-btn-search {
+    font-size: .26rem;
+    border: 1px solid #1ced61;
+    color: #fff;
+    background: #0bb543;
+    height: .5rem;
+    border-radius: .1rem;
+    width: 1.4rem;
+    margin-top: .2rem;
+    margin-right: .2rem;
+}
+
+.leftBox .conMiddle .con-btn-clear,
+.comBoxPadding .conMiddle .con-btn-clear:focus {
+    font-size: .26rem;
+    border: 1px solid #1ced61;
+    color: #1ced61;
+    background: #2653b7;
+    height: .5rem;
+    border-radius: .1rem;
+    width: 1.4rem;
+    margin-top: .2rem;
+    margin-right: .2rem;
+}
+
+.leftBox .conMiddle .con-btn-search:hover,
+.comBoxPadding .conMiddle .con-btn-clear:hover {
+    border: 1px solid #018a2e;
+    background: #018a2e;
+    color: #fff;
 }
