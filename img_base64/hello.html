@@ -33,13 +33,17 @@
             }
             var image = new Image();
             image.crossOrigin = '';
-            image.src = img;
             var deferred = $.Deferred();
             if (img) {
-                image.onload = function () {
-                    deferred.resolve(getBase64Image(image)); //将base64传给done上传处理
-                }
-                return deferred.promise(); //问题要让onload完成后再return sessionStorage['imgTest']
+                // 因为异步性问题，onload可能会不触发，等获取尺寸成功后，图片早就加载完成了，所以才导致有的时候不触发 onload 事件
+                // image.onload = function () {
+                //     deferred.resolve(getBase64Image(image)); //将base64传给done上传处理
+                // }
+                // return deferred.promise(); //问题要让onload完成后再return sessionStorage['imgTest']
+                
+                // 代码修改如下后，就解决了
+                image.addEventListener('load' , getBase64Image(image) , false);
+                image.src = img;
             }
         }
         getBase64(imgSrc)
