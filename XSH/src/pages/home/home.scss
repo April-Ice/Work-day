@@ -1,4 +1,27 @@
 page-home {
+
+    // 竖屏（portrait）
+    @media screen and (orientation:portrait){
+        .landscape{
+            display:none;
+        }
+        // .index-page{
+        //     transform: rotate(90deg)
+        // }
+        .warn-screen{
+            display:block;
+            // display:none;
+        }
+    }
+    @media screen and (orientation:landscape){
+        .landscape{
+            display:block;
+        }
+        .warn-screen{
+            display:none;
+        }
+    }
+
     .index-page{
         width: 100vw;
         height: 100vh;
