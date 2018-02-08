@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>getBase64</title>
+    <style>
+        .item1 {
+            cursor: move;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            /* background:#000; */
+            height: 400px;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,33 +30,37 @@
     <script>
         new ZResize();
         var imgSrc = "https://img.alicdn.com/bao/uploaded/TB1qimQIpXXXXXbXFXXSutbFXXX.jpg";
-
+        
+        var dataURL = '';
         function getBase64(img) { //传入图片路径，返回base64
-            function getBase64Image(img, width, height) { //width、height调用时传入具体像素值，控制大小 ,不传则默认图像大小
+            var image = new Image();
+            image.crossOrigin = 'anonymous';
+            var deferred = $.Deferred();
+            if (img) {
+                // 因为异步性问题，onload可能会不触发，等获取尺寸成功后，图片早就加载完成了，所以才导致有的时候不触发 onload 事件
+                image.onload = function () {
+                    deferred.resolve(getBase64Image(image)); //将base64传给done上传处理
+                }
+                return deferred.promise(); //问题要让onload完成后再return sessionStorage['imgTest']
+                
+                // 代码修改如下后，就解决了
+                // image.addEventListener('load', getBase64Image(image, 100, 100), false);
+                // image.src = img;
+                // return 'dataURL';
+            }
+        }
+
+        function getBase64Image(img, width, height) { //width、height调用时传入具体像素值，控制大小 ,不传则默认图像大小
                 var canvas = document.createElement("canvas");
                 canvas.width = width ? width : img.width;
                 canvas.height = height ? height : img.height;
 
                 var ctx = canvas.getContext("2d");
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                var dataURL = canvas.toDataURL();
+                dataURL = canvas.toDataURL();
                 return dataURL;
             }
-            var image = new Image();
-            image.crossOrigin = '';
-            var deferred = $.Deferred();
-            if (img) {
-                // 因为异步性问题，onload可能会不触发，等获取尺寸成功后，图片早就加载完成了，所以才导致有的时候不触发 onload 事件
-                // image.onload = function () {
-                //     deferred.resolve(getBase64Image(image)); //将base64传给done上传处理
-                // }
-                // return deferred.promise(); //问题要让onload完成后再return sessionStorage['imgTest']
-                
-                // 代码修改如下后，就解决了
-                image.addEventListener('load' , getBase64Image(image) , false);
-                image.src = img;
-            }
-        }
+
         getBase64(imgSrc)
             .then(function (base64) {
                 console.log(base64);

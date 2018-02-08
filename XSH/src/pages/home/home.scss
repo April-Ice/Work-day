@@ -1,0 +1,154 @@
+page-home {
+    .index-page{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: #df6363 url(../assets/imgs/index/bg.jpg) center no-repeat;
+        background-size: 100% 100vh;
+    }
+    .logo{
+        text-align: center;
+        line-height: 3;
+        color: #fff;
+        // font-weight: bold;
+        font-size: 3rem;
+        margin: 0 auto;
+        position: relative;
+        min-height: 19rem;
+        .trigle{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-12rem);
+            margin: 0 auto;
+            width: 0;
+            height: 0;
+            border-left: 12rem solid transparent;
+            border-right: 12rem solid transparent;
+            border-top: 12rem solid rgba(0, 0, 0, .2);
+        }
+    }
+
+    .pattern{
+        text-align: center;
+        width: 30%;
+        min-height: 5vw;
+        margin: 0 auto;
+        background: url(../assets/imgs/index/pattern.png) center no-repeat;
+        background-size: 100% 100%;
+        // img{
+        //     display: inline-block;
+        //     width: 30%;
+        // }
+    }
+    .hall-name{
+        text-align: center;
+        color: #fff;
+        h3{
+            font-size: 3.2rem;
+            // margin: 2rem;
+            font-weight: normal;
+        }
+        h4{
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+        p{
+            font-size: 1.8rem;
+        }
+    }
+
+    .login-box{
+        font-size: 1.8rem;
+        line-height: 2;
+        border: 1px solid #fff;
+        margin: 6rem auto 0;
+        width: 8em;
+        text-align: center;
+        color: #fff;
+        &:hover{
+            background: rgba(255,255,255, .5);
+        }
+    }
+
+
+    // 底部菜单
+    .foot-memu{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content:space-between;
+    }
+    .hall-box{
+        width: 8.8vw;
+        height: 8.8vw;
+        background: #000;
+        color: #fff;
+        padding: 1rem;
+        background-size: 100%;
+        overflow:hidden;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8.8vw;
+            height: 8.8vw;
+            background: rgba(0, 0, 0, .46);
+            z-index: 1;
+        }
+        >div{
+            position: absolute;
+            border: 1px solid #fff;
+            width: calc(8.8vw - 2rem);
+            height: calc(8.8vw - 2rem);
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+            padding: 1.4rem;
+            z-index: 2;
+            &:hover{
+                background: rgba(255,255,255, .5);
+            }
+        }
+    }
+    .home-menu{
+        line-height: 2.4;
+        background: url(../assets/imgs/index/hall10.jpg) center;
+    }
+    .center-product{
+        background: url(../assets/imgs/index/hall9.jpg) center;
+    }
+    .diamond-hall{
+        background: url(../assets/imgs/index/hall7.jpg) center;
+    }
+    .gold-hall{
+        background: url(../assets/imgs/index/hall8.jpg) center;
+    }
+    .flower-hall{
+        background: url(../assets/imgs/index/hall9.jpg) center;
+    }
+    .year-hall{
+        background: url(../assets/imgs/index/hall10.jpg) center;
+    }
+    .center-hall{
+        background: url(../assets/imgs/index/hall7.jpg) center;
+    }
+    .crystal-hall{
+        background: url(../assets/imgs/index/hall8.jpg) center;
+    }
+    .emerald-hall{
+        background: url(../assets/imgs/index/hall9.jpg) center;
+    }
+    .auspicious-hall{
+        background: url(../assets/imgs/index/hall10.jpg) center;
+    }
+    .jade-hall{
+        background: url(../assets/imgs/index/hall7.jpg) center;
+    }
+    .sun-hall{
+        background: url(../assets/imgs/index/hall8.jpg) center;
+    }
+}

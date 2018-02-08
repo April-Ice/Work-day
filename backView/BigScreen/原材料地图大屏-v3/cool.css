@@ -1,0 +1,114 @@
+.mapBox {
+    width: 100%;
+    min-height: 87.3vh;
+    position: relative;
+}
+
+.chartBox {
+    width: 100%;
+    height: 100%;
+    ;
+    background: #fff;
+}
+
+
+/* --------悬窗-------- */
+
+.map_board {
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+    background: #004882;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 5px rgb(228, 220, 220);
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.map_board .title {
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    padding-left: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.map_board .title p{
+    margin: 0;
+}
+.map_board .up{
+    height: 16px;
+    width: 16px;
+    margin-top: 4px !important;
+    background: #4f8ccc;
+    border-radius: 2px;
+    color: #fff;
+    position: relative;
+}
+.map_board .up i{
+    width:0;
+    height:0;
+    border-width:0 6px 6px;
+    border-style:solid;
+    border-color:transparent transparent rgb(247, 237, 237);/*透明 透明  灰*/
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    margin-top: -3px;
+}
+.triangle_border_down{
+    border-width:6px 6px 0 !important;
+    border-color:rgb(250, 247, 247) transparent transparent !important;
+}
+.map_board .content {
+    border: 1px solid #fff;
+    margin-top: 8px;
+}
+
+.map_board .content table{
+    margin: 10px;
+    width: 100%;
+    line-height: 2;
+}
+
+.map_board .content table td{
+    border: 0;
+    color: #3dfa2a;
+}
+
+.map_board .label{
+    width: 70%;
+    font-weight: bold;
+}
+
+.bottom_board{
+    top: 74vh;
+    left: 0;
+    width: auto;
+    min-width: 620px;
+
+}
+
+.top_board{
+    top: 10vh;
+    right: 40px;
+    width: 384px;
+}
+
+.bottom_board .content p,.bottom_board .content h4{
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+    margin-left: 40px;
+    color: #3dfa2a;
+}
+.bottom_board .content p{
+    font-size: 12px;
+}
+.bottom_board .content h4{
+    font-size: 14px;
+    margin-bottom: 2em;
+}
+.bottom_board .content img{
+    width: 100%;
+}
