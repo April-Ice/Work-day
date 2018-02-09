@@ -34,9 +34,10 @@
 			<h4>贵宾集团 • 喜事汇酒店</h4>
 			<p>slogn 冰城绝美的宴会胜地</p>
 		</div>
-		<div class="login-box">
+		<div class="login-box" *ngIf="!login" (click)="gotoLogin()">
 			登录
 		</div>
+
 		<div class="foot-memu">
 			<div class="hall-box home-menu">
 				<div>首页</div>

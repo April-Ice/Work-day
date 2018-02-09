@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-// import { LoginPage } from '../index';
-
-
 @Component({
 	selector: 'page-home',
 	templateUrl: 'home.html',
 	// providers: [indexService]
 })
-export class HomePage {
+export class LoginPage {
 	login: any;
 
 	constructor(
@@ -17,9 +14,4 @@ export class HomePage {
 	) {
 		this.login = false;
 	}
-
-	public gotoLogin() {
-		// this.nav.push(LoginPage);
-	}
-
 }

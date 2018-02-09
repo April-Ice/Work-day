@@ -1,0 +1,22 @@
+<ion-content class="index-page" scroll="false">
+	<!-- <h3>Ionic Menu Starter</h3> -->
+	<div class="warn-screen">
+
+		<ion-card>
+			<ion-card-header>
+				检测到非横屏状态
+			</ion-card-header>
+			<ion-card-content>
+				竖屏下内容排版错乱，请切换到横屏，以获得更好体验
+			</ion-card-content>
+		</ion-card>
+	</div>
+	<div class="landscape">
+
+		<div class="login-box" *ngIf="!login" (click)="gotoLogin()">
+			登录
+		</div>
+
+	</div>
+
+</ion-content>
