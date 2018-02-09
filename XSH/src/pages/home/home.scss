@@ -78,8 +78,9 @@ page-home {
         p{
             font-size: 1.8rem;
         }
-    }
+	}
 
+	//登录
     .login-box{
         font-size: 1.8rem;
         line-height: 2;
@@ -91,7 +92,31 @@ page-home {
         &:hover{
             background: rgba(255,255,255, .5);
         }
-    }
+	}
+
+	//查看订单报表
+	.view-box{
+		width: 20vw;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		color: #fff;
+		text-align: center;
+		font-size: 1.6rem;
+		>div{
+			// width: 10vw;
+			margin: 2rem auto 0;
+			.iconBox{
+				margin: 0 auto;
+				font-size: 2rem;
+				border: 1px solid #fff;
+				height: 5rem;
+				width: 5rem;
+				line-height: 5rem;
+				margin-bottom: 1rem;
+			}
+		}
+	}
 
 
     // 底部菜单

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { MemberService } from '../../providers/member';
+import { HomePage } from '../home/home';
 
 
 @Component({
@@ -21,15 +22,16 @@ export class LoginPage {
 
 	getTest() {
 		console.log("getTest");
-
 		this.service.getTest().then(data => {
 			console.log(data);
 		});
-		// https://jsonplaceholder.typicode.com/posts/1
 	}
 
 	formSubmit(form) {
 		console.log("登录");
+		if(true){
+			this.nav.push(HomePage);
+		}
 		// form.cookietime = '2592000';
 		// form.fastloginfield = 'username';
 		// form.auth = this.myform.auth || '';

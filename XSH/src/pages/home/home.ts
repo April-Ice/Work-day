@@ -21,12 +21,17 @@ export class HomePage {
 		public navCtrl: NavController,
 		public navParams: NavParams
 	) {
-		this.login = false;
+		this.login = true;
 	}
 
-	gotoLogina() {
+	gotoLogin() {
 		console.log("gotoLogin");
 		this.navCtrl.push(LoginPage);
+	}
+
+	gotoChart() {
+		console.log("gotoChart");
+		this.navCtrl.push(ChartPage);
 	}
 
 }

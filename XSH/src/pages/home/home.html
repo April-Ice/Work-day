@@ -30,8 +30,27 @@
 			<h4>贵宾集团 • 喜事汇酒店</h4>
 			<p>slogn 冰城绝美的宴会胜地</p>
 		</div>
-		<div class="login-box" *ngIf="!login" (click)="gotoLogina($event);">
+		<div class="login-box" *ngIf="!login" (click)="gotoLogin();">
 			登录
+		</div>
+		<div class="view-box" *ngIf="login">
+			<div (click)="gotoChart();">
+				<div>
+					<div class="iconBox">
+						<ion-icon name="heart"></ion-icon>
+					</div>
+					查看订单
+				</div>
+
+			</div>
+			<div (click)="gotoChart();">
+				<div>
+					<div class="iconBox">
+						<ion-icon name="heart"></ion-icon>
+					</div>
+					数据报表
+				</div>
+			</div>
 		</div>
 
 		<div class="foot-memu">
