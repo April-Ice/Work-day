@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { FileUploadModule } from 'ng2-file-upload';
 
+import { HttpModule } from '@angular/http';
+
 import { BridgeHelper } from '../helpers/bridge';
 import { ErrorHelper } from '../helpers/error';
 
@@ -31,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
 	BrowserModule,
 	FileUploadModule,
+	HttpModule,
 	IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp,RouteConfig),
   ],
