@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
+
+//--------------待解决问题  不能直接引用index-----------------------------
 // import { LoginPage } from '../index';
+//----------------------------------------------------------------------
+import { LoginPage } from '../login/login';
+import { ChartPage } from '../charts/chart';
 
 
 @Component({
@@ -13,13 +18,15 @@ export class HomePage {
 	login: any;
 
 	constructor(
-		public nav: NavController,
+		public navCtrl: NavController,
+		public navParams: NavParams
 	) {
 		this.login = false;
 	}
 
-	public gotoLogin() {
-		// this.nav.push(LoginPage);
+	gotoLogina() {
+		console.log("gotoLogin");
+		this.navCtrl.push(LoginPage);
 	}
 
 }

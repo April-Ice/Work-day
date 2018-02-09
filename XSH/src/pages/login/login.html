@@ -1,22 +1,24 @@
-<ion-content class="index-page" scroll="false">
-	<!-- <h3>Ionic Menu Starter</h3> -->
-	<div class="warn-screen">
-
-		<ion-card>
-			<ion-card-header>
-				检测到非横屏状态
-			</ion-card-header>
-			<ion-card-content>
-				竖屏下内容排版错乱，请切换到横屏，以获得更好体验
-			</ion-card-content>
-		</ion-card>
-	</div>
-	<div class="landscape">
-
-		<div class="login-box" *ngIf="!login" (click)="gotoLogin()">
+<ion-content class="login-page">
+	<div class="sign-box">
+		<h3>SING IN</h3>
+		<p>Login in with your information!</p>
+		<form #ngform="ngForm">
+			<ion-item>
+				<ion-label>
+					<ion-icon ></ion-icon>
+				</ion-label>
+				<ion-input type="text" name="username" spellcheck="false" autocapitalize="off" placeholder="用户名" required ngModel></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label>
+					<ion-icon ></ion-icon>
+				</ion-label>
+				<ion-input type="password" name="password" placeholder="密 码" required ngModel>
+				</ion-input>
+			</ion-item>
+		</form>
+		<button margin-top ion-button block [disabled]="!ngform.valid" (click)="formSubmit(ngform.value)">
 			登录
-		</div>
-
+		</button>
 	</div>
-
 </ion-content>

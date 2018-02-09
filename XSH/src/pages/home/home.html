@@ -9,9 +9,7 @@
 
 
 <ion-content class="index-page" scroll="false">
-	<!-- <h3>Ionic Menu Starter</h3> -->
 	<div class="warn-screen">
-
 		<ion-card>
 			<ion-card-header>
 				检测到非横屏状态
@@ -26,15 +24,13 @@
 			<div class="trigle"></div>
 			LOGO
 		</div>
-		<div class="pattern">
-			<!-- <img src="../assets/imgs/index/pattern.png" />; -->
-		</div>
+		<div class="pattern"></div>
 		<div class="hall-name">
 			<h3>MISHAN XISHIHUI WEDDING</h3>
 			<h4>贵宾集团 • 喜事汇酒店</h4>
 			<p>slogn 冰城绝美的宴会胜地</p>
 		</div>
-		<div class="login-box" *ngIf="!login" (click)="gotoLogin()">
+		<div class="login-box" *ngIf="!login" (click)="gotoLogina($event);">
 			登录
 		</div>
 
