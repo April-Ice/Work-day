@@ -19,7 +19,7 @@ export const Sites = {
     static: 'http://cike360.com',
     ucenter: 'http://cike360.com',
     webview: 'http://cike360.com',
-    baseapi: 'http://cike360.com'
+    baseapi: 'https://jsonplaceholder.typicode.com'
 };
 
 // export const Package = {

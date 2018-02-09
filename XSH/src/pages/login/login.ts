@@ -16,6 +16,16 @@ export class LoginPage {
 		public nav: NavController,
 		public service: MemberService
 	) {
+		this.getTest();
+	}
+
+	getTest() {
+		console.log("getTest");
+
+		this.service.getTest().then(data => {
+			console.log(data);
+		});
+		// https://jsonplaceholder.typicode.com/posts/1
 	}
 
 	formSubmit(form) {
@@ -24,14 +34,14 @@ export class LoginPage {
 		// form.fastloginfield = 'username';
 		// form.auth = this.myform.auth || '';
 		// this.service.login(form).then(data => {
-			// this.myform.auth = data.auth;
-			//登陆成功
-			// if (data.errkey == 'login_succeed') {
-				// this.myform.question = false;
-				// this.myform.seccode = '';
-				// this.myform.auth = '';
-				// this.logined();
-			// }
+		// 	this.myform.auth = data.auth;
+		// 	登陆成功
+		// 	if (data.errkey == 'login_succeed') {
+		// 		this.myform.question = false;
+		// 		this.myform.seccode = '';
+		// 		this.myform.auth = '';
+		// 		this.logined();
+		// 	}
 		// });
 	}
 }

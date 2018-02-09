@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicStorageModule } from '@ionic/storage';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicModule } from 'ionic-angular';
+// import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { FileUploadModule } from 'ng2-file-upload';
 

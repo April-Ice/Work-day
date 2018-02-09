@@ -8,6 +8,12 @@ export class MemberService extends BaseService {
 
     constructor(injector: Injector) {
         super(injector);
+	}
+
+	public getTest() {
+		let query = {};
+		let url = '/photos';
+        return this.bridge.get(url, query);
     }
 
     // public login(query) {
