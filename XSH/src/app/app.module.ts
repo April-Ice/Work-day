@@ -36,7 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 	FileUploadModule,
 	HttpModule,
 	IonicStorageModule.forRoot(),
-    IonicModule.forRoot(MyApp,RouteConfig),
+	IonicModule.forRoot(MyApp,RouteConfig),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

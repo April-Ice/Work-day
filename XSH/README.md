@@ -28,3 +28,7 @@ $  ionic cordova run android
 在项目文件中有.editorconfig 文件 
 indent_style = tab //使用制表符
 indent_size = 4 //4个空格为一个缩进
+
+
+##### Ionic引入Echarts：
+https://zhuanlan.zhihu.com/p/28902584
