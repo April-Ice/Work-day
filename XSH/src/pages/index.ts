@@ -6,15 +6,18 @@
 import { HomePage } from './home/home';
 import { LoginPage } from './login/login';
 import { ChartPage } from './charts/chart';
+import { ProductsPage } from './products/products';
 
 export const Pages = [
 	HomePage,
 	LoginPage,
-	ChartPage
+	ChartPage,
+	ProductsPage
 ];
 
 export {
 	HomePage,
 	LoginPage,
-	ChartPage
+	ChartPage,
+	ProductsPage
 };

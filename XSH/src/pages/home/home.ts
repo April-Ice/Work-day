@@ -7,6 +7,7 @@ import { NavController, NavParams } from 'ionic-angular';
 //----------------------------------------------------------------------
 import { LoginPage } from '../login/login';
 import { ChartPage } from '../charts/chart';
+import { ProductsPage } from '../products/products';
 
 
 @Component({
@@ -34,4 +35,8 @@ export class HomePage {
 		this.navCtrl.push(ChartPage);
 	}
 
+	gotoProducts() {
+		console.log("gotoProducts");
+		this.navCtrl.push(ProductsPage);
+	}
 }
